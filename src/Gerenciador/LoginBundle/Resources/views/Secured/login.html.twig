@@ -1,0 +1,31 @@
+{% extends "GerenciadorLoginBundle::layout.html.twig" %}
+
+{% block title "Mercado de Sabores - Gerenciador" %}
+
+{% block content_header 'Login' %}
+
+{% block content %}
+
+
+    {% if error %}
+<div class="error">{{ error.message }}</div>
+    {% endif %}
+
+
+<!-- <div class="container"> -->
+<form action="{{ path("_security_check") }}" class="form-signin" method="post" id="login">
+
+    <h2 class="form-signin-heading">Acesse sua conta</h2>
+
+    <input type="text" class="input-block-level" placeholder="Usuário" id="username" name="_username" value="{{ last_username }}"  />
+
+    <input type="password" class="input-block-level" placeholder="Senha" id="password" name="_password" />
+
+    <button  type="submit" class="btn btn-large btn-primary"/> Entrar</button>
+</form>
+<!-- </div> -->
+
+</div> <!-- /container -->
+{% endblock %}
+
+{% set code = code(_self) %}

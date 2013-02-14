@@ -1,0 +1,3 @@
+gerenciador_login_homepage:
+    pattern:  /admin/{name}
+    defaults: { _controller: GerenciadorLoginBundle:Default:index }

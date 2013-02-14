@@ -1,0 +1,3 @@
+mercado_pagina_homepage:
+    pattern:  /
+    defaults: { _controller: MercadoPaginaBundle:Default:index }

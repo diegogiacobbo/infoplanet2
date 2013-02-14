@@ -1,0 +1,7 @@
+parameters:
+#    gerenciador_login.example.class: Gerenciador\LoginBundle\Example
+
+services:
+#    gerenciador_login.example:
+#        class: %gerenciador_login.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
