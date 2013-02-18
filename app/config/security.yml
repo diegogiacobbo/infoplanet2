@@ -23,16 +23,16 @@ security:
             security: false
 
         login:
-            pattern:  ^/admin/secured/login$
+            pattern:  ^/admin/login$
             security: false
 
         secured_area:
-            pattern:    ^/admin/secured/
+            pattern:    ^/admin/
             form_login:
-                check_path: /admin/secured/login_check
-                login_path: /admin/secured/login
+                check_path: /admin/login_check
+                login_path: /admin/login
             logout:
-                path:   /admin/secured/logout
+                path:   /admin/logout
                 target: /admin/
             #anonymous: ~
             #http_basic:

@@ -157,7 +157,20 @@ class Twig_Loader_Filesystem implements Twig_LoaderInterface, Twig_ExistsLoaderI
      * {@inheritdoc}
      */
     public function isFresh($name, $time)
-    {
+    {        
+        if($_SERVER['SERVER_ADDR'] == "127.0.0.1"){
+            //nada
+        }else if($_SERVER['SERVER_ADDR'] == "174.132.156.93"){        
+            foreach ($this->cache as $cache){
+                $pos = strpos($cache, "mercadoSabores");
+                $this->cache[key($this->cache)] = "/home/diego/public_html/ms2013".substr($cache, $pos+14);
+            }
+        }else{
+            foreach ($this->cache as $cache){
+                $pos = strpos($cache, "mercadoSabores");
+                $this->cache[key($this->cache)] = "/home/mercadodesabores/www/2013".substr($cache, $pos+14);
+            }
+        }
         return filemtime($this->findTemplate($name)) <= $time;
     }
 
@@ -167,8 +180,12 @@ class Twig_Loader_Filesystem implements Twig_LoaderInterface, Twig_ExistsLoaderI
 
         // normalize name
         $name = preg_replace('#/{2,}#', '/', strtr($name, '\\', '/'));
-
+        
+        
+        
         if (isset($this->cache[$name])) {
+            var_dump($this->cache[$name]);
+            die("uow");
             return $this->cache[$name];
         }
 

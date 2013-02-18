@@ -1,6 +1,3 @@
-_welcome:
-    pattern:  /
-    defaults: { _controller: MercadoPaginaBundle:Default:index }
 
 _demo_secured:
     resource: "@AcmeDemoBundle/Controller/SecuredController.php"
@@ -11,9 +8,7 @@ _demo:
     type:     annotation
     prefix:   /demo
 
-_admin_secured:
-    resource: "@GerenciadorLoginBundle/Controller/SecuredController.php"
-    type:     annotation
+
 
 _admin:
     resource: "@GerenciadorLoginBundle/Controller/DefaultController.php"

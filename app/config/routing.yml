@@ -5,6 +5,14 @@ mercado_pagina:
 gerenciador_login:
     resource: "@GerenciadorLoginBundle/Resources/config/routing.yml"
     prefix:   /
+    
+_welcome:
+    pattern:  /
+    defaults: { _controller: MercadoPaginaBundle:Default:index }
+    
+_admin_secured:
+    resource: "@GerenciadorLoginBundle/Controller/SecuredController.php"
+    type:     annotation
 
 # Internal routing configuration to handle ESI
 # ****** WARNING ******

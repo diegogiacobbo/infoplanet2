@@ -331,7 +331,6 @@ class Twig_Environment
         if (!$this->runtimeInitialized) {
             $this->initRuntime();
         }
-
         return $this->loadedTemplates[$cls] = new $cls($this);
     }
 

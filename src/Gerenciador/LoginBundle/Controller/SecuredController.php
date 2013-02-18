@@ -9,7 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use JMS\SecurityExtraBundle\Annotation\Secure;
 
 /**
- * @Route("/admin/secured")
+ * @Route("/admin")
  */
 class SecuredController extends Controller
 {

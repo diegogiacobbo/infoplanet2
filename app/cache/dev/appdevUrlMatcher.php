@@ -25,15 +25,6 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         $allow = array();
         $pathinfo = rawurldecode($pathinfo);
 
-        // _welcome
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', '_welcome');
-            }
-
-            return array (  '_controller' => 'Mercado\\PaginaBundle\\Controller\\DefaultController::indexAction',  '_route' => '_welcome',);
-        }
-
         // _demo_login
         if ($pathinfo === '/demo/secured/login') {
             return array (  '_controller' => 'Acme\\DemoBundle\\Controller\\SecuredController::loginAction',  '_route' => '_demo_login',);
@@ -76,36 +67,6 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // _demo_contact
         if ($pathinfo === '/demo/contact') {
             return array (  '_controller' => 'Acme\\DemoBundle\\Controller\\DemoController::contactAction',  '_route' => '_demo_contact',);
-        }
-
-        // _admin_login
-        if ($pathinfo === '/admin/secured/login') {
-            return array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::loginAction',  '_route' => '_admin_login',);
-        }
-
-        // _security_check
-        if ($pathinfo === '/admin/secured/login_check') {
-            return array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::securityCheckAction',  '_route' => '_security_check',);
-        }
-
-        // _admin_logout
-        if ($pathinfo === '/admin/secured/logout') {
-            return array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::logoutAction',  '_route' => '_admin_logout',);
-        }
-
-        // gerenciador_login_secured_hello
-        if ($pathinfo === '/admin/secured/hello') {
-            return array (  'name' => 'World',  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::helloAction',  '_route' => 'gerenciador_login_secured_hello',);
-        }
-
-        // _admin_secured_hello
-        if (0 === strpos($pathinfo, '/admin/secured/hello') && preg_match('#^/admin/secured/hello/(?P<name>[^/]+)$#s', $pathinfo, $matches)) {
-            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::helloAction',)), array('_route' => '_admin_secured_hello'));
-        }
-
-        // _admin_secured_hello_admin
-        if (0 === strpos($pathinfo, '/admin/secured/hello/admin') && preg_match('#^/admin/secured/hello/admin/(?P<name>[^/]+)$#s', $pathinfo, $matches)) {
-            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::helloadminAction',)), array('_route' => '_admin_secured_hello_admin'));
         }
 
         // _wdt
@@ -197,8 +158,51 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // gerenciador_login_homepage
-        if (0 === strpos($pathinfo, '/admin') && preg_match('#^/admin/(?P<name>[^/]+)$#s', $pathinfo, $matches)) {
-            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\DefaultController::indexAction',)), array('_route' => 'gerenciador_login_homepage'));
+        if (rtrim($pathinfo, '/') === '/admin') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'gerenciador_login_homepage');
+            }
+
+            return array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::loginAction',  '_route' => 'gerenciador_login_homepage',);
+        }
+
+        // _welcome
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', '_welcome');
+            }
+
+            return array (  '_controller' => 'Mercado\\PaginaBundle\\Controller\\DefaultController::indexAction',  '_route' => '_welcome',);
+        }
+
+        // _admin_login
+        if ($pathinfo === '/admin/login') {
+            return array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::loginAction',  '_route' => '_admin_login',);
+        }
+
+        // _security_check
+        if ($pathinfo === '/admin/login_check') {
+            return array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::securityCheckAction',  '_route' => '_security_check',);
+        }
+
+        // _admin_logout
+        if ($pathinfo === '/admin/logout') {
+            return array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::logoutAction',  '_route' => '_admin_logout',);
+        }
+
+        // gerenciador_login_secured_hello
+        if ($pathinfo === '/admin/hello') {
+            return array (  'name' => 'World',  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::helloAction',  '_route' => 'gerenciador_login_secured_hello',);
+        }
+
+        // _admin_secured_hello
+        if (0 === strpos($pathinfo, '/admin/hello') && preg_match('#^/admin/hello/(?P<name>[^/]+)$#s', $pathinfo, $matches)) {
+            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::helloAction',)), array('_route' => '_admin_secured_hello'));
+        }
+
+        // _admin_secured_hello_admin
+        if (0 === strpos($pathinfo, '/admin/hello/admin') && preg_match('#^/admin/hello/admin/(?P<name>[^/]+)$#s', $pathinfo, $matches)) {
+            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::helloadminAction',)), array('_route' => '_admin_secured_hello_admin'));
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

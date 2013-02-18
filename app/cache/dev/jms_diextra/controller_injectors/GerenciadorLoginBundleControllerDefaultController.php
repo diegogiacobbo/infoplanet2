@@ -10,7 +10,10 @@ namespace Gerenciador\LoginBundle\Controller;
 class DefaultController__JMSInjector
 {
     public static function inject($container) {
-        $instance = new \Gerenciador\LoginBundle\Controller\DefaultController();
+        require_once '/var/www/mercadoSabores/app/cache/dev/jms_diextra/proxies/Gerenciador-LoginBundle-Controller-DefaultController.php';
+        $b = new \JMS\AopBundle\Aop\InterceptorLoader($container, array('Gerenciador\\LoginBundle\\Controller\\DefaultController' => array('indexAction' => array(0 => 'security.access.method_interceptor'))));
+        $instance = new \EnhancedProxy_169bb06018bcfe008c5e9ef162b64b6969cc4e56\__CG__\Gerenciador\LoginBundle\Controller\DefaultController();
+        $instance->__CGInterception__setLoader($b);
         return $instance;
     }
 }

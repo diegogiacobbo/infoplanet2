@@ -4,13 +4,21 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mercado de Sabores</title>
-        <link href="{{ asset('bundles/mercadopagina/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+        <!--<link href="{ asset('bundles/mercadopagina/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">-->
         <script src="{{ asset('bundles/mercadopagina/js/bootstrap.min.js') }}"></script>
         <link href="{{ asset('bundles/mercadopagina/css/bootstrap-responsive.css') }}" rel="stylesheet">
         <style type="text/css">
+
+                *{
+
+                    text-shadow: none !important;
+                    color: white !important;
+
+                }
                 body {
                     padding-top: 20px;
                     padding-bottom: 60px;
+                    background: url("{{ asset('bundles/mercadopagina/images/bg.jpg') }}") repeat;
                 }
 
                 /* Custom container */
@@ -56,8 +64,17 @@
                 /* Customize the navbar links to be fill the entire space of the .navbar */
                 .navbar .navbar-inner {
                     padding: 0;
+                    background: none !important;
+                    color: white !important;
+                    text-shadow: none !important;
+                    border: none !important;
                 }
-
+                .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus{
+                    text-decoration: underline !important;
+                    background: none !important;
+                    color: white !important;
+                    text-shadow: none !important;
+                }
                 .navbar .nav {
                     margin: 0;
                     display: table;
@@ -65,18 +82,18 @@
                 }
 
                 .navbar .nav li {
-                    display: table-cell;
-                    width: 1%;
+                    display: table-cell; 
+                    /*width: 1%;*/
                     float: none;
                 }
 
                 .navbar .nav li a {
-                    font-weight: bold;
                     text-align: center;
-                    border-left: 1px solid rgba(255, 255, 255, .75);
-                    border-right: 1px solid rgba(0, 0, 0, .1);
+                    /*border-left: 1px solid rgba(255, 255, 255, .75);
+                    border-right: 1px solid rgba(0, 0, 0, .1);*/
                 }
 
+                /*
                 .navbar .nav li:first-child a {
                     border-left: 0;
                     border-radius: 3px 0 0 3px;
@@ -85,43 +102,74 @@
                 .navbar .nav li:last-child a {
                     border-right: 0;
                     border-radius: 0 3px 3px 0;
+                }*/
+
+                article.row-fluid > .centralizador{
+                    margin: 0 11% 0 11%;
+                }
+
+
+                footer, .footer{
+                }
+                
+                .li_center{
+                    text-align: center;
+                }
+                
+                .li_right{
+                    text-align: right;
+                }
+                
+                .logo{
+                    background: url("{{ asset('bundles/mercadopagina/images/logo.png') }}") center;
+                    background-size: 100% 100%;
+                    height: 190px;
+                    width: 120px;
                 }
             </style>
         </head>
         <body>
             <div class="container">
-                <header class="masthead">
-                    <a href="{{ path('_welcome') }}">
-                        <img src="{{ asset('bundles/acmedemo/images/logo.gif') }}" alt="Mercado de Sabores logo" />
-                    </a>
-                    <div class="navbar">
-                        <div class="navbar-inner">
-                            <div class="container">
-                                <ul class="nav">
-                                    <li class="active"><a href="#">Home</a></li>
-                                    <li><a href="#">LINK2</a></li>
-                                    <li><a href="#">LINK3</a></li>
-                                    <li><a href="#">LINK4</a></li>
-                                </ul>
+                <header class="navbar">
+                    <div class="navbar-inner row-fluid">
+                        <div class="span4">
+                            <ul class="nav">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Produtos</a></li>
+                            </ul>
+                        </div>    
+                        <a href="{{ path('_welcome') }}">
+                            <div class="span4 visible-desktop logo">                            
                             </div>
+                        </a>
+                        <div class="span4">                            
+                            <ul class="nav">
+                                <li><a href="#">Curiosidades</a></li>
+                                <li><a href="#">Contato</a></li>
+                            </ul>
                         </div>
                     </div>
                     <!-- /.navbar -->
                 </header>
 
-            {% block content_header %}
-                    {% block content_header_more %}
-                <!--<li><a href="{{ path('_demo') }}">Demo Home</a></li>-->
-                    {% endblock %}
-            {% endblock %}
+                {% block content_header %}
+                        {% block content_header_more %}
+                <!--<li><a href="{ path('_demo') }}">Demo Home</a></li>-->
+                        {% endblock %}
+                {% endblock %}
 
-            {% block content %}
-            {% endblock %}
+            </div>
+                {% block content %}
+                {% endblock %}
 
-            <footer class="footer">
-                <p>&copy; DesenhandoWeb 2013</p>
-            </footer>
+            <div class="container">
 
-        </div>
-    </body>
-</html>
+                <article class="row-fluid">
+                    <footer class="footer span10">
+                        <p>&copy; DesenhandoWeb 2013</p>
+                    </footer>
+
+                </article>
+            </div>
+        </body>
+    </html>
