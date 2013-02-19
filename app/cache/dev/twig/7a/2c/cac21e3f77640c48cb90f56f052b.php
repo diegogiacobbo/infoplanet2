@@ -25,10 +25,7 @@ class __TwigTemplate_7a2ccac21e3f77640c48cb90f56f052b extends Twig_Template
         <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
         <title>Mercado de Sabores</title>
-        <link href=\"";
-        // line 7
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/css/bootstrap.min.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\" media=\"screen\">
+        <!--<link href=\"{ asset('bundles/mercadopagina/css/bootstrap.min.css') }}\" rel=\"stylesheet\" media=\"screen\">-->
         <script src=\"";
         // line 8
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap.min.js"), "html", null, true);
@@ -38,9 +35,20 @@ class __TwigTemplate_7a2ccac21e3f77640c48cb90f56f052b extends Twig_Template
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/css/bootstrap-responsive.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
         <style type=\"text/css\">
+
+                *{
+
+                    text-shadow: none !important;
+                    color: white !important;
+
+                }
                 body {
                     padding-top: 20px;
                     padding-bottom: 60px;
+                    background: url(\"";
+        // line 21
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/images/bg.jpg"), "html", null, true);
+        echo "\") repeat;
                 }
 
                 /* Custom container */
@@ -86,8 +94,17 @@ class __TwigTemplate_7a2ccac21e3f77640c48cb90f56f052b extends Twig_Template
                 /* Customize the navbar links to be fill the entire space of the .navbar */
                 .navbar .navbar-inner {
                     padding: 0;
+                    background: none !important;
+                    color: white !important;
+                    text-shadow: none !important;
+                    border: none !important;
                 }
-
+                .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus{
+                    text-decoration: underline !important;
+                    background: none !important;
+                    color: white !important;
+                    text-shadow: none !important;
+                }
                 .navbar .nav {
                     margin: 0;
                     display: table;
@@ -95,18 +112,18 @@ class __TwigTemplate_7a2ccac21e3f77640c48cb90f56f052b extends Twig_Template
                 }
 
                 .navbar .nav li {
-                    display: table-cell;
-                    width: 1%;
+                    display: table-cell; 
+                    /*width: 1%;*/
                     float: none;
                 }
 
                 .navbar .nav li a {
-                    font-weight: bold;
                     text-align: center;
-                    border-left: 1px solid rgba(255, 255, 255, .75);
-                    border-right: 1px solid rgba(0, 0, 0, .1);
+                    /*border-left: 1px solid rgba(255, 255, 255, .75);
+                    border-right: 1px solid rgba(0, 0, 0, .1);*/
                 }
 
+                /*
                 .navbar .nav li:first-child a {
                     border-left: 0;
                     border-radius: 3px 0 0 3px;
@@ -115,81 +132,110 @@ class __TwigTemplate_7a2ccac21e3f77640c48cb90f56f052b extends Twig_Template
                 .navbar .nav li:last-child a {
                     border-right: 0;
                     border-radius: 0 3px 3px 0;
+                }*/
+
+                article.row-fluid > .centralizador{
+                    margin: 0 11% 0 11%;
+                }
+
+
+                footer, .footer{
+                }
+                
+                .li_center{
+                    text-align: center;
+                }
+                
+                .li_right{
+                    text-align: right;
+                }
+                
+                .logo{
+                    background: url(\"";
+        // line 124
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/images/logo.png"), "html", null, true);
+        echo "\") center;
+                    background-size: 100% 100%;
+                    height: 190px;
+                    width: 120px;
                 }
             </style>
         </head>
         <body>
             <div class=\"container\">
-                <header class=\"masthead\">
-                    <a href=\"";
-        // line 94
+                <header class=\"navbar\">
+                    <div class=\"navbar-inner row-fluid\">
+                        <div class=\"span4\">
+                            <ul class=\"nav\">
+                                <li><a href=\"#\">Home</a></li>
+                                <li><a href=\"#\">Produtos</a></li>
+                            </ul>
+                        </div>    
+                        <a href=\"";
+        // line 141
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_welcome"), "html", null, true);
         echo "\">
-                        <img src=\"";
-        // line 95
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/images/logo.gif"), "html", null, true);
-        echo "\" alt=\"Mercado de Sabores logo\" />
-                    </a>
-                    <div class=\"navbar\">
-                        <div class=\"navbar-inner\">
-                            <div class=\"container\">
-                                <ul class=\"nav\">
-                                    <li class=\"active\"><a href=\"#\">Home</a></li>
-                                    <li><a href=\"#\">LINK2</a></li>
-                                    <li><a href=\"#\">LINK3</a></li>
-                                    <li><a href=\"#\">LINK4</a></li>
-                                </ul>
+                            <div class=\"span4 visible-desktop logo\">                            
                             </div>
+                        </a>
+                        <div class=\"span4\">                            
+                            <ul class=\"nav\">
+                                <li><a href=\"#\">Curiosidades</a></li>
+                                <li><a href=\"#\">Contato</a></li>
+                            </ul>
                         </div>
                     </div>
                     <!-- /.navbar -->
                 </header>
 
-            ";
-        // line 112
+                ";
+        // line 155
         $this->displayBlock('content_header', $context, $blocks);
-        // line 117
+        // line 160
         echo "
-            ";
-        // line 118
+            </div>
+                ";
+        // line 162
         $this->displayBlock('content', $context, $blocks);
-        // line 120
+        // line 164
         echo "
-            <footer class=\"footer\">
-                <p>&copy; DesenhandoWeb 2013</p>
-            </footer>
+            <div class=\"container\">
 
-        </div>
-    </body>
-</html>
+                <article class=\"row-fluid\">
+                    <footer class=\"footer span10\">
+                        <p>&copy; DesenhandoWeb 2013</p>
+                    </footer>
+
+                </article>
+            </div>
+        </body>
+    </html>
 ";
     }
 
-    // line 112
+    // line 155
     public function block_content_header($context, array $blocks = array())
     {
-        // line 113
-        echo "                    ";
+        // line 156
+        echo "                        ";
         $this->displayBlock('content_header_more', $context, $blocks);
-        // line 116
-        echo "            ";
+        // line 159
+        echo "                ";
     }
 
-    // line 113
+    // line 156
     public function block_content_header_more($context, array $blocks = array())
     {
-        // line 114
-        echo "                <!--<li><a href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_demo"), "html", null, true);
-        echo "\">Demo Home</a></li>-->
-                    ";
+        // line 157
+        echo "                <!--<li><a href=\"{ path('_demo') }}\">Demo Home</a></li>-->
+                        ";
     }
 
-    // line 118
+    // line 162
     public function block_content($context, array $blocks = array())
     {
-        // line 119
-        echo "            ";
+        // line 163
+        echo "                ";
     }
 
     public function getTemplateName()
@@ -204,6 +250,6 @@ class __TwigTemplate_7a2ccac21e3f77640c48cb90f56f052b extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  192 => 119,  189 => 118,  182 => 114,  179 => 113,  175 => 116,  172 => 113,  169 => 112,  157 => 120,  155 => 118,  152 => 117,  150 => 112,  130 => 95,  126 => 94,  38 => 9,  34 => 8,  30 => 7,  22 => 1,);
+        return array (  238 => 163,  235 => 162,  230 => 157,  227 => 156,  223 => 159,  220 => 156,  217 => 155,  201 => 164,  199 => 162,  195 => 160,  193 => 155,  176 => 141,  156 => 124,  50 => 21,  31 => 8,  22 => 1,  38 => 6,  35 => 9,  29 => 3,);
     }
 }

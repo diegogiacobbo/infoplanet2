@@ -36,6 +36,8 @@ class __TwigTemplate_beed98aae1c4b3921f43b22233b3427a extends Twig_Template
     {
         // line 6
         echo "<!-- Jumbotron -->
+
+<div class=\"container\">
 <figure class=\"jumbotron\">
     <!-- \t\t\t<h1>Marketing stuff!</h1> -->
     <p class=\"lead\">Cras justo odio, dapibus ac facilisis in, egestas
@@ -43,33 +45,33 @@ class __TwigTemplate_beed98aae1c4b3921f43b22233b3427a extends Twig_Template
         condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <!-- \t\t\t<a class=\"btn btn-large btn-success\" href=\"#\">Get started today</a> -->
 </figure>
-
 <hr>
-
+</div>
 <!-- Example row of columns -->
 <article class=\"row-fluid\">
-    <div class=\"span6\">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce
-            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-            magna mollis euismod. Donec sed odio dui.</p>
-        <p>
-            <a class=\"btn\" href=\"#\">View details &raquo;</a>
-        </p>
-    </div>
-    <div class=\"span6\">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce
-            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-            magna mollis euismod. Donec sed odio dui.</p>
-        <p>
-            <a class=\"btn\" href=\"#\">View details &raquo;</a>
-        </p>
+    <div class=\"centralizador\">
+        <div class=\"span6\">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce
+                dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+                ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+                magna mollis euismod. Donec sed odio dui.</p>
+            <p>
+                <a class=\"btn\" href=\"#\">View details &raquo;</a>
+            </p>
+        </div>
+        <div class=\"span6\">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce
+                dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+                ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+                magna mollis euismod. Donec sed odio dui.</p>
+            <p>
+                <a class=\"btn\" href=\"#\">View details &raquo;</a>
+            </p>
+        </div>
     </div>
 </article>
-<hr>
 ";
     }
 
