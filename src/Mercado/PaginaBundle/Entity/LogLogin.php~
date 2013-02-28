@@ -1,0 +1,58 @@
+<?php
+
+namespace Mercado\PaginaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * LogLogin
+ *
+ * @ORM\Table(name="log_login")
+ * @ORM\Entity
+ */
+class LogLogin
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="data", type="string", length=45, nullable=true)
+     */
+    private $data;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="id_sessao", type="string", length=45, nullable=true)
+     */
+    private $idSessao;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="data_logoff", type="string", length=45, nullable=true)
+     */
+    private $dataLogoff;
+
+    /**
+     * @var \Usuario
+     *
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\OneToOne(targetEntity="Usuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="usuario_id", referencedColumnName="id")
+     * })
+     */
+    private $usuario;
+
+
+}

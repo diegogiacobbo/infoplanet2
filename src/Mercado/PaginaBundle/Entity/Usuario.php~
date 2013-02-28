@@ -1,0 +1,70 @@
+<?php
+
+namespace Mercado\PaginaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Usuario
+ *
+ * @ORM\Table(name="usuario")
+ * @ORM\Entity
+ */
+class Usuario
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="username", type="string", length=45, nullable=false)
+     */
+    private $username;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dth_inclusao", type="string", length=45, nullable=true)
+     */
+    private $dthInclusao;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dth_alteracao", type="string", length=45, nullable=true)
+     */
+    private $dthAlteracao;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_usuario_inclusao", type="integer", nullable=true)
+     */
+    private $idUsuarioInclusao;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="id_usuario_alteracao", type="string", length=45, nullable=true)
+     */
+    private $idUsuarioAlteracao;
+
+    /**
+     * @var \TipoUsuario
+     *
+     * @ORM\ManyToOne(targetEntity="TipoUsuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_tipo_usuario", referencedColumnName="id")
+     * })
+     */
+    private $idTipoUsuario;
+
+
+}

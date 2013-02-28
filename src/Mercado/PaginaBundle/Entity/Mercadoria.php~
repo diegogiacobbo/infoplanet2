@@ -1,0 +1,130 @@
+<?php
+
+namespace Mercado\PaginaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Mercadoria
+ *
+ * @ORM\Table(name="mercadoria")
+ * @ORM\Entity
+ */
+class Mercadoria
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nome", type="string", length=45, nullable=true)
+     */
+    private $nome;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="codigo_produto", type="string", length=45, nullable=true)
+     */
+    private $codigoProduto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descricao", type="text", nullable=true)
+     */
+    private $descricao;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="unidade_medida", type="string", length=45, nullable=true)
+     */
+    private $unidadeMedida;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="quantidade", type="float", nullable=true)
+     */
+    private $quantidade;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="itens_disponiveis", type="integer", nullable=true)
+     */
+    private $itensDisponiveis;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dth_fabricacao", type="date", nullable=true)
+     */
+    private $dthFabricacao;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dth_validade", type="date", nullable=true)
+     */
+    private $dthValidade;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="unidade_monetaria", type="string", length=45, nullable=true)
+     */
+    private $unidadeMonetaria;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="preco", type="float", nullable=true)
+     */
+    private $preco;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_user_inclusao", type="integer", nullable=true)
+     */
+    private $idUserInclusao;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dth_inclusao", type="datetime", nullable=true)
+     */
+    private $dthInclusao;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_user_alteracao", type="integer", nullable=true)
+     */
+    private $idUserAlteracao;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dth_alteracao", type="datetime", nullable=true)
+     */
+    private $dthAlteracao;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_cidade", type="integer", nullable=true)
+     */
+    private $idCidade;
+
+
+}

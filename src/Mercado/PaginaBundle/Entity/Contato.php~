@@ -1,0 +1,98 @@
+<?php
+
+namespace Mercado\PaginaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Contato
+ *
+ * @ORM\Table(name="contato")
+ * @ORM\Entity
+ */
+class Contato
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="data", type="datetime", nullable=true)
+     */
+    private $data;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=45, nullable=true)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email_secundario", type="string", length=45, nullable=true)
+     */
+    private $emailSecundario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefone_residencial", type="string", length=45, nullable=true)
+     */
+    private $telefoneResidencial;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefone_comercial", type="string", length=45, nullable=true)
+     */
+    private $telefoneComercial;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefone_celular", type="string", length=45, nullable=true)
+     */
+    private $telefoneCelular;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="logradouro", type="string", length=45, nullable=true)
+     */
+    private $logradouro;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="numero", type="integer", nullable=true)
+     */
+    private $numero;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="bairro", type="string", length=45, nullable=true)
+     */
+    private $bairro;
+
+    /**
+     * @var \Usuario
+     *
+     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="usuario_id", referencedColumnName="id")
+     * })
+     */
+    private $usuario;
+
+
+}

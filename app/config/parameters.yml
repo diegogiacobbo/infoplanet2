@@ -2,7 +2,7 @@ parameters:
     database_driver: pdo_mysql
     database_host: 127.0.0.1
     database_port: null
-    database_name: symfony
+    database_name: mercado_de_sabores
     database_user: root
     database_password: olnrtvu2t
     mailer_transport: smtp
