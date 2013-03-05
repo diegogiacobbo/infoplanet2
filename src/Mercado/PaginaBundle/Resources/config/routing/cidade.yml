@@ -1,0 +1,10 @@
+admin_cidade:
+    pattern:  /
+    defaults: { _controller: "MercadoPaginaBundle:Cidade:index" }
+
+admin_cidade_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "MercadoPaginaBundle:Cidade:show" }
+
+
+

@@ -43,14 +43,9 @@ class LogLogin
     private $dataLogoff;
 
     /**
-     * @var \Usuario
+     * @var integer
      *
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="Identity")
-     * @ORM\OneToOne(targetEntity="Usuario")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="usuario_id", referencedColumnName="id")
-     * })
+     * @ORM\Column(name="usuario", type="string", length=45, nullable=false)
      */
     private $usuario;
 
@@ -138,10 +133,10 @@ class LogLogin
     /**
      * Set usuario
      *
-     * @param \Mercado\PaginaBundle\Entity\Usuario $usuario
+     * @param integer $usuario
      * @return LogLogin
      */
-    public function setUsuario(\Mercado\PaginaBundle\Entity\Usuario $usuario)
+    public function setUsuario($usuario)
     {
         $this->usuario = $usuario;
     
@@ -151,7 +146,7 @@ class LogLogin
     /**
      * Get usuario
      *
-     * @return \Mercado\PaginaBundle\Entity\Usuario 
+     * @return integer
      */
     public function getUsuario()
     {

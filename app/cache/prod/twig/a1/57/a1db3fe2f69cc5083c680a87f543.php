@@ -11,130 +11,180 @@ class __TwigTemplate_a157a1db3fe2f69cc5083c680a87f543 extends Twig_Template
 
         $this->blocks = array(
             'title' => array($this, 'block_title'),
-            'content_header' => array($this, 'block_content_header'),
-            'content_header_more' => array($this, 'block_content_header_more'),
-            'content' => array($this, 'block_content'),
         );
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<!DOCTYPE html>
-<html lang=\"en\">
+        echo "<!DOCTYPE HTML>
+<html>
     <head>
-        <meta charset=\"UTF-8\" />
+        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
         <title>";
-        // line 5
+        // line 6
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
+        <style type=\"text/css\">
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link href=\"";
+        // line 13
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/css/bootstrap.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" media=\"screen\">
+        <link href=\"";
+        // line 14
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/css/bootstrap-responsive.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
         <link rel=\"icon\" sizes=\"16x16\" href=\"";
-        // line 6
+        // line 15
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
     </head>
     <body>
-        <div id=\"symfony-wrapper\">
-            <div id=\"symfony-header\">
-                <a href=\"";
-        // line 11
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_welcome"), "html", null, true);
-        echo "\">
-                    <!--<img src=\"{ asset('bundles/acmedemo/images/logo.gif') }}\" alt=\"Symfony logo\" /> -->
-                </a>
-                <form id=\"symfony-search\" method=\"GET\" action=\"http://symfony.com/search\">
-                    <label for=\"symfony-search-field\"><span>Search on Symfony Website</span></label>
-                    <input name=\"q\" id=\"symfony-search-field\" type=\"search\" placeholder=\"Search on Symfony website\" class=\"medium_txt\" />
-                    <input type=\"submit\" class=\"symfony-button-grey\" value=\"OK\" />
-                </form>
-            </div>
-
-            ";
-        // line 21
-        if (isset($context["app"])) { $_app_ = $context["app"]; } else { $_app_ = null; }
-        $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute($_app_, "session"), "flashbag"), "get", array(0 => "notice"), "method"));
-        foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
-            // line 22
-            echo "                <div class=\"flash-message\">
-                    <em>Notice</em>: ";
-            // line 23
-            if (isset($context["flashMessage"])) { $_flashMessage_ = $context["flashMessage"]; } else { $_flashMessage_ = null; }
-            echo twig_escape_filter($this->env, $_flashMessage_, "html", null, true);
-            echo "
+        <!--<div class=\"navbar navbar-inverse navbar-fixed-top\">
+            <div class=\"navbar-inner\">
+                <div class=\"container\">
+                    <button type=\"button\" class=\"btn btn-navbar\" data-toggle=\"collapse\" data-target=\".nav-collapse\">
+                        <span class=\"icon-bar\"></span>
+                        <span class=\"icon-bar\"></span>
+                        <span class=\"icon-bar\"></span>
+                    </button>
+                    <a class=\"brand\" href=\"#\">Project name</a>
+                    <div class=\"nav-collapse collapse\">
+                        <ul class=\"nav\">
+                            <li class=\"active\"><a href=\"#\">Home</a></li>
+                            <li><a href=\"#about\">About</a></li>
+                            <li><a href=\"#contact\">Contact</a></li>
+                            <li class=\"dropdown\">
+                                <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Registros <b class=\"caret\"></b></a>
+                                <ul class=\"dropdown-menu\">
+                                    <li><a href=\"";
+        // line 35
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("admin_cidade"), "html", null, true);
+        echo "\">Cidades</a></li>
+                                    <li><a href=\"#\">Another action</a></li>
+                                    <li><a href=\"#\">Something else here</a></li>
+                                    <li class=\"divider\"></li>
+                                    <li class=\"nav-header\">Nav header</li>
+                                    <li><a href=\"#\">Separated link</a></li>
+                                    <li><a href=\"#\">One more separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
-        $context = array_merge($_parent, array_intersect_key($context, $_parent));
-        // line 26
-        echo "
-            ";
-        // line 27
-        $this->displayBlock('content_header', $context, $blocks);
-        // line 36
-        echo "
-            <div class=\"symfony-content\">
-                ";
-        // line 38
-        $this->displayBlock('content', $context, $blocks);
-        // line 40
-        echo "            </div>
+            </div>
+        </div>-->
+        <div class=\"navbar navbar-inverse navbar-fixed-top\">
+            <div class=\"navbar-inner\">
+                <div class=\"container\">
+                    <button type=\"button\" class=\"btn btn-navbar\" data-toggle=\"collapse\" data-target=\".nav-collapse\">
+                        <span class=\"icon-bar\"></span>
+                        <span class=\"icon-bar\"></span>
+                        <span class=\"icon-bar\"></span>
+                    </button>
+                    <a class=\"brand\" href=\"#\">Project name</a>
+                    <div class=\"nav-collapse collapse\">
+                        <ul class=\"nav\">
+                            <li class=\"active\"><a href=\"#\">Home</a></li>
+                            <li><a href=\"#about\">About</a></li>
+                            <li><a href=\"#contact\">Contact</a></li>
+                            <li class=\"dropdown\">
+                                <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <b class=\"caret\"></b></a>
+                                <ul class=\"dropdown-menu\">
+                                    <li><a href=\"#\">Action</a></li>
+                                    <li><a href=\"#\">Another action</a></li>
+                                    <li><a href=\"#\">Something else here</a></li>
+                                    <li class=\"divider\"></li>
+                                    <li class=\"nav-header\">Nav header</li>
+                                    <li><a href=\"#\">Separated link</a></li>
+                                    <li><a href=\"#\">One more separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class=\"navbar-form pull-right\">
+                            <input class=\"span2\" type=\"text\" placeholder=\"Email\">
+                            <input class=\"span2\" type=\"password\" placeholder=\"Password\">
+                            <button type=\"submit\" class=\"btn\">Sign in</button>
+                        </form>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>        
+        <script src=\"";
+        // line 85
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("http://code.jquery.com/jquery-1.9.1.min.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 86
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/jquery.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 87
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap.js"), "html", null, true);
+        echo "\"></script>
 
-            ";
-        // line 42
-        if (array_key_exists("code", $context)) {
-            // line 43
-            echo "                <h2>Code behind this page</h2>
-                <div class=\"symfony-content\">";
-            // line 44
-            if (isset($context["code"])) { $_code_ = $context["code"]; } else { $_code_ = null; }
-            echo $_code_;
-            echo "</div>
-            ";
-        }
-        // line 46
-        echo "        </div>
+        <script src=\"";
+        // line 89
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-transition.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 90
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-alert.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 91
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-modal.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 92
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-dropdown.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 93
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-scrollspy.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 94
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-tab.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 95
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-tooltip.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 96
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-popover.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 97
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-button.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 98
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-collapse.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 99
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-carousel.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 100
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-typeahead.js"), "html", null, true);
+        echo "\"></script>
     </body>
-</html>
-";
+</html>";
     }
 
-    // line 5
+    // line 6
     public function block_title($context, array $blocks = array())
     {
         echo "Gerenciador/LoginBundle Bundle";
-    }
-
-    // line 27
-    public function block_content_header($context, array $blocks = array())
-    {
-        // line 28
-        echo "                <ul id=\"menu\">
-                    ";
-        // line 29
-        $this->displayBlock('content_header_more', $context, $blocks);
-        // line 32
-        echo "                </ul>
-
-                <div style=\"clear: both\"></div>
-            ";
-    }
-
-    // line 29
-    public function block_content_header_more($context, array $blocks = array())
-    {
-        // line 30
-        echo "                        <!--<li><a href=\"{ path('_admin') }}\">Admin Home</a></li>-->
-                    ";
-    }
-
-    // line 38
-    public function block_content($context, array $blocks = array())
-    {
-        // line 39
-        echo "                ";
     }
 
     public function getTemplateName()
@@ -149,6 +199,6 @@ class __TwigTemplate_a157a1db3fe2f69cc5083c680a87f543 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  137 => 39,  129 => 30,  126 => 29,  119 => 32,  77 => 36,  23 => 1,  54 => 21,  548 => 162,  542 => 161,  537 => 158,  529 => 155,  525 => 153,  521 => 151,  511 => 149,  504 => 148,  501 => 147,  496 => 146,  490 => 144,  487 => 143,  482 => 142,  472 => 134,  468 => 132,  465 => 131,  459 => 130,  454 => 129,  449 => 126,  443 => 122,  440 => 121,  436 => 120,  433 => 119,  428 => 116,  422 => 112,  419 => 111,  415 => 110,  412 => 109,  407 => 106,  393 => 105,  389 => 103,  374 => 101,  364 => 99,  361 => 98,  358 => 97,  354 => 95,  347 => 91,  343 => 90,  329 => 89,  326 => 88,  320 => 86,  306 => 85,  301 => 84,  294 => 81,  286 => 80,  278 => 78,  270 => 77,  263 => 74,  255 => 73,  246 => 70,  238 => 69,  230 => 68,  188 => 61,  185 => 60,  161 => 58,  154 => 55,  146 => 51,  143 => 50,  134 => 38,  131 => 42,  122 => 37,  76 => 19,  72 => 26,  51 => 13,  171 => 58,  163 => 55,  159 => 53,  152 => 50,  138 => 44,  123 => 42,  117 => 29,  111 => 27,  101 => 34,  98 => 46,  83 => 40,  75 => 27,  71 => 19,  64 => 16,  43 => 7,  250 => 71,  240 => 90,  236 => 88,  229 => 84,  225 => 83,  220 => 80,  218 => 67,  215 => 78,  212 => 77,  209 => 76,  200 => 66,  194 => 65,  179 => 59,  176 => 60,  173 => 59,  166 => 55,  162 => 54,  157 => 56,  155 => 51,  151 => 48,  148 => 47,  145 => 46,  139 => 45,  128 => 43,  109 => 31,  87 => 42,  84 => 21,  114 => 28,  104 => 19,  80 => 23,  65 => 23,  63 => 13,  58 => 10,  40 => 6,  34 => 11,  24 => 4,  46 => 12,  29 => 5,  36 => 6,  32 => 4,  27 => 3,  125 => 24,  118 => 36,  110 => 20,  97 => 18,  92 => 44,  89 => 43,  85 => 14,  69 => 17,  28 => 4,  22 => 2,  57 => 9,  50 => 7,  47 => 7,  38 => 6,  25 => 3,  19 => 1,  94 => 39,  88 => 6,  79 => 26,  48 => 7,  39 => 7,  35 => 5,  31 => 7,  26 => 6,  21 => 1,  203 => 72,  197 => 66,  189 => 62,  183 => 63,  180 => 57,  174 => 56,  170 => 54,  167 => 53,  158 => 48,  153 => 45,  150 => 44,  147 => 43,  144 => 42,  136 => 37,  133 => 44,  130 => 35,  124 => 32,  121 => 31,  113 => 21,  108 => 31,  105 => 5,  102 => 28,  99 => 26,  95 => 24,  91 => 16,  81 => 38,  70 => 15,  66 => 13,  62 => 23,  59 => 22,  56 => 12,  52 => 10,  49 => 9,  45 => 6,  41 => 11,  37 => 5,  33 => 6,  30 => 3,);
+        return array (  185 => 6,  178 => 100,  174 => 99,  170 => 98,  166 => 97,  162 => 96,  158 => 95,  154 => 94,  150 => 93,  146 => 92,  142 => 91,  138 => 90,  134 => 89,  129 => 87,  125 => 86,  121 => 85,  68 => 35,  45 => 15,  41 => 14,  37 => 13,  27 => 6,  20 => 1,);
     }
 }

@@ -7,13 +7,11 @@ _demo:
     resource: "@AcmeDemoBundle/Controller/DemoController.php"
     type:     annotation
     prefix:   /demo
-
-
-
-_admin:
-    resource: "@GerenciadorLoginBundle/Controller/DefaultController.php"
-    type:     annotation
-    prefix:   /admin
+    
+#_admin:
+#    resource: "@GerenciadorLoginBundle/Controller/DefaultController.php"
+#    type:     annotation
+#    prefix:   /admin
 
 _wdt:
     resource: "@WebProfilerBundle/Resources/config/routing/wdt.xml"

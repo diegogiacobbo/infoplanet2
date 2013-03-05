@@ -3,6 +3,8 @@
 namespace Mercado\PaginaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Security\Core\User\AdvancedUserInterface;
 
 /**
  * Usuario
@@ -10,8 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="usuario")
  * @ORM\Entity
  */
-class Usuario
-{
+class Usuario implements AdvancedUserInterface {
+
     /**
      * @var integer
      *
@@ -28,6 +30,13 @@ class Usuario
      */
     private $username;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=20, nullable=false)
+     */
+    private $password;
+    
     /**
      * @var string
      *
@@ -52,17 +61,25 @@ class Usuario
      */
     private $idTipoUsuario;
 
-
-
     /**
      * Get id
      *
      * @return integer 
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
+    
+    /**
+     * Get password
+     *
+     * @return string 
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
 
     /**
      * Set username
@@ -70,10 +87,9 @@ class Usuario
      * @param string $username
      * @return Usuario
      */
-    public function setUsername($username)
-    {
+    public function setUsername($username) {
         $this->username = $username;
-    
+
         return $this;
     }
 
@@ -82,8 +98,7 @@ class Usuario
      *
      * @return string 
      */
-    public function getUsername()
-    {
+    public function getUsername() {
         return $this->username;
     }
 
@@ -93,10 +108,9 @@ class Usuario
      * @param string $dthInclusao
      * @return Usuario
      */
-    public function setDthInclusao($dthInclusao)
-    {
+    public function setDthInclusao($dthInclusao) {
         $this->dthInclusao = $dthInclusao;
-    
+
         return $this;
     }
 
@@ -105,8 +119,7 @@ class Usuario
      *
      * @return string 
      */
-    public function getDthInclusao()
-    {
+    public function getDthInclusao() {
         return $this->dthInclusao;
     }
 
@@ -116,10 +129,9 @@ class Usuario
      * @param string $dthAlteracao
      * @return Usuario
      */
-    public function setDthAlteracao($dthAlteracao)
-    {
+    public function setDthAlteracao($dthAlteracao) {
         $this->dthAlteracao = $dthAlteracao;
-    
+
         return $this;
     }
 
@@ -128,21 +140,19 @@ class Usuario
      *
      * @return string 
      */
-    public function getDthAlteracao()
-    {
+    public function getDthAlteracao() {
         return $this->dthAlteracao;
     }
-    
+
     /**
      * Set idTipoUsuario
      *
      * @param \Mercado\PaginaBundle\Entity\TipoUsuario $idTipoUsuario
      * @return Usuario
      */
-    public function setIdTipoUsuario(\Mercado\PaginaBundle\Entity\TipoUsuario $idTipoUsuario = null)
-    {
+    public function setIdTipoUsuario(\Mercado\PaginaBundle\Entity\TipoUsuario $idTipoUsuario = null) {
         $this->idTipoUsuario = $idTipoUsuario;
-    
+
         return $this;
     }
 
@@ -151,8 +161,59 @@ class Usuario
      *
      * @return \Mercado\PaginaBundle\Entity\TipoUsuario 
      */
-    public function getIdTipoUsuario()
-    {
+    public function getIdTipoUsuario() {
         return $this->idTipoUsuario;
     }
+
+    /**
+     * Gets the user salt.
+     *
+     * @return string The salt.
+     */
+    public function getSalt() {
+        $salt = "RJGL0VX857tr7wWps8V69reU";   // This salt can be anything you want but just remember the user is created with a salt, their password will be encrypted using it. 
+        return $salt;    // So if this changes, then the user won't be able to log in. So make sure this value won't change for the user 
+        // (I'm thinking about using the timestamp that the user signed up. Please let me know if that's a bad idea.)
+    }
+
+    public function getRoles() {
+        $roles = array();
+        foreach ($this->userRoles as $group) {
+            $roles[] = new Rank($group->getRoleName(), $group->getRole());
+        }
+        //print_r($roles);
+        return $roles;
+    }
+    
+    
+    
+     /**
+     * Erases the user credentials.
+     */
+    public function eraseCredentials()
+    {
+ 
+    }
+    public function equals(UserInterface $user)
+    {
+        return md5($this->getUsername()) == md5($user->getUsername());
+    }
+   
+
+    public function isAccountNonExpired() {
+        return true;
+    }
+
+    public function isAccountNonLocked() {
+        return true;
+    }
+
+    public function isCredentialsNonExpired() {
+        return true;
+    }
+
+    public function isEnabled() {
+        return true;
+    }
+
 }

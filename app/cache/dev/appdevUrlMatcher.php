@@ -148,22 +148,13 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // mercado_pagina_homepage
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'mercado_pagina_homepage');
-            }
-
-            return array (  '_controller' => 'Mercado\\PaginaBundle\\Controller\\DefaultController::indexAction',  '_route' => 'mercado_pagina_homepage',);
-        }
-
-        // gerenciador_login_homepage
+        // _admin
         if (rtrim($pathinfo, '/') === '/admin') {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'gerenciador_login_homepage');
+                return $this->redirect($pathinfo.'/', '_admin');
             }
 
-            return array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::loginAction',  '_route' => 'gerenciador_login_homepage',);
+            return array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\DefaultController::indexAction',  '_route' => '_admin',);
         }
 
         // _welcome
@@ -203,6 +194,23 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // _admin_secured_hello_admin
         if (0 === strpos($pathinfo, '/admin/hello/admin') && preg_match('#^/admin/hello/admin/(?P<name>[^/]+)$#s', $pathinfo, $matches)) {
             return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Gerenciador\\LoginBundle\\Controller\\SecuredController::helloadminAction',)), array('_route' => '_admin_secured_hello_admin'));
+        }
+
+        if (0 === strpos($pathinfo, '/admin/cidade')) {
+            // admin_cidade
+            if (rtrim($pathinfo, '/') === '/admin/cidade') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'admin_cidade');
+                }
+
+                return array (  '_controller' => 'Mercado\\PaginaBundle\\Controller\\CidadeController::indexAction',  '_route' => 'admin_cidade',);
+            }
+
+            // admin_cidade_show
+            if (preg_match('#^/admin/cidade/(?P<id>[^/]+)/show$#s', $pathinfo, $matches)) {
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Mercado\\PaginaBundle\\Controller\\CidadeController::showAction',)), array('_route' => 'admin_cidade_show'));
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

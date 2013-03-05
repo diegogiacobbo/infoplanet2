@@ -36,7 +36,7 @@ class SecuredController extends Controller
      */
     public function securityCheckAction()
     {
-        // The security layer will intercept this request
+         return $this->render('GerenciadorLoginBundle:Default:index.html.twig');
     }
 
     /**

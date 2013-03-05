@@ -102,10 +102,7 @@ class Contato
     /**
      * @var \Usuario
      *
-     * @ORM\ManyToOne(targetEntity="Usuario")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="usuario_id", referencedColumnName="id")
-     * })
+     * @ORM\Column(name="usuario_id", type="integer", nullable=true)
      */
     private $usuario;
 
@@ -331,10 +328,10 @@ class Contato
     /**
      * Set usuario
      *
-     * @param \Mercado\PaginaBundle\Entity\Usuario $usuario
+     * @param integer $usuario
      * @return Contato
      */
-    public function setUsuario(\Mercado\PaginaBundle\Entity\Usuario $usuario = null)
+    public function setUsuario($usuario)
     {
         $this->usuario = $usuario;
     

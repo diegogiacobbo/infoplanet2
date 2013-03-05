@@ -17,7 +17,7 @@ class Mercadoria
      *
      * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="Sequence")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 

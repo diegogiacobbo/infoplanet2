@@ -1,11 +1,19 @@
 mercado_pagina:
     resource: "@MercadoPaginaBundle/Resources/config/routing.yml"
     prefix:   /
-
-gerenciador_login:
-    resource: "@GerenciadorLoginBundle/Resources/config/routing.yml"
-    prefix:   /
+#
+#gerenciador_login:
+#    resource: "@GerenciadorLoginBundle/Resources/config/routing.yml"
+#    prefix:   /admin
+#    
+#gerenciador_login:
+#    resource: "@GerenciadorLoginBundle/Resources/config/routing.yml"
+#    prefix:   /admin/
     
+_admin:
+    resource: "@GerenciadorLoginBundle/Resources/config/routing.yml"
+    prefix:   /admin/
+
 _welcome:
     pattern:  /
     defaults: { _controller: MercadoPaginaBundle:Default:index }
@@ -13,6 +21,16 @@ _welcome:
 _admin_secured:
     resource: "@GerenciadorLoginBundle/Controller/SecuredController.php"
     type:     annotation
+    
+    
+MercadoPaginaBundle_admin_cidade:
+    resource: "@MercadoPaginaBundle/Resources/config/routing/cidade.yml"
+    prefix:   /admin/cidade
+    
+_admin_cidade:
+    resource: "@MercadoPaginaBundle/Controller/CidadeController.php"
+    type:     annotation
+
 
 # Internal routing configuration to handle ESI
 # ****** WARNING ******

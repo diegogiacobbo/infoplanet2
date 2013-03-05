@@ -1,0 +1,36 @@
+{% extends "GerenciadorLoginBundle::layout.html.twig" %}
+
+{% block title "Mercado de Sabores - Gerenciador" %}
+
+{% block content %}
+
+<h1>Cidade list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Estado</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('admin_cidade_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nome }}</td>
+                <td>{{ entity.estado }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_cidade_show', { 'id': entity.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

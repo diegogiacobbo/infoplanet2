@@ -7,23 +7,40 @@ class __TwigTemplate_03e431f848e9b525d1bcd36ad0b5e7c9 extends Twig_Template
     {
         parent::__construct($env);
 
-        $this->parent = false;
+        $this->parent = $this->env->loadTemplate("GerenciadorLoginBundle::layout.html.twig");
 
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
+            'content' => array($this, 'block_content'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "GerenciadorLoginBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        // line 1
-        echo "<ul>
-    <li><a href=\"";
-        // line 2
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_admin_secured_hello", array("name" => "World")), "html", null, true);
-        echo "\">Access the secured area</a> <a href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_admin_login"), "html", null, true);
-        echo "\">Go to the login page</a></li>
-</ul>";
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
+
+    // line 3
+    public function block_title($context, array $blocks = array())
+    {
+        echo "Mercado de Sabores - Gerenciador";
+    }
+
+    // line 5
+    public function block_content($context, array $blocks = array())
+    {
+        // line 6
+        echo "
+<ul>
+   Area de administração!
+</ul>
+
+";
     }
 
     public function getTemplateName()
@@ -38,6 +55,6 @@ class __TwigTemplate_03e431f848e9b525d1bcd36ad0b5e7c9 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  22 => 2,  19 => 1,);
+        return array (  38 => 6,  35 => 5,  29 => 3,);
     }
 }

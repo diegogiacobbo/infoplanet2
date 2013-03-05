@@ -1,3 +1,7 @@
-gerenciador_login_homepage:
-    pattern:  /admin/
-    defaults: { _controller: GerenciadorLoginBundle:Secured:login }
+#gerenciador_login:
+#    pattern:  /admin/
+#    defaults: { _controller: GerenciadorLoginBundle:Secured:login }
+    
+_admin:
+    pattern: /
+    defaults: { _controller: GerenciadorLoginBundle:Default:index }

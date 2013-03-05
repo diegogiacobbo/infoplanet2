@@ -1,29 +1,79 @@
-{% extends "GerenciadorLoginBundle::layout.html.twig" %}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Gerenciador/LoginBundle Bundle{% endblock %}</title>
+        <link href="{{ asset('bundles/mercadopagina/css/bootstrap.css') }}" rel="stylesheet" media="screen">
+        <link href="{{ asset('bundles/mercadopagina/css/bootstrap-responsive.css') }}" rel="stylesheet">
+        <script src="{{ asset('bundles/mercadopagina/js/bootstrap.js') }}"></script>
+        <script src="{{ asset('bundles/mercadopagina/js/bootstrap-dropdown.js') }}"></script>
+        <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
 
-{% block title "Mercado de Sabores - Gerenciador" %}
+        <style type="text/css">
+                body {
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                    background-color: #f5f5f5;
+                }
 
-{% block content_header 'Login' %}
+                .form-signin {
+                    max-width: 300px;
+                    padding: 19px 29px 29px;
+                    margin: 0 auto 20px;
+                    background-color: #fff;
+                    border: 1px solid #e5e5e5;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+                    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                }
+                .form-signin .form-signin-heading,
+                .form-signin .checkbox {
+                    margin-bottom: 10px;
+                }
+                .form-signin input[type="text"],
+                .form-signin input[type="password"] {
+                    font-size: 16px;
+                    height: auto;
+                    margin-bottom: 15px;
+                    padding: 7px 9px;
+                }
 
-{% block content %}
+            </style>
+        </head>
+        <body>
+        {% block content %}
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+                <div class="flash-message">
+                    <em>Notice</em>: {{ flashMessage }}
+                </div>
+            {% endfor %}
 
 
-    {% if error %}
-<div class="error">{{ error.message }}</div>
-    {% endif %}
+
+            {% if error %}
+                <div class="error">{{ error.message }}</div>
+            {% endif %}
 
 
-<!-- <div class="container"> -->
-<form action="{{ path("_security_check") }}" class="form-signin" method="post" id="login">
+                <!-- <div class="container"> -->
+                <form action="{{ path("_security_check") }}" class="form-signin" method="post" id="login">
 
-    <h2 class="form-signin-heading">Acesse sua conta</h2>
+                    <h2 class="form-signin-heading">Acesse sua conta</h2>
 
-    <input type="text" class="input-block-level" placeholder="Usuário" id="username" name="_username" value="{{ last_username }}"  />
+                    <input type="text" class="input-block-level" placeholder="Usuário" id="username" name="_username" value="{{ last_username }}"  />
 
-    <input type="password" class="input-block-level" placeholder="Senha" id="password" name="_password" />
+                    <input type="password" class="input-block-level" placeholder="Senha" id="password" name="_password" />
 
-    <button  type="submit" class="btn btn-large btn-primary"/> Entrar</button>
-</form>
-<!-- </div> -->
+                    <button  type="submit" class="btn btn-large btn-primary"/> Entrar</button>
+            </form>
 
-</div> <!-- /container -->
+
+            <!-- </div> -->
+        </div>
+    </body>
+</html>
 {% endblock %}
