@@ -1,0 +1,15 @@
+{% extends "MercadoPaginaBundle::layout.html.twig" %}
+
+{% block title %}Contato{% endblock%}
+
+{% block content %}
+    <form action="{{ path('MercadoPaginaBundle_contato_send') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <input type="submit" />
+    </form>
+
+{% if result is not null %}
+    <p>{{ result }}</p>
+{% endif %}
+
+{% endblock %}

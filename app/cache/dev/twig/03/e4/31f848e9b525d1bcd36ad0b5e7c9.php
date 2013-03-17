@@ -28,7 +28,7 @@ class __TwigTemplate_03e431f848e9b525d1bcd36ad0b5e7c9 extends Twig_Template
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        echo "Mercado de Sabores - Gerenciador";
+        echo "Área de administração";
     }
 
     // line 5
@@ -37,7 +37,7 @@ class __TwigTemplate_03e431f848e9b525d1bcd36ad0b5e7c9 extends Twig_Template
         // line 6
         echo "
 <ul>
-   Area de administração!
+   ...
 </ul>
 
 ";

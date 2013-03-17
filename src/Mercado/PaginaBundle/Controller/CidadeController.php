@@ -4,8 +4,9 @@ namespace Mercado\PaginaBundle\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+ini_set('memory_limit', '3G');
 use Mercado\PaginaBundle\Entity\Cidade;
+
 
 /**
  * Cidade controller.

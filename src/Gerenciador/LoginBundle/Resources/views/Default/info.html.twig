@@ -1,0 +1,15 @@
+{% extends "GerenciadorLoginBundle::layout.html.twig" %}
+
+{% block title %}Contato{% endblock%}
+
+{% block content %}
+
+<form action="{{ path('GerenciadorLoginBundle_info_empresa_send') }}" method="post">
+    <textarea name="content" style="width:100%"></textarea>
+</form>
+
+{% if result is not null %}
+<p>{{ result }}</p>
+{% endif %}
+
+{% endblock %}

@@ -266,11 +266,11 @@ class appDevDebugProjectContainer extends Container
      * This service is shared.
      * This method always returns the same instance of the service.
      *
-     * @return EntityManager513533fad30c7_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager513533fad30c7_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
+     * @return EntityManager514646fe73eca_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager514646fe73eca_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
      */
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
-        require_once '/var/www/mercadoSabores/app/cache/dev/jms_diextra/doctrine/EntityManager_513533fad30c7.php';
+        require_once '/var/www/mercadoSabores/app/cache/dev/jms_diextra/doctrine/EntityManager_514646fe73eca.php';
 
         $a = new \Doctrine\Common\Cache\ArrayCache();
         $a->setNamespace('sf2orm_default_5969e0242982b58d4b0a09c70d94c1ea');
@@ -281,26 +281,29 @@ class appDevDebugProjectContainer extends Container
         $c = new \Doctrine\Common\Cache\ArrayCache();
         $c->setNamespace('sf2orm_default_5969e0242982b58d4b0a09c70d94c1ea');
 
-        $d = new \Doctrine\ORM\Mapping\Driver\DriverChain();
-        $d->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($this->get('annotation_reader'), array(0 => '/var/www/mercadoSabores/src/Mercado/PaginaBundle/Entity')), 'Mercado\\PaginaBundle\\Entity');
+        $d = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array('/var/www/mercadoSabores/src/Mercado/PaginaBundle/Resources/config/doctrine' => 'Mercado\\PaginaBundle\\Entity'));
+        $d->setGlobalBasename('mapping');
 
-        $e = new \Doctrine\ORM\Configuration();
-        $e->setEntityNamespaces(array('MercadoPaginaBundle' => 'Mercado\\PaginaBundle\\Entity'));
-        $e->setMetadataCacheImpl($a);
-        $e->setQueryCacheImpl($b);
-        $e->setResultCacheImpl($c);
-        $e->setMetadataDriverImpl($d);
-        $e->setProxyDir('/var/www/mercadoSabores/app/cache/dev/doctrine/orm/Proxies');
-        $e->setProxyNamespace('Proxies');
-        $e->setAutoGenerateProxyClasses(true);
-        $e->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
-        $e->setDefaultRepositoryClassName('Doctrine\\ORM\\EntityRepository');
-        $e->setNamingStrategy(new \Doctrine\ORM\Mapping\DefaultNamingStrategy());
+        $e = new \Doctrine\ORM\Mapping\Driver\DriverChain();
+        $e->addDriver($d, 'Mercado\\PaginaBundle\\Entity');
 
-        $f = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $e);
-        $this->get('doctrine.orm.default_manager_configurator')->configure($f);
+        $f = new \Doctrine\ORM\Configuration();
+        $f->setEntityNamespaces(array('MercadoPaginaBundle' => 'Mercado\\PaginaBundle\\Entity'));
+        $f->setMetadataCacheImpl($a);
+        $f->setQueryCacheImpl($b);
+        $f->setResultCacheImpl($c);
+        $f->setMetadataDriverImpl($e);
+        $f->setProxyDir('/var/www/mercadoSabores/app/cache/dev/doctrine/orm/Proxies');
+        $f->setProxyNamespace('Proxies');
+        $f->setAutoGenerateProxyClasses(true);
+        $f->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
+        $f->setDefaultRepositoryClassName('Doctrine\\ORM\\EntityRepository');
+        $f->setNamingStrategy(new \Doctrine\ORM\Mapping\DefaultNamingStrategy());
 
-        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager513533fad30c7_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($f, $this);
+        $g = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $f);
+        $this->get('doctrine.orm.default_manager_configurator')->configure($g);
+
+        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager514646fe73eca_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($g, $this);
     }
 
     /**
@@ -373,7 +376,6 @@ class appDevDebugProjectContainer extends Container
         $instance->addSubscriberService('data_collector.request', 'Symfony\\Component\\HttpKernel\\DataCollector\\RequestDataCollector');
         $instance->addSubscriberService('router_listener', 'Symfony\\Component\\HttpKernel\\EventListener\\RouterListener');
         $instance->addSubscriberService('twig.exception_listener', 'Symfony\\Component\\HttpKernel\\EventListener\\ExceptionListener');
-        $instance->addSubscriberService('swiftmailer.email_sender.listener', 'Symfony\\Bundle\\SwiftmailerBundle\\EventListener\\EmailSenderListener');
         $instance->addSubscriberService('web_profiler.debug_toolbar', 'Symfony\\Bundle\\WebProfilerBundle\\EventListener\\WebDebugToolbarListener');
 
         return $instance;
@@ -1244,7 +1246,7 @@ class appDevDebugProjectContainer extends Container
         $instance->add(new \Symfony\Component\HttpKernel\DataCollector\MemoryDataCollector());
         $instance->add($this->get('data_collector.router'));
         $instance->add(new \Symfony\Bundle\SecurityBundle\DataCollector\SecurityDataCollector($this->get('security.context')));
-        $instance->add(new \Symfony\Bridge\Swiftmailer\DataCollector\MessageDataCollector($this, true));
+        $instance->add(new \Symfony\Bridge\Swiftmailer\DataCollector\MessageDataCollector($this, false));
         $instance->add($e);
 
         return $instance;
@@ -1772,19 +1774,6 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
-     * Gets the 'swiftmailer.email_sender.listener' service.
-     *
-     * This service is shared.
-     * This method always returns the same instance of the service.
-     *
-     * @return Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener A Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener instance.
-     */
-    protected function getSwiftmailer_EmailSender_ListenerService()
-    {
-        return $this->services['swiftmailer.email_sender.listener'] = new \Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener($this);
-    }
-
-    /**
      * Gets the 'swiftmailer.plugin.messagelogger' service.
      *
      * This service is shared.
@@ -1798,48 +1787,18 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
-     * Gets the 'swiftmailer.spool' service.
-     *
-     * This service is shared.
-     * This method always returns the same instance of the service.
-     *
-     * @return Swift_MemorySpool A Swift_MemorySpool instance.
-     */
-    protected function getSwiftmailer_SpoolService()
-    {
-        return $this->services['swiftmailer.spool'] = new \Swift_MemorySpool();
-    }
-
-    /**
      * Gets the 'swiftmailer.transport' service.
-     *
-     * This service is shared.
-     * This method always returns the same instance of the service.
-     *
-     * @return Swift_Transport_SpoolTransport A Swift_Transport_SpoolTransport instance.
-     */
-    protected function getSwiftmailer_TransportService()
-    {
-        $this->services['swiftmailer.transport'] = $instance = new \Swift_Transport_SpoolTransport($this->get('swiftmailer.transport.eventdispatcher'), $this->get('swiftmailer.spool'));
-
-        $instance->registerPlugin($this->get('swiftmailer.plugin.messagelogger'));
-
-        return $instance;
-    }
-
-    /**
-     * Gets the 'swiftmailer.transport.real' service.
      *
      * This service is shared.
      * This method always returns the same instance of the service.
      *
      * @return Swift_Transport_EsmtpTransport A Swift_Transport_EsmtpTransport instance.
      */
-    protected function getSwiftmailer_Transport_RealService()
+    protected function getSwiftmailer_TransportService()
     {
-        $this->services['swiftmailer.transport.real'] = $instance = new \Swift_Transport_EsmtpTransport(new \Swift_Transport_StreamBuffer(new \Swift_StreamFilters_StringReplacementFilterFactory()), array(0 => new \Swift_Transport_Esmtp_AuthHandler(array(0 => new \Swift_Transport_Esmtp_Auth_CramMd5Authenticator(), 1 => new \Swift_Transport_Esmtp_Auth_LoginAuthenticator(), 2 => new \Swift_Transport_Esmtp_Auth_PlainAuthenticator()))), $this->get('swiftmailer.transport.eventdispatcher'));
+        $this->services['swiftmailer.transport'] = $instance = new \Swift_Transport_EsmtpTransport(new \Swift_Transport_StreamBuffer(new \Swift_StreamFilters_StringReplacementFilterFactory()), array(0 => new \Swift_Transport_Esmtp_AuthHandler(array(0 => new \Swift_Transport_Esmtp_Auth_CramMd5Authenticator(), 1 => new \Swift_Transport_Esmtp_Auth_LoginAuthenticator(), 2 => new \Swift_Transport_Esmtp_Auth_PlainAuthenticator()))), new \Swift_Events_SimpleEventDispatcher());
 
-        $instance->setHost('127.0.0.1');
+        $instance->setHost('localhost');
         $instance->setPort(25);
         $instance->setEncryption(NULL);
         $instance->setUsername(NULL);
@@ -1847,6 +1806,8 @@ class appDevDebugProjectContainer extends Container
         $instance->setAuthMode(NULL);
         $instance->setTimeout(30);
         $instance->setSourceIp(NULL);
+        $instance->registerPlugin(new \Swift_Plugins_RedirectingPlugin('diegogiacobo@gmail.com', array()));
+        $instance->registerPlugin($this->get('swiftmailer.plugin.messagelogger'));
 
         return $instance;
     }
@@ -2581,7 +2542,7 @@ class appDevDebugProjectContainer extends Container
     /**
      * Gets the doctrine.orm.entity_manager service alias.
      *
-     * @return EntityManager513533fad30c7_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
+     * @return EntityManager514646fe73eca_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
      */
     protected function getDoctrine_Orm_EntityManagerService()
     {
@@ -2790,23 +2751,6 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
-     * Gets the 'swiftmailer.transport.eventdispatcher' service.
-     *
-     * This service is shared.
-     * This method always returns the same instance of the service.
-     *
-     * This service is private.
-     * If you want to be able to request this service from the container directly,
-     * make it public, otherwise you might end up with broken code.
-     *
-     * @return Swift_Events_SimpleEventDispatcher A Swift_Events_SimpleEventDispatcher instance.
-     */
-    protected function getSwiftmailer_Transport_EventdispatcherService()
-    {
-        return $this->services['swiftmailer.transport.eventdispatcher'] = new \Swift_Events_SimpleEventDispatcher();
-    }
-
-    /**
      * Gets the 'templating.locator' service.
      *
      * This service is shared.
@@ -2956,10 +2900,12 @@ class appDevDebugProjectContainer extends Container
             'database_name' => 'mercado_de_sabores',
             'database_user' => 'root',
             'database_password' => 'olnrtvu2t',
-            'mailer_transport' => 'smtp',
+            'mailer_transport' => 'smtp.gmail.com',
             'mailer_host' => '127.0.0.1',
-            'mailer_user' => NULL,
+            'mailer_username' => 'diegogiacobb@gmail.com',
             'mailer_password' => NULL,
+            'mailer_port' => 465,
+            'mailer_encryption' => 'ssl',
             'locale' => 'en',
             'secret' => '460ddf271d8ed00457e95224284285e37e323c8f',
             'database_path' => NULL,
@@ -3261,19 +3207,15 @@ class appDevDebugProjectContainer extends Container
             'swiftmailer.transport.smtp.class' => 'Swift_Transport_EsmtpTransport',
             'swiftmailer.transport.smtp.encryption' => NULL,
             'swiftmailer.transport.smtp.port' => 25,
-            'swiftmailer.transport.smtp.host' => '127.0.0.1',
+            'swiftmailer.transport.smtp.host' => 'localhost',
             'swiftmailer.transport.smtp.username' => NULL,
             'swiftmailer.transport.smtp.password' => NULL,
             'swiftmailer.transport.smtp.auth_mode' => NULL,
             'swiftmailer.transport.smtp.timeout' => 30,
             'swiftmailer.transport.smtp.source_ip' => NULL,
-            'swiftmailer.plugin.blackhole.class' => 'Swift_Plugins_BlackholePlugin',
-            'swiftmailer.spool.memory.class' => 'Swift_MemorySpool',
-            'swiftmailer.email_sender.listener.class' => 'Symfony\\Bundle\\SwiftmailerBundle\\EventListener\\EmailSenderListener',
-            'swiftmailer.spool.memory.path' => '/var/www/mercadoSabores/app/cache/dev/swiftmailer/spool',
-            'swiftmailer.spool.enabled' => true,
+            'swiftmailer.spool.enabled' => false,
             'swiftmailer.sender_address' => NULL,
-            'swiftmailer.single_address' => NULL,
+            'swiftmailer.single_address' => 'diegogiacobo@gmail.com',
             'swiftmailer.delivery_whitelist' => array(
 
             ),
@@ -3409,8 +3351,8 @@ class appDevDebugProjectContainer extends Container
             ),
             'jms_di_extra.cache_dir' => '/var/www/mercadoSabores/app/cache/dev/jms_diextra',
             'jms_di_extra.doctrine_integration' => true,
-            'jms_di_extra.doctrine_integration.entity_manager.file' => '/var/www/mercadoSabores/app/cache/dev/jms_diextra/doctrine/EntityManager_513533fad30c7.php',
-            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager513533fad30c7_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
+            'jms_di_extra.doctrine_integration.entity_manager.file' => '/var/www/mercadoSabores/app/cache/dev/jms_diextra/doctrine/EntityManager_514646fe73eca.php',
+            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager514646fe73eca_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
             'security.secured_services' => array(
 
             ),

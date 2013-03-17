@@ -28,7 +28,7 @@ class __TwigTemplate_beed98aae1c4b3921f43b22233b3427a extends Twig_Template
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        echo twig_escape_filter($this->env, ("Mercado de Sabores " . $this->getContext($context, "name")), "html", null, true);
+        echo "Mercado de Sabores ";
     }
 
     // line 5

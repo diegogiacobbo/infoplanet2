@@ -28,106 +28,185 @@ class __TwigTemplate_a157a1db3fe2f69cc5083c680a87f543 extends Twig_Template
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
         <style type=\"text/css\">
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
-        <link href=\"";
+                body {
+                    padding-top: 60px;
+                    padding-bottom: 40px;
+                }
+            </style>
+            <link href=\"";
         // line 13
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/css/bootstrap.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" media=\"screen\">
-        <link href=\"";
+            <link href=\"";
         // line 14
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/css/bootstrap-responsive.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
-        <link rel=\"icon\" sizes=\"16x16\" href=\"";
+            <link rel=\"icon\" sizes=\"16x16\" href=\"";
         // line 15
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
-    </head>
-    <body>
-        <div class=\"navbar navbar-inverse navbar-fixed-top\">
-            <div class=\"navbar-inner\">
-                <div class=\"container\">
-                    <button type=\"button\" class=\"btn btn-navbar\" data-toggle=\"collapse\" data-target=\".nav-collapse\">
-                        <span class=\"icon-bar\"></span>
-                        <span class=\"icon-bar\"></span>
-                        <span class=\"icon-bar\"></span>
-                    </button>
-                    <a class=\"brand\" href=\"#\">Administração</a>
-                    <div class=\"nav-collapse collapse\">
-                        <ul class=\"nav\">
-                            <li class=\"active\"><a href=\"#\">Home</a></li>
-                            <li><a href=\"#about\">Sobre</a></li>
-                            <li><a href=\"#contact\">Contato</a></li>
-                            <li class=\"dropdown\">
-                                <a data-toggle=\"dropdown\" class=\"dropdown-toggle\" href=\"#\">Registros no Sistema <b class=\"caret\"></b></a>
-                                <ul class=\"dropdown-menu\">
-                                    <li><a href=\"";
-        // line 35
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("admin_cidade"), "html", null, true);
+        </head>
+        <body>
+            <div class=\"navbar navbar-inverse navbar-fixed-top\">
+                <div class=\"navbar-inner\">
+                    <div class=\"container\">
+                        <button type=\"button\" class=\"btn btn-navbar\" data-toggle=\"collapse\" data-target=\".nav-collapse\">
+                            <span class=\"icon-bar\"></span>
+                            <span class=\"icon-bar\"></span>
+                            <span class=\"icon-bar\"></span>
+                        </button>
+                        <a class=\"brand\" href=\"";
+        // line 26
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_admin"), "html", null, true);
+        echo "\">Administração</a>
+                        <div class=\"nav-collapse collapse\">
+                            <ul class=\"nav\">
+                                <li class=\"active\"><a href=\"";
+        // line 29
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("GerenciadorLoginBundle_info_empresa"), "html", null, true);
+        echo "\">Sobre sua empresa</a></li>
+                                <li><a href=\"";
+        // line 30
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("GerenciadorLoginBundle_admin_email_automatico"), "html", null, true);
+        echo "\">E-mail automático</a></li>
+                                <li class=\"dropdown\">
+                                    <a data-toggle=\"dropdown\" class=\"dropdown-toggle\" href=\"#\">Registros no Sistema <b class=\"caret\"></b></a>
+                                    <ul class=\"dropdown-menu\">
+                                        <li><a href=\"";
+        // line 34
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_admin_city"), "html", null, true);
         echo "\">Cidades</a></li>
-                                    <li><a href=\"#\">Another action</a></li>
-                                    <li><a href=\"#\">Something else here</a></li>
-                                    <li class=\"divider\"></li>
-                                    <li class=\"nav-header\">Nav header</li>
-                                    <li><a href=\"#\">Separated link</a></li>
-                                    <li><a href=\"#\">One more separated link</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <form class=\"navbar-form pull-right\">
-                            <input class=\"span2\" type=\"text\" placeholder=\"Email\">
-                            <input class=\"span2\" type=\"password\" placeholder=\"Password\">
-                            <button type=\"submit\" class=\"btn\">Sign in</button>
-                        </form>
-                    </div><!--/.nav-collapse -->
+                                        <li><a href=\"#\">Produtos</a></li>
+                                        <!--<li class=\"divider\"></li>
+                                        <li class=\"nav-header\">Nav header</li>
+                                        <li><a href=\"#\">Separated link</a></li>
+                                        <li><a href=\"#\">One more separated link</a></li>-->
+                                    </ul>
+                                </li>
+                                <li><a class=\"actionLogout\" href=\"";
+        // line 42
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_admin_logout"), "html", null, true);
+        echo "\"><button>Logout</button></a></li>
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div>
                 </div>
-            </div>
-        </div>     
+            </div>     
         ";
-        // line 54
+        // line 48
         $this->displayBlock('content', $context, $blocks);
-        // line 56
-        echo "        <script src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("http://code.jquery.com/jquery-1.9.1.min.js"), "html", null, true);
+        // line 50
+        echo "            <script src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/jquery-1.9.1.js"), "html", null, true);
         echo "\"></script>
-        <!--<script src=\"{ { asset('bundles/mercadopagina/js/jquery.js') }}\"></script>-->
-        <script src=\"";
-        // line 58
+            <script src=\"";
+        // line 51
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap.js"), "html", null, true);
         echo "\"></script>        
-        <script src=\"";
-        // line 59
+            <script src=\"";
+        // line 52
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-dropdown.js"), "html", null, true);
         echo "\"></script>
-        <!--<script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-transition.js') }}\"></script>
-        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-alert.js') }}\"></script>
-        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-modal.js') }}\"></script>
-        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-dropdown.js') }}\"></script>
-        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-scrollspy.js') }}\"></script>
-        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-tab.js') }}\"></script>
-        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-tooltip.js') }}\"></script>
-        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-popover.js') }}\"></script>
-        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-button.js') }}\"></script>
-        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-collapse.js') }}\"></script>
-        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-carousel.js') }}\"></script>
-        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-typeahead.js') }}\"></script> -->
-        <script type=\"text/javascript\">
-            \$(document).ready(function() {
-                \$('.dropdown-toggle').focusout(function(){
-                    \$('.dropdown').removeClass('open');
-                });
-                \$('.dropdown-toggle').click(function(){
-                    if(\$('.dropdown').hasClass('open'))
-                        \$('.dropdown').removeClass(\"open\");
-                    else
-                        \$('.dropdown').addClass(\"open\");
-                });
-                
+            <script src=\"";
+        // line 53
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-transition.js"), "html", null, true);
+        echo "\"></script>
+            <script src=\"";
+        // line 54
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-alert.js"), "html", null, true);
+        echo "\"></script>
+            <script src=\"";
+        // line 55
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-modal.js"), "html", null, true);
+        echo "\"></script>
+            <script src=\"";
+        // line 56
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-dropdown.js"), "html", null, true);
+        echo "\"></script>
+            <script src=\"";
+        // line 57
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-scrollspy.js"), "html", null, true);
+        echo "\"></script>
+            <script src=\"";
+        // line 58
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-tab.js"), "html", null, true);
+        echo "\"></script>
+            <script src=\"";
+        // line 59
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-tooltip.js"), "html", null, true);
+        echo "\"></script>
+            <script src=\"";
+        // line 60
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-popover.js"), "html", null, true);
+        echo "\"></script>
+            <script src=\"";
+        // line 61
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-button.js"), "html", null, true);
+        echo "\"></script>
+            <script src=\"";
+        // line 62
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-collapse.js"), "html", null, true);
+        echo "\"></script>
+            <script src=\"";
+        // line 63
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-carousel.js"), "html", null, true);
+        echo "\"></script>
+            <script src=\"";
+        // line 64
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-typeahead.js"), "html", null, true);
+        echo "\"></script>
+
+            <script type=\"text/javascript\" src=\"";
+        // line 66
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/tinymce/jscripts/tiny_mce/tiny_mce.js"), "html", null, true);
+        echo "\"></script>
+            <script type=\"text/javascript\">
+            tinyMCE.init({
+                    // General options
+                    mode : \"textareas\",
+                    theme : \"advanced\",
+                    plugins : \"autolink,lists,spellchecker,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template\",
+
+                    // Theme options
+                    theme_advanced_buttons1 : \"save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect,fontsizeselect\",
+                    theme_advanced_buttons2 : \"cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor\",
+                    theme_advanced_buttons3 : \"tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen\",
+                    theme_advanced_buttons4 : \"insertlayer,moveforward,movebackward,absolute,|,styleprops,spellchecker,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,blockquote,pagebreak,|,insertfile,insertimage\",
+                    theme_advanced_toolbar_location : \"top\",
+                    theme_advanced_toolbar_align : \"left\",
+                    theme_advanced_statusbar_location : \"bottom\",
+                    theme_advanced_resizing : true,
+
+                    // Skin options
+                    skin : \"o2k7\",
+                    skin_variant : \"silver\",
+
+                    // Example content CSS (should be your site CSS)
+                    content_css : \"css/example.css\",
+
+                    // Drop lists for link/image/media/template dialogs
+                    template_external_list_url : \"js/template_list.js\",
+                    external_link_list_url : \"js/link_list.js\",
+                    external_image_list_url : \"js/image_list.js\",
+                    media_external_list_url : \"js/media_list.js\",
+
+                    // Replace values for the template plugin
+                    template_replace_values : {
+                            username : \"Some User\",
+                            staffid : \"991234\"
+                    }
             });
-        </script>
+            </script>
+            <script type=\"text/javascript\">
+                function(){
+                    \$('actionLogout').click(function(){
+                        confirm(\"Você tem certeza que deseja deslogar do sistema?\");
+                        
+                    });
+                    
+                    //@todo: criar tb os actives menus, manter a cor do hover para active!!
+                }
+            </script>
     </body>
 </html>";
     }
@@ -135,13 +214,13 @@ class __TwigTemplate_a157a1db3fe2f69cc5083c680a87f543 extends Twig_Template
     // line 6
     public function block_title($context, array $blocks = array())
     {
-        echo "Gerenciador/LoginBundle Bundle";
+        echo "Área de Administração";
     }
 
-    // line 54
+    // line 48
     public function block_content($context, array $blocks = array())
     {
-        // line 55
+        // line 49
         echo "        ";
     }
 
@@ -157,6 +236,6 @@ class __TwigTemplate_a157a1db3fe2f69cc5083c680a87f543 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  145 => 55,  142 => 54,  136 => 6,  103 => 59,  99 => 58,  93 => 56,  91 => 54,  69 => 35,  46 => 15,  42 => 14,  38 => 13,  28 => 6,  21 => 1,);
+        return array (  224 => 49,  221 => 48,  215 => 6,  161 => 66,  156 => 64,  152 => 63,  148 => 62,  144 => 61,  140 => 60,  136 => 59,  132 => 58,  128 => 57,  124 => 56,  120 => 55,  116 => 54,  112 => 53,  108 => 52,  104 => 51,  99 => 50,  97 => 48,  88 => 42,  77 => 34,  70 => 30,  66 => 29,  60 => 26,  46 => 15,  42 => 14,  28 => 6,  21 => 1,  38 => 13,  35 => 5,  29 => 3,);
     }
 }

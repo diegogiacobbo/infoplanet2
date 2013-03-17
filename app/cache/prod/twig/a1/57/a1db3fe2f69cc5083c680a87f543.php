@@ -11,6 +11,7 @@ class __TwigTemplate_a157a1db3fe2f69cc5083c680a87f543 extends Twig_Template
 
         $this->blocks = array(
             'title' => array($this, 'block_title'),
+            'content' => array($this, 'block_content'),
         );
     }
 
@@ -46,40 +47,6 @@ class __TwigTemplate_a157a1db3fe2f69cc5083c680a87f543 extends Twig_Template
         echo "\" />
     </head>
     <body>
-        <!--<div class=\"navbar navbar-inverse navbar-fixed-top\">
-            <div class=\"navbar-inner\">
-                <div class=\"container\">
-                    <button type=\"button\" class=\"btn btn-navbar\" data-toggle=\"collapse\" data-target=\".nav-collapse\">
-                        <span class=\"icon-bar\"></span>
-                        <span class=\"icon-bar\"></span>
-                        <span class=\"icon-bar\"></span>
-                    </button>
-                    <a class=\"brand\" href=\"#\">Project name</a>
-                    <div class=\"nav-collapse collapse\">
-                        <ul class=\"nav\">
-                            <li class=\"active\"><a href=\"#\">Home</a></li>
-                            <li><a href=\"#about\">About</a></li>
-                            <li><a href=\"#contact\">Contact</a></li>
-                            <li class=\"dropdown\">
-                                <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Registros <b class=\"caret\"></b></a>
-                                <ul class=\"dropdown-menu\">
-                                    <li><a href=\"";
-        // line 35
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("admin_cidade"), "html", null, true);
-        echo "\">Cidades</a></li>
-                                    <li><a href=\"#\">Another action</a></li>
-                                    <li><a href=\"#\">Something else here</a></li>
-                                    <li class=\"divider\"></li>
-                                    <li class=\"nav-header\">Nav header</li>
-                                    <li><a href=\"#\">Separated link</a></li>
-                                    <li><a href=\"#\">One more separated link</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>-->
         <div class=\"navbar navbar-inverse navbar-fixed-top\">
             <div class=\"navbar-inner\">
                 <div class=\"container\">
@@ -88,16 +55,22 @@ class __TwigTemplate_a157a1db3fe2f69cc5083c680a87f543 extends Twig_Template
                         <span class=\"icon-bar\"></span>
                         <span class=\"icon-bar\"></span>
                     </button>
-                    <a class=\"brand\" href=\"#\">Project name</a>
+                    <a class=\"brand\" href=\"";
+        // line 26
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_admin"), "html", null, true);
+        echo "\">Administração</a>
                     <div class=\"nav-collapse collapse\">
                         <ul class=\"nav\">
                             <li class=\"active\"><a href=\"#\">Home</a></li>
-                            <li><a href=\"#about\">About</a></li>
-                            <li><a href=\"#contact\">Contact</a></li>
+                            <li><a href=\"#about\">Sobre</a></li>
+                            <li><a href=\"#contact\">Contato</a></li>
                             <li class=\"dropdown\">
-                                <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <b class=\"caret\"></b></a>
+                                <a data-toggle=\"dropdown\" class=\"dropdown-toggle\" href=\"#\">Registros no Sistema <b class=\"caret\"></b></a>
                                 <ul class=\"dropdown-menu\">
-                                    <li><a href=\"#\">Action</a></li>
+                                    <li><a href=\"";
+        // line 35
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_admin_city"), "html", null, true);
+        echo "\">Cidades</a></li>
                                     <li><a href=\"#\">Another action</a></li>
                                     <li><a href=\"#\">Something else here</a></li>
                                     <li class=\"divider\"></li>
@@ -115,68 +88,49 @@ class __TwigTemplate_a157a1db3fe2f69cc5083c680a87f543 extends Twig_Template
                     </div><!--/.nav-collapse -->
                 </div>
             </div>
-        </div>        
-        <script src=\"";
-        // line 85
+        </div>     
+        ";
+        // line 54
+        $this->displayBlock('content', $context, $blocks);
+        // line 56
+        echo "        <script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("http://code.jquery.com/jquery-1.9.1.min.js"), "html", null, true);
         echo "\"></script>
+        <!--<script src=\"{ { asset('bundles/mercadopagina/js/jquery.js') }}\"></script>-->
         <script src=\"";
-        // line 86
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/jquery.js"), "html", null, true);
-        echo "\"></script>
-        <script src=\"";
-        // line 87
+        // line 58
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap.js"), "html", null, true);
-        echo "\"></script>
-
+        echo "\"></script>        
         <script src=\"";
-        // line 89
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-transition.js"), "html", null, true);
-        echo "\"></script>
-        <script src=\"";
-        // line 90
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-alert.js"), "html", null, true);
-        echo "\"></script>
-        <script src=\"";
-        // line 91
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-modal.js"), "html", null, true);
-        echo "\"></script>
-        <script src=\"";
-        // line 92
+        // line 59
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-dropdown.js"), "html", null, true);
         echo "\"></script>
-        <script src=\"";
-        // line 93
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-scrollspy.js"), "html", null, true);
-        echo "\"></script>
-        <script src=\"";
-        // line 94
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-tab.js"), "html", null, true);
-        echo "\"></script>
-        <script src=\"";
-        // line 95
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-tooltip.js"), "html", null, true);
-        echo "\"></script>
-        <script src=\"";
-        // line 96
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-popover.js"), "html", null, true);
-        echo "\"></script>
-        <script src=\"";
-        // line 97
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-button.js"), "html", null, true);
-        echo "\"></script>
-        <script src=\"";
-        // line 98
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-collapse.js"), "html", null, true);
-        echo "\"></script>
-        <script src=\"";
-        // line 99
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-carousel.js"), "html", null, true);
-        echo "\"></script>
-        <script src=\"";
-        // line 100
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/mercadopagina/js/bootstrap-typeahead.js"), "html", null, true);
-        echo "\"></script>
+        <!--<script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-transition.js') }}\"></script>
+        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-alert.js') }}\"></script>
+        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-modal.js') }}\"></script>
+        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-dropdown.js') }}\"></script>
+        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-scrollspy.js') }}\"></script>
+        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-tab.js') }}\"></script>
+        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-tooltip.js') }}\"></script>
+        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-popover.js') }}\"></script>
+        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-button.js') }}\"></script>
+        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-collapse.js') }}\"></script>
+        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-carousel.js') }}\"></script>
+        <script src=\"{ { asset('bundles/mercadopagina/js/bootstrap-typeahead.js') }}\"></script> -->
+        <script type=\"text/javascript\">
+            \$(document).ready(function() {
+                \$('.dropdown-toggle').focusout(function(){
+                    \$('.dropdown').removeClass('open');
+                });
+                \$('.dropdown-toggle').click(function(){
+                    if(\$('.dropdown').hasClass('open'))
+                        \$('.dropdown').removeClass(\"open\");
+                    else
+                        \$('.dropdown').addClass(\"open\");
+                });
+                
+            });
+        </script>
     </body>
 </html>";
     }
@@ -184,7 +138,14 @@ class __TwigTemplate_a157a1db3fe2f69cc5083c680a87f543 extends Twig_Template
     // line 6
     public function block_title($context, array $blocks = array())
     {
-        echo "Gerenciador/LoginBundle Bundle";
+        echo "Área de Administração";
+    }
+
+    // line 54
+    public function block_content($context, array $blocks = array())
+    {
+        // line 55
+        echo "        ";
     }
 
     public function getTemplateName()
@@ -199,6 +160,6 @@ class __TwigTemplate_a157a1db3fe2f69cc5083c680a87f543 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  185 => 6,  178 => 100,  174 => 99,  170 => 98,  166 => 97,  162 => 96,  158 => 95,  154 => 94,  150 => 93,  146 => 92,  142 => 91,  138 => 90,  134 => 89,  129 => 87,  125 => 86,  121 => 85,  68 => 35,  45 => 15,  41 => 14,  37 => 13,  27 => 6,  20 => 1,);
+        return array (  148 => 55,  145 => 54,  139 => 6,  106 => 59,  102 => 58,  96 => 56,  94 => 54,  72 => 35,  46 => 15,  42 => 14,  28 => 6,  21 => 1,  89 => 33,  77 => 27,  70 => 23,  66 => 22,  60 => 26,  57 => 20,  53 => 19,  38 => 13,  35 => 5,  29 => 3,);
     }
 }

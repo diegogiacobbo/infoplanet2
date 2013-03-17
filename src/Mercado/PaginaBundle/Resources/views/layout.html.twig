@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mercado de Sabores</title>
+        <title>{% block title %}Mercado de Sabores{% endblock %}</title>
         <!--<link href="{ asset('bundles/mercadopagina/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">-->
         <script src="{{ asset('bundles/mercadopagina/js/bootstrap.min.js') }}"></script>
         <link href="{{ asset('bundles/mercadopagina/css/bootstrap-responsive.css') }}" rel="stylesheet">
@@ -20,6 +20,12 @@
                     padding-bottom: 60px;
                     background: url("{{ asset('bundles/mercadopagina/images/bg.jpg') }}") repeat;
                 }
+                
+                textarea, input{
+                    color: #000!important;
+                }
+                
+                
 
                 /* Custom container */
                 .container {
@@ -111,15 +117,15 @@
 
                 footer, .footer{
                 }
-                
+
                 .li_center{
                     text-align: center;
                 }
-                
+
                 .li_right{
                     text-align: right;
                 }
-                
+
                 .logo{
                     background: url("{{ asset('bundles/mercadopagina/images/logo.png') }}") center;
                     background-size: 100% 100%;
@@ -134,7 +140,7 @@
                     <div class="navbar-inner row-fluid">
                         <div class="span4">
                             <ul class="nav">
-                                <li><a href="#">Home</a></li>
+                                <li><a href="{{ path('_welcome') }}">Home</a></li>
                                 <li><a href="#">Produtos</a></li>
                             </ul>
                         </div>    
@@ -145,7 +151,7 @@
                         <div class="span4">                            
                             <ul class="nav">
                                 <li><a href="#">Curiosidades</a></li>
-                                <li><a href="#">Contato</a></li>
+                                <li><a href="{{ path('MercadoPaginaBundle_contato') }}">Contato</a></li>
                             </ul>
                         </div>
                     </div>

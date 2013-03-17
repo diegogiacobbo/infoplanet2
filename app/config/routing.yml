@@ -1,6 +1,19 @@
 mercado_pagina:
     resource: "@MercadoPaginaBundle/Resources/config/routing.yml"
     prefix:   /
+    
+MercadoPaginaBundle_contato:
+    pattern:  /contato
+    defaults: { _controller: MercadoPaginaBundle:Default:contato }
+    requirements:
+        _method:  GET
+        
+
+MercadoPaginaBundle_contato_send:
+    pattern:  /contato
+    defaults: { _controller: MercadoPaginaBundle:Default:contato }
+    requirements:
+        _method:  POST
 #
 #gerenciador_login:
 #    resource: "@GerenciadorLoginBundle/Resources/config/routing.yml"
@@ -22,14 +35,29 @@ _admin_secured:
     resource: "@GerenciadorLoginBundle/Controller/SecuredController.php"
     type:     annotation
     
-    
 MercadoPaginaBundle_admin_cidade:
     resource: "@MercadoPaginaBundle/Resources/config/routing/cidade.yml"
     prefix:   /admin/cidade
     
-_admin_cidade:
-    resource: "@MercadoPaginaBundle/Controller/CidadeController.php"
-    type:     annotation
+_admin_city:
+    pattern:  /admin/cidade
+    defaults: { _controller: MercadoPaginaBundle:Cidade:index }
+    
+GerenciadorLoginBundle_admin_email_automatico:
+    pattern:  /admin/email-automatico
+    defaults: { _controller: GerenciadorLoginBundle:Default:email }
+    requirements:
+        _method:  GET
+        
+GerenciadorLoginBundle_admin_email_automatico_send:
+    pattern:  /admin/email-automatico
+    defaults: { _controller: GerenciadorLoginBundle:Default:email }
+    requirements:
+        _method:  POST
+    
+#_admin_cidade:
+#    resource: "@MercadoPaginaBundle/Controller/CidadeController.php"
+#    type:     annotation
 
 
 # Internal routing configuration to handle ESI
@@ -40,3 +68,15 @@ _admin_cidade:
 #_internal:
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #    prefix:   /_internal
+
+GerenciadorLoginBundle_info_empresa:
+    pattern:  /admin/info
+    defaults: { _controller: GerenciadorLoginBundle:Default:info }
+    requirements:
+        _method:  GET
+    
+GerenciadorLoginBundle_info_empresa_send:
+    pattern:  /admin/info
+    defaults: { _controller: GerenciadorLoginBundle:Default:info }
+    requirements:
+        _method:  POST

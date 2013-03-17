@@ -1,0 +1,11 @@
+Mercado\PaginaBundle\Entity\Contato:
+    type: entity
+    table: null
+    repositoryClass: Mercado\PaginaBundle\Entity\ContatoRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }
