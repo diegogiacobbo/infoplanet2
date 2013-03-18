@@ -86,6 +86,7 @@
   'MercadoPaginaBundle:Cidade:show.html.twig' => '/var/www/mercadoSabores/src/Mercado/PaginaBundle/Resources/views/Cidade/show.html.twig',
   'MercadoPaginaBundle:Cidade:index.html.twig' => '/var/www/mercadoSabores/src/Mercado/PaginaBundle/Resources/views/Cidade/index.html.twig',
   'MercadoPaginaBundle:Default:contato.html.twig' => '/var/www/mercadoSabores/src/Mercado/PaginaBundle/Resources/views/Default/contato.html.twig',
+  'MercadoPaginaBundle:Default:email.txt.twig' => '/var/www/mercadoSabores/src/Mercado/PaginaBundle/Resources/views/Default/email.txt.twig',
   'MercadoPaginaBundle:Default:index.html.twig' => '/var/www/mercadoSabores/src/Mercado/PaginaBundle/Resources/views/Default/index.html.twig',
   'AcmeDemoBundle::layout.html.twig' => '/var/www/mercadoSabores/src/Acme/DemoBundle/Resources/views/layout.html.twig',
   'AcmeDemoBundle:Welcome:index.html.twig' => '/var/www/mercadoSabores/src/Acme/DemoBundle/Resources/views/Welcome/index.html.twig',
