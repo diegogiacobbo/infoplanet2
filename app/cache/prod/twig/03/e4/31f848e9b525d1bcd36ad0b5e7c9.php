@@ -37,7 +37,7 @@ class __TwigTemplate_03e431f848e9b525d1bcd36ad0b5e7c9 extends Twig_Template
         // line 6
         echo "
 <ul>
-   dale
+   ...
 </ul>
 
 ";

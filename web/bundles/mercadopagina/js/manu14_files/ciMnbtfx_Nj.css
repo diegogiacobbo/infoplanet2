@@ -1,0 +1,546 @@
+/*1365096255,173213215*/
+
+body.contact_importer{background-color:transparent}
+div.file_help{padding:10px;display:none;border:1px solid #ccc;background:#fcfcfc;margin-top:6px;margin-bottom:6px}
+.fh_title{font-size:11px}
+div.fh_sect{margin:4px}
+div.fh_instr{display:none;margin:3px 3px 0 0;padding:6px}
+.editor{margin:3px auto 7px}
+.editor_panel{background:#f7f7f7;padding:10px 0}
+.editor td{border:none;margin:0;padding:5px 1px 1px}
+.editor td.label{color:#666;font-weight:bold;padding-right:10px}
+.editor td.label small{color:#999}
+.editor .suboption_group{border-bottom:1px solid #c0c0c0;border-top:1px solid #c0c0c0;margin-left:20px}
+.editor .suboption_group td{padding:0}
+.editor tr.tallrow{vertical-align:top}
+.editor tr.tallrow td.label{padding-top:7px}
+.editor tr.subrow{vertical-align:top}
+.editor tr.subrow td{margin-top:0;padding-top:0}
+.editor .buttons{padding:10px 0 0;text-align:center}
+.editor .buttons_left{padding-left:0;text-align:left}
+.editor .buttons .inputsubmit,
+.editor .buttons .inputbutton{margin:2px 4px}
+.editor .buttons_left .inputsubmit,
+.editor .buttons_left .inputbutton{margin-left:0}
+.editor label{color:#000;font-weight:normal;width:200px}
+.editor label.row_description{color:inherit;font-weight:inherit;width:inherit}
+.editor table.option_field td{margin:0;padding:0 2px 0 0}
+.editor .option_caption{color:#777;font-weight:normal;padding-bottom:2px;width:260px}
+.editor .inputtext,
+.editor .inputpassword{margin-left:0;width:300px}
+.editor textarea{margin-left:0;width:300px}
+.editor textarea.clearWidth{width:auto}
+.editor select{margin-left:0;margin-right:5px}
+.editor .checkbox_array{margin:0;padding:5px 0 0}
+.editor .checkbox_array td{margin:0;padding:0 0 0}
+.editor .checkbox_array label{padding-right:15px}
+.editor .relationship .inputtext{width:200px}
+.editor .highschool input{margin-right:5px;width:235px}
+.editor .school input{margin-right:5px;width:235px}
+.editor .school .inputtext{width:200px}
+.editor_panel .editor .school table.nopadding td{padding:0 0 0 0}
+.editor .school .school_typeahead{width:210px}
+.editor .select xselect{width:200px}
+.editor .two_level_select select{width:145px}
+.editor .text_with_privacy input{margin-right:5px;width:105px}
+.editor .text_with_privacy select{margin-left:5px;width:auto}
+.editor .text_with_privacy td{color:#777}
+.editor .divider{border-bottom:solid 1px #fff;border-top:solid 1px #ccc;height:0;margin:5px 0;overflow:hidden}
+.editor .date_time span, .editor .inline_text{margin:0 4px 0 -2px}
+.editor .note{width:300px}
+.editor .hiddenrow{display:none}
+.editor .calendar_popup{display:inline}
+.editor .calendar_at_time{padding:0 0 0 8px}
+.editor .calicon{padding:0 2px 1px 0}
+.editor .calendars td{padding:0}
+.editor #start_calendar, .editor #end_calendar{background-color:#fff;border-bottom:solid 1px #3b5998;border-left:solid 1px #d8dfea;border-right:solid 1px #d8dfea;margin-left:147px;margin-top:-3px;position:absolute;width:168px;z-index:100}
+.editor #box_separator{padding:0 3px 0 3px}
+#hubs_wikipedia .editsection, #hubs_wikipedia sup, #mw-hidden-catlinks, #hubs_wikipedia #app100573140000096_catlinks, #hubs_wikipedia #app100573140000096_siteSub, #hubs_wikipedia #app100573140000096_firstHeading, #hubs_wikipedia #app100573140000096_toc, #hubs_wikipedia .printonly, #hubs_wikipedia .toc, #hubs_wikipedia .infobox, #hubs_wikipedia .infobox_v2, #hubs_wikipedia table.navbox, #hubs_wikipedia table.ambox, #hubs_wikipedia table.mbox-small, #hubs_wikipedia table.succession-box, #hubs_wikipedia table.stub, #hubs_wikipedia .dablink, #hubs_wikipedia #app100573140000096_coordinates, #hubs_wikipedia #app100573140000096_jump-to-nav, #hubs_wikipedia .printfooter, #hubs_wikipedia .hiddenStructure, #hubs_wikipedia .vertical-navbox, .wikipedia_redirect #hubs_wikipedia #app100573140000096_contentSub{display:none;margin:0;padding:0}
+#hubs_wikipedia h2{font-size:11px;border-bottom:1px solid #e9e9e9;border-top:1px solid #aaa;padding:.5em 0;margin:15px 0 10px 0}
+#hubs_wikipedia h3, #hubs_wikipedia h4{margin-bottom:2px;font-size:11px;line-height:16px}
+#hubs_wikipedia h3 + h4{display:none}
+#hubs_wikipedia p, #hubs_wikitable .wikitable, #hubs_wikipedia ul, #hubs_wikipedia dl{margin:0 0 10px 0;line-height:16px}
+#hubs_wikipedia ul{line-height:14px;list-style-position:outside;list-style-type:disc;padding-left:15px}
+#hubs_wikipedia ul ul{margin-top:5px;margin-bottom:0}
+#hubs_wikipedia ul li{display:list-item;padding-bottom:3px;line-height:16px}
+#hubs_wikipedia dt{margin:0;color:#000}
+#hubs_wikipedia dd{margin:0 0 5px 15px}
+#hubs_wikipedia table.metadata{margin-bottom:10px;border:1px solid #ccc;background:#f7f7f7 !important}
+#hubs_wikipedia blockquote{border-left:3px solid #ccc;color:#606060;padding:0 0 0 10px !important;margin:0 0 10px 0 !important;line-height:16px}
+#hubs_wikipedia ol{margin:2px 0 10px 0}
+#hubs_wikipedia ol li{margin:0 0 2px 0}
+#hubs_wikipedia table.toccolours{border:1px solid #ccc;background:#f7f7f7}
+#hubs_wikipedia i{font-family:'lucida grande',tahoma,verdana,arial,sans-serif}
+.hubs_wikipedia div.source_divider{border-color:#e9e9e9;border-style:solid;border-width:1px 0 0;margin:5px 0 10px}
+#hubs_wikipedia table{width:100%;border-color:#ccc !important;border-collapse:collapse;border-width:1px !important;margin-bottom:10px}
+#hubs_wikipedia table th{background:#f7f7f7 !important;color:#333 !important;padding:2px}
+#hubs_wikipedia table td{padding:2px}
+#hubs_wikipedia table span{font-size:100% !important}
+#hubs_wikipedia .rellink{color:gray;margin-bottom:2px}
+#hubs_wikipedia .portal table{margin:0}
+#hubs_wikipedia .external{padding-right:12px;background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yW/r/AebrcwrBeG6.png) no-repeat right 3px}
+#hubs_wikipedia div.thumb{margin-bottom:5px;border-color:#fff;border-style:solid;width:auto}
+#hubs_wikipedia div.thumbinner{border:1px solid #ccc;padding:3px !important;background-color:#f9f9f9;text-align:center;overflow:hidden}
+#hubs_wikipedia .thumbimage{border:1px solid #ccc}
+#hubs_wikipedia .thumbcaption{border:none;text-align:left;padding:3px !important;font-size:11px}
+#hubs_wikipedia img.thumbborder{border:1px solid #ddd}
+#hubs_wikipedia a.new{color:#333}
+#hubs_wikipedia div.magnify{float:right;border:none !important;background:none !important}
+#hubs_wikipedia div.magnify a{display:block;border:none !important;background:none !important}
+#hubs_wikipedia div.magnify img{display:none}
+#hubs_wikipedia div.tright{border-width:0 0 10px 10px;clear:right;float:right}
+#hubs_wikipedia div.tleft{border-width:5px 10px 5px 0;clear:left;float:left;margin-right:5px}
+#hubs_wikipedia .wikipedia_citation{border-top:1px solid #ccc;clear:both;color:#666;margin:10px 0 0 0;padding:5px 0 10px 0}
+#hubs_wikipedia .wikipedia_citation a{color:#8d9ccf}
+.profile .wiki_source{padding-top:20px}
+#suggest_edits_onpage .label{width:80px}
+#suggest_edits_onpage .notice{margin:8px -5px 8px}
+#suggest_edits_onpage .dataRow .label{padding-top:3px}
+#suggest_edits_onpage .edit_page_basic_info .inputtext, #suggest_edits_onpage .edit_page_basic_info textarea{width:370px}
+#suggest_edits_onpage .edit_page_basic_info .uiTypeahead{width:378px}
+#suggest_edits_onpage .edit_page_basic_info .uiTypeahead.topic_typeahead{width:auto}
+#suggest_edits_onpage .edit_page_basic_info .uiTypeahead.duplicate_typeahead{width:auto}
+#suggest_edits_onpage .edit_page_basic_info
+.nullableTypeaheadEnabled .uiTypeahead{width:353px}
+#suggest_edits_onpage .edit_page_basic_info .nullableFieldDisabled{width:376px;padding-bottom:1px}
+#suggest_edits_onpage .edit_page_basic_info .nullableFieldEnabled{width:378px}
+#suggest_edits_onpage .edit_page_basic_info
+.nullableFieldEnabled .nullableTextField, #suggest_edits_onpage .edit_page_basic_info
+.nullableTypeaheadEnabled .nullableTypeaheadTextField{width:347px}
+#suggest_edits_onpage .uiTokenizer{width:376px}
+#suggest_edits_onpage .footer .data{padding-right:14px}
+#suggest_edits_onpage td.data{padding:1px 1px 3px}
+#suggest_edits_onpage .hours_empty_row, #suggest_edits_onpage .divider{display:none}
+#suggest_edits_onpage .hours_editor_row td, #suggest_edits_onpage .hours_editor_row th{padding-top:2px;padding-bottom:2px;vertical-align:middle}
+#suggest_edits_onpage .hours_editor_row.nonNeedy th{vertical-align:top}
+#suggest_edits_onpage .places_suggest_duplicate_row td, #suggest_edits_onpage .places_suggest_duplicate_row th{padding-top:0;padding-bottom:0;vertical-align:middle}
+#place_duplicate_loading_indicator_area{text-align:center}
+.profile .wikipedia-description p{margin:1px 0 10px;line-height:16px}
+.profile .wikipedia-description h2, .profile .wikipedia-description h3{margin:0;font-size:11px}
+.profile .wikipedia-description h2 + h3{display:none}
+.profile .wikipedia-description i{font-family:'lucida grande',tahoma,verdana,arial,sans-serif}
+.profile .wikipedia-description ul{line-height:14px;list-style-position:outside;list-style-type:disc;padding-left:15px;margin-bottom:7px}
+.profile .wikipedia-description ul li{display:list-item;padding-bottom:3px}
+.profile .wikipedia-description .external{padding-right:12px;background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yW/r/AebrcwrBeG6.png) no-repeat right 3px}
+.findfriends #webmail .header{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/y6/r/HhuARCoWAr9.gif)}
+.findfriends #email_application .header{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yb/r/b7VwC8kZCwJ.gif)}
+.findfriends #chatfind .header{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yQ/r/WBWgBVeCy7Y.gif)}
+.findfriends #friend_guesser .header{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yw/r/OpnXm-HZHKy.gif)}
+.findfriends #people_search .header{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yB/r/Unmn04Ngmxd.gif)}
+.findfriends #people_search .search_query .inputtext{float:left;padding:4px 3px 3px 3px;line-height:14px;margin:0}
+.findfriends #people_search .UISearchQuery_Submit{padding:0 2px 1px 2px}
+.findfriends #people_search #classmates_links{clear:left;padding-top:10px}
+.findfriends #browse_by_name .header{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yJ/r/RVElCNYrs5z.gif)}
+.findfriends #people_search .content{padding-left:25px}
+.findfriends #people_search .search_query{margin:10px 0 20px 0}
+.findfriends #people_search .inputsubmit{margin:0 5px;padding:2px 0;width:75px}
+.findfriends #people_search #q_ff{width:205px}
+.findfriends #people_search .content li{padding-bottom:5px}
+#browse_by_name .alphabet_list a{float:left;font-weight:bold;margin:10px 7px 0 0}
+#new_ff #intro h2{font-size:14px;font-weight:bold}
+#new_ff #intro h3{font-size:14px}
+#new_ff p{color:#555}
+#new_ff #intro p{margin:7px 20px 20px 0;display:block;font-size:11px;line-height:15px;color:#666}
+#new_ff .box_row{margin-bottom:15px}
+#new_ff .box_row .box{width:290px}
+#new_ff .box_row .left{float:left}
+#new_ff .box_row .right{float:right}
+#new_ff .box_row .full{width:603px}
+#new_ff .header{background-position:left 11px;background-repeat:no-repeat;border-top:1px solid #e0e0e0;padding:12px 0 5px 24px}
+#new_ff #friend_guesser .header{padding:12px 10px 5px 24px}
+#new_ff .icq_header{border-top:1px solid #e0e0e0;padding:12px 0 5px 0}
+#new_ff .header .main_title{float:left;font-size:13px;font-weight:bold}
+#new_ff .icq_main_title{font-size:13px;font-weight:bold;padding-left:2px}
+#new_ff .icq_content{padding:1px 0 16px 23px}
+#new_ff .icq_content .editor .buttons{padding-top:0}
+#new_ff .icq_content .ci_submit_button{padding-left:0}
+#ff_icq_row{padding:14px 0 0 0}
+#new_ff .header .subtext{float:right;margin-right:10px}
+#new_ff .header .main_subtitle{float:left;clear:left;padding-top:5px;color:#666;line-height:16px}
+#new_ff .box_row .box .content{padding:0 10px}
+#new_ff .box_row .box .content p{color:#555;margin-bottom:0}
+#new_ff .box_row .box .content .friend_guesses{margin:0 0 0 5px}
+#new_ff .box_row #chatfind p{line-height:16px;margin-top:13px;margin-bottom:15px}
+#new_ff .box_row #people_search .inputsearch{background:none;padding-left:5px}
+#new_ff .box_row #people_search #q{width:150px}
+#new_ff .box_row #people_search .inputsubmit{margin:0 0 1px 5px;width:55px}
+#new_ff .box_row #people_search .search_query{margin:15px 0 15px 15px}
+#new_ff .box_row #people_search #classmates_links{margin:0 0 0 15px}
+#new_ff .box_row #webmail .content #webmail_contact_reason{float:left;padding:3px;line-height:14px;width:163px;margin-top:10px}
+#new_ff .box_row #address_book_upload{margin-left:12px}
+#new_ff .box_row #address_book_upload #upload{margin:2px 0}
+#new_ff .box_row #webmail .content #error{margin:10px 20px 10px 0}
+#new_ff .box_row #chatfind .content #error{margin:10px 0}
+#new_ff .box_row #webmail .content #error h1, #new_ff .box_row #chatfind .content #error h1{font-size:12px}
+#new_ff .box_row #webmail .content #error p, #new_ff .box_row #chatfind .content #error p{font-size:11px}
+#new_ff .box_row #webmail .content #address_book_upload .instructions{padding-top:10px}
+#new_ff .box_row #webmail .header #webmail_contact_link, #new_ff .box_row #webmail .content #address_book_upload{display:none}
+#new_ff .box_row #webmail .content #address_book_upload{float:left}
+#new_ff .box_row #webmail .header #upload_contact_link{display:block}
+#new_ff .box_row #webmail .right_align_span{float:right}
+#chatfind .contact_importer_widget .ci_login, #chatfind .contact_importer_widget .ci_password{width:150px}
+#chatfind .caption{color:#777}
+#new_ff #friend_guesser .see_more{display:block;line-height:20px}
+#new_ff #friend_guesser div.see_more{margin:10px 13px 10px 15px;border-top:1px solid #d8dfea}
+#new_ff #friend_guesser a.see_more{background:#f2f2f2 url(http://static.ak.fbcdn.net/rsrc.php/v2/yj/r/Fg783X5g9Fx.gif) no-repeat left 2px;border:none;padding-left:21px}
+#new_ff #friend_guesser a.see_more:hover{background-color:#e6edf8}
+#new_ff .box_row #friend_guesser .content a.see_more{font-weight:bold}
+#new_ff .friend_grid .friend_grid_col{margin-left:16px}
+#new_ff .box_row #people_search.full .search_query{float:left;padding-right:30px}
+#new_ff .box_row #people_search.full .search_query .inputsubmit{width:75px}
+#new_ff .box_row #people_search.full .search_query #q{width:200px}
+#new_ff .box_row #people_search.full #classmates_links{font-weight:bold;float:left;margin-top:15px}
+#new_ff #chat_expand_links li{padding:2px 0}
+#new_ff #browse_by_name .content{padding:0 10px 0 25px}
+#importer_frame{margin-bottom:20px}
+.followListFilter{border-bottom:1px solid #e9e9e9}
+.friend_suggester_dialog #fb_multi_friend_selector_wrapper,
+.friend_suggester_dialog .pop_content .dialog_body{padding:0}
+.friend_suggester_dialog #fb_multi_friend_selector h2{background:none;border:none}
+.friend_suggester_dialog #fb_multi_friend_selector .multi_friend_status,
+.friend_suggester_dialog #fb_multi_friend_selector h3{border:none;padding:4px 10px}
+.friend_suggester_dialog #fb_multi_friend_selector .buttons,
+.friend_suggester_dialog #fb_multi_friend_selector #view_unselected{display:none}
+.friend_suggester_dialog #fb_multi_friend_selector #friends{border:none;padding:0}
+.friend_suggester_dialog #fb_multi_friend_selector{width:auto}
+.friend_suggester_dialog #fb_multi_friend_selector #friends .recommended_text{background-color:#edeff4}
+.friend_suggester_dialog #fb_multi_friend_selector #friends
+.recommended_friends{background-color:#edeff4;border-bottom:1px solid #dadada}
+.fbAggregatedMapContainer{overflow:hidden;position:relative;z-index:0}
+.fbAggregatedMapContainer .fbAggregatedMap{height:100%}
+.fbAggregatedMapContainer .fbAggregatedMapControl{z-index:7000}
+.fbAggregatedMapCalloutThrobber{position:relative;top:20px;margin-right:auto;margin-left:auto;display:block}
+.fbAggregatedMapCalloutThrobberDiv{display:block;height:50px;width:409px}
+.fbAggregatedMapCalloutShell{position:absolute}
+.fbAggregatedMapCalloutShell .storyOnlyMe div.onlyMeBorderBottom{margin:3px -12px 0 -12px}
+.fbAggregatedMapBubbleShell{background:rgba(177, 109, 137, .35);cursor:pointer;position:absolute;text-align:center;vertical-align:middle}
+.fbAggregatedMapBubbleShellSmall{-webkit-border-radius:15px;height:30px;line-height:30px;width:30px}
+.fbAggregatedMapBubbleShellMedium{-webkit-border-radius:20px;height:40px;line-height:40px;width:40px}
+.fbAggregatedMapBubbleShellLarge{-webkit-border-radius:28px;height:56px;line-height:56px;width:56px}
+.fbAggregatedMapBubble{background-color:#b16582;border:1px solid #58283b;color:#fff;font-family:"Helvetica";font-weight:bold;margin:4px;position:relative;text-align:center;vertical-align:middle;-webkit-font-smoothing:antialiased}
+.fbAggregatedMapBubbleSmall{-webkit-border-radius:11px;font-size:14px;height:20px;line-height:20px;width:20px;z-index:13}
+.fbAggregatedMapBubbleMedium{-webkit-border-radius:16px;font-size:16px;height:30px;line-height:30px;width:30px;z-index:12}
+.fbAggregatedMapBubbleLarge{-webkit-border-radius:24px;font-size:18px;height:46px;line-height:46px;width:46px;z-index:11}
+.fbAggregatedMapPin{color:#fff;-webkit-font-smoothing:antialiased;position:absolute;cursor:pointer}
+.fbAggregatedMapPinText{color:#fff;font-family:"Helvetica";font-weight:bold;left:0;position:absolute;text-align:center}
+.fbAggregatedMapPinTextSmall{font-size:12px;top:1px;width:17px}
+.fbAggregatedMapPinTextMedium{font-size:12px;top:4px;width:25px}
+.fbAggregatedMapPinTextLarge{font-size:12px;top:5px;width:31px}
+.fbAggregatedMapTooltipText{background-color:#fff;color:#333;display:block;font-size:11px;font-weight:bold;min-height:17px;padding:5px 8px 3px;text-align:left;white-space:nowrap}
+.fbMapsButtonStack .uiButtonGroup{border-color:#c5c6c8;-webkit-box-shadow:none}
+.fbMapsButtonStack .uiButtonGroup .uiButtonGroupItem{border-left:0;border-top:1px solid #d9d9d9;display:block}
+.fbMapsButtonStack .uiButtonGroup .firstItem{border-top:0}
+.fbMapsButtonStack > :first-child .uiButtonGroup .uiButton{-webkit-border-bottom-left-radius:0;-webkit-border-top-left-radius:3px;-webkit-border-top-right-radius:3px}
+.fbMapsButtonStack > :last-child .uiButtonGroup .uiButton{-webkit-border-bottom-left-radius:3px;-webkit-border-bottom-right-radius:3px;-webkit-border-top-right-radius:0}
+.fbMapsButtonStack .uiButtonGroup .uiButton .label{vertical-align:middle}
+.fbMapCallout .fbMapCalloutArrowRight, .fbMapCallout .fbMapCalloutArrowLeft, .fbMapCallout .fbMapCalloutArrowTop, .fbMapCallout .fbMapCalloutArrowBottom{display:none;position:absolute}
+.fbMapCalloutArrowRight{left:-8px;top:40px}
+.fbMapCalloutArrowLeft{right:-8px;top:40px}
+.fbMapCalloutArrowTop{bottom:-8px}
+.fbMapCalloutArrowBottom{top:-8px}
+.fbMapCalloutUseArrowRight .fbMapCalloutArrowRight, .fbMapCalloutUseArrowLeft .fbMapCalloutArrowLeft, .fbMapCalloutUseArrowBottom .fbMapCalloutArrowBottom, .fbMapCalloutUseArrowTop .fbMapCalloutArrowTop{display:block}
+.fbMapCalloutMain{background-color:#fff;border:1px solid #fff;margin:1px;outline:1px solid rgba(0, 0, 0, .35)}
+.fbMapCalloutShadow{-webkit-box-shadow:rgba(0, 0, 0, .3) 0 2px 5px}
+.__6{cursor:pointer;position:absolute}
+.__7{padding:1px 6px}
+html .__7 .img{margin:4px 1px}
+a.egoMediaThumb i,
+span.egoMediaThumb i{height:66px;width:94px}
+a.egoMediaThumbMedium i,
+span.egoMediaThumbMedium i{height:78px;width:104px}
+.egoTimelineIntro a.egoMediaThumbMedium i,
+.egoTimelineIntro span.egoMediaThumbMedium i{height:70px;width:104px}
+.egoPlaceComboInput form{display:table;width:100%}
+.egoPlaceComboInput form .uiTypeaheadSpan, .egoPlaceComboInput form .uiButton{display:table-cell}
+.egoPlaceComboInput .uiTypeaheadSpan{width:100%;padding:0 5px 0 0}
+.egoPlaceComboInput .uiTypeahead, .egoPlaceComboInput .uiButton{margin:0}
+.egoPlaceComboInput .uiButtonConfirm{margin-left:189px;margin-top:7px}
+.egoPhotoImage{float:left;padding-bottom:3px}
+.egoPhotoContext{padding-top:3px}
+li.notification .uiCloseButton{visibility:hidden}
+li.notification:hover .uiCloseButton,
+.notification .openToggler .uiCloseButton{visibility:visible}
+.hoursEditorTable{border-spacing:0}
+.hoursEditorDayButtonGrid .uiButtonDepressed{background:#7d7d7d}
+.hoursEditorDayButtonGrid .uiButtonDepressed input{color:#fff}
+.hoursEditorDayButton{border-left-width:0;width:24px}
+.hoursEditorDayButtonFirst{border-left-width:1px}
+.hoursEditorAddRow .hoursEditorAddHoursButton{padding-bottom:0}
+.hoursEditorDaysText{padding-bottom:2px;padding-right:3px}
+.hoursEditorHoursText{padding-bottom:2px;padding-left:3px}
+.hoursEditorOpenTimeInput,
+.hoursEditorCloseTimeInput{width:70px}
+.hoursEditorFormRow{padding-left:7px;width:253px}
+.hoursEditorAllCheckboxContainer{width:140px}
+.pagesElsewhere:hover{background-color:#eff2f7;text-decoration:none}
+.pagesElsewhere:hover .pagesElsewhereReportBtn{visibility:visible}
+.pagesElsewhere .pagesElsewhereReportBtn{visibility:hidden;float:left}
+.pagesElsewhere{padding:3px 2px 3px 7px}
+.pagesElsewhere a{color:#333;text-decoration:none}
+.pagesFriendActivity .uiStreamStory .mainWrapper{margin-right:0}
+.pagesFriendActivityMore > .uiStreamStory:first-child{margin-top:0;border-width:1px 0 0 0}
+.pagesFacepileEllipsis{height:24px;width:24px;background-color:#d8dfea}
+.nullableFieldDisabled{border:1px dashed #ccc}
+.nullableFieldEnabled .nullableDisabledButton{display:none}
+.nullableFieldDisabled .nullableDisabledButton{display:inherit}
+.nullableFieldDisabled .nullableComboField{display:none}
+.nullableDisabledText{padding-top:2px;padding-bottom:2px;font-size:11px;color:#777}
+.nullableDisabledCloseButton{margin-top:2px}
+.nullableFieldDisabled .nullableDisabledButton{margin:1px 1px 0 6px}
+.nullableFieldDisabled .nullableTypeaheadButton,
+.nullableFieldEnabled .nullableTypeaheadButton,
+.nullableTypeaheadEnabled .nullableComboField,
+.nullableTypeaheadEnabled .nullableDisabledButton{display:none}
+.create_album_form textarea,
+.create_album_form .inputtext{width:380px}
+#suggest_edits_onpage .uiInfoTable{table-layout:fixed}
+.PlacesTypeaheadView{overflow:hidden}
+.PlacesTypeaheadViewPopulated{background:#fff;border:solid;border-width:1px 1px 2px;border-color:#333 #333 #293e6a;padding:2px 0 0 0}
+.PlacesTypeaheadView .uiScrollableArea, .PlacesTypeaheadView .uiScrollableAreaWrap{max-height:200px}
+div.PlacesTypeaheadView ul{border:0;padding:0}
+.PlacesTypeaheadView .uiDynamicMap{border-top:1px solid #ddd}
+.PlacesTypeaheadView .compact .placecreate, .PlacesTypeaheadView .places .placecreate, .PlacesTypeaheadView .compact .freeform, .PlacesTypeaheadView .places .freeform{border-top-color:#ddd;min-height:10px;padding:2px 6px 1px;text-align:center}
+div.PlacesTypeaheadView .selected{background-color:#6d84b4;border-color:#3b5998}
+.PlacesTypeaheadFocused, .PlacesTypeaheadFocused .uiTypeahead{z-index:3}
+.app_star_survey_block{padding-top:3px
+}
+.app_star_survey_privacy_icon{margin-top:3px}
+.uiStarsRatable{display:inline-block;position:relative;cursor:pointer}
+.uiStarsRatable i{display:inline-block;height:14px;width:16px}
+.uiStarsRatable.placeStarSurvey i{height:20px;width:20px}
+.uiStarsRatable .emptyStar{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yS/r/89Dvpjs2h9f.png);background-repeat:no-repeat;background-size:auto;background-position:0 -93px}
+.uiStarsRatable .fullStar{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yS/r/89Dvpjs2h9f.png);background-repeat:no-repeat;background-size:auto;background-position:0 -78px}
+.uiStarsRatable .hoverStar{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yS/r/89Dvpjs2h9f.png);background-repeat:no-repeat;background-size:auto;background-position:0 -63px}
+.uiStarsRatable.placeStarSurvey .emptyStar{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yS/r/89Dvpjs2h9f.png);background-repeat:no-repeat;background-size:auto;background-position:0 0}
+.uiStarsRatable.placeStarSurvey .fullStar{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yS/r/89Dvpjs2h9f.png);background-repeat:no-repeat;background-size:auto;background-position:0 -42px}
+.uiStarsRatable.placeStarSurvey .hoverStar{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yS/r/89Dvpjs2h9f.png);background-repeat:no-repeat;background-size:auto;background-position:0 -21px}
+.uiStarsRated{cursor:default}
+.fbTimelineMapZoomer{left:9px;top:9px}
+.fbTimelineMapSnapback{left:9px;top:54px}
+.fbTimelineMapPager{position:absolute;right:9px;top:9px}
+._3sv- .fbProfileBrowserListContainer{margin-left:-13px;padding-top:13px}
+._3sv- .fbProfileBrowserListContainer .followListItem{border:1px solid #e5e5e5;display:inline-block;margin:0 0 13px 13px;padding:0 10px 0 0;vertical-align:top;width:390px}
+#pagelet_map .fbTimelineCompactSection{padding:3px}
+#pagelet_map .contactInfoTable{width:100%}
+#pagelet_map .callOut{padding:20px;width:300px}
+#pagelet_map .callOut .closeButton{position:absolute;right:5px;top:5px}
+#pagelet_map .businessStatus{width:130px;text-align:right}
+#pagelet_map .businessAddress{width:170px;font-weight:bold}
+#pagelet_map .uiScrollableArea.contentAfter::after{background-color:#fff}
+#pagelet_featured_admins .featuredAdminsList{margin-left:3px}
+.pagesAboutDivider{background-color:#c4cde0;float:left;height:100%;margin-left:430px;position:absolute;width:1px}
+.pagesAbout.fbTimelineCompactSection{height:auto;padding:0;position:relative}
+._3nm{width:950px;border:1px solid #d2d2d2;border-top:0 none;border-bottom-color:#afafaf;-webkit-box-shadow:0 1px 0 rgba(0, 0, 0, .05);-webkit-border-bottom-left-radius:5px;-webkit-border-bottom-right-radius:5px;background-color:#fff;font-family:"Helvetica Neue", "Helvetica", "Arial", sans-serif;padding:20px 20px 20px 20px;margin-bottom:20px}
+._3nm ._3no{padding-right:20px;width:264px;vertical-align:top}
+._3nm ._3ut{width:666px;vertical-align:top}
+._3nm h2{font-size:24px;font-weight:bold;margin-left:-1px}
+._3nm .uiButtonGroup{vertical-align:top}
+._3nm .uiButtonGroup .uiButtonGroupItem:empty{display:none}
+._3nm .uiButtonGroup .uiMenu{font-family:"Lucida Grande", "Helvetica", "Arial", sans-serif}
+._3nm .addToMapForm label{height:19px;background-color:transparent;background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/ys/r/erQtkPhJhlW.png);background-repeat:no-repeat;background-size:auto;background-position:0 -4px;border-left:0;border-right:0}
+._3nm .addToMapForm label i{margin-top:4px}
+._3nm .addToMapForm label input{font-size:13px;font-weight:bold;line-height:16px}
+._3nm ._5a-{width:100%;margin-top:5px}
+._3nm ._5a- > tbody > tr > td{vertical-align:top}
+._3nm ._3q9{font:13px/20px "Lucida Grande", "Helvetica", "Arial", sans-serif;color:#444}
+._3nm ._3q9 .text_exposed_link{font-size:inherit}
+._3nm ._3q9 p:first-child{margin-top:0}
+._3nm #hubs_wikipedia{padding-bottom:20px}
+._3nm ._3no ._3nq{padding:0;margin-top:20px}
+._3nm ._3nq{float:right;padding-left:15px;width:264px}
+._6nw ._3nm ._5a_, ._3nm ._5a_{border-top:1px solid #ededed;color:#444;font:13px/18px "Lucida Grande", "Helvetica", "Arial", sans-serif;padding:5px 0}
+._3nm ._5a_ .img{vertical-align:-1px;margin-right:6px}
+._3nm ._5a_:first-child{border-top:0 none;padding-top:0}
+._3nm ._5a_:last-child{padding-bottom:0}
+._3nm ._5a_ ._5b0{font-weight:bold;margin-right:6px}
+._5a_{width:100%}
+._5a_ td._5l5, ._5a_ td._5l6, ._5a_ td._5l6 a[role="button"]{font:13px/18px "Lucida Grande", "Helvetica", "Arial", sans-serif !important}
+._5a_ ._5l5{width:15px}
+._3nm ._5b1{color:gray;font:13px/16px "Lucida Grande", "Helvetica", "Arial", sans-serif !important;margin-bottom:10px;margin-top:5px}
+._3nm ._5b1 .fsm{font:13px/18px "Lucida Grande", "Helvetica", "Arial", sans-serif !important}
+._3nm ._5b1 a.uiLinkSubtle{color:gray}
+._54q{margin-bottom:10px;border-spacing:0}
+._54r, ._54r td{color:#444;font-family:'Lucida Grande', Helvetica, Arial, sans-serif !important;font-size:13px !important;line-height:18px !important}
+._54s, ._54t{vertical-align:top;padding-bottom:4px}
+._54q tr:last-child ._54s, ._54q tr:list-child ._54t{padding-bottom:0}
+._54s{font-weight:bold;padding-right:8px}
+._54t{padding-right:20px}
+._54q > tbody > tr > td:last-child{padding-right:0}
+._54q .hours{width:100%}
+._54q .hours .day{padding-right:5px;width:40px}
+._54q .hours .day.days{width:75px}
+._29t blockquote{margin:0}
+._29t blockquote > p:first-child{margin-top:0}
+._29t #hubs_wikipedia{display:block;font:13px/20px "Lucida Grande", "Helvetica", "Arial", sans-serif}
+._29t #hubs_wikipedia .pef-notification-container{display:none}
+._29t #hubs_wikipedia .metadata.topicon{display:none}
+._29t ._3tc{display:block;margin:auto;margin-top:40px}
+._29t ._4qq{display:block}
+._29t #hubs_wikipedia p, ._29t #hubs_wikipedia ul, ._29t #hubs_wikipedia dl{line-height:1.6}
+._3ni{width:244px;float:right}
+._3nj{width:726px;float:left}
+._69d{border:1px solid #d2d2d2;overflow:hidden;text-overflow:ellipsis;position:relative}
+._69d ._69e{bottom:8px;position:absolute;right:8px}
+._69f{margin:8px 15px 8px 15px}
+._69g{font-size:16px;font-weight:bold;line-height:22px;max-width:500px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+._69d ._69h{margin-bottom:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#666;font-size:12px}
+._69d ._69h a{color:#666}
+._69i{border-spacing:0}
+._69i td{vertical-align:top}
+._69i td:first-child{width:12px}
+._4w9{width:124px;word-wrap:break-word}
+._4wa{font:11px/14px "Lucida Grande", "Helvetica", "Arial", sans-serif}
+._4wb{font:13px/16px "Lucida Grande", "Helvetica", "Arial", sans-serif;margin-top:5px}
+._4wc, ._4wc ._50hf, ._4wc a{color:#999}
+._4wc{margin-top:3px}
+table._435{border-spacing:0}
+._437{vertical-align:top}
+._438{width:100%;text-align:center;font:11px/16px "Lucida Grande", "Helvetica", "Arial", sans-serif;margin-top:10px}
+._438 a{color:#666}
+._436:first-child ._437{padding-top:0}
+._436:last-child ._437{padding-bottom:0}
+._436 ._437:first-child{padding-left:0}
+._436 ._437:last-child{padding-right:0}
+._435 ._436:first-child ._437{padding-top:0}
+._435 ._436 ._437{padding-top:16px;padding-right:16px}
+._435 ._436 ._437:last-child{padding-right:0}
+._3nl #globalContainer #contentArea{width:992px !important}
+._3nl{background-color:#f7f7f7 !important}
+._2qk{height:275px;width:275px}
+._4m78{position:relative}
+._2r9 ._2ra{position:relative;display:block;min-height:50px;min-width:50px}
+._2r9 ._2ra.profilePic .img{display:block}
+._64d{background:#000;background:-webkit-gradient(linear, center top, center bottom, from(transparent), to(rgba(0, 0, 0, .7)));background:-webkit-linear-gradient(transparent, rgba(0, 0, 0, .7));bottom:0;color:#fff;display:block;left:0;padding-top:5px;position:absolute;width:100%}
+._52h2, ._52h2:hover, ._52h3{color:#fff;display:block;text-decoration:none}
+._52h4{border:2px solid #fff;-webkit-border-radius:2px}
+._gl{margin-bottom:20px}
+._3nj ._gl, ._3ni ._gl._498{background:white;border:1px solid #d2d2d2;border-bottom-color:#afafaf;-webkit-box-shadow:0 1px 0 rgba(0, 0, 0, .05);-webkit-border-radius:3px;padding:20px}
+._1zd._gm{margin-top:0}
+._3ng{display:none}
+._4ty{font-family:"Helvetica Neue", "Helvetica", "Arial", sans-serif}
+._4qd h3{color:#444;font:bold 20px "Helvetica Neue", "Helvetica", "Arial", sans-serif;margin:-4px 0 0 -1px}
+._4qd{margin-bottom:10px}
+._3ni ._4qd h3{color:#919191;font-size:16px}
+._4m78 ._4m79{position:relative}
+._4m78:hover ._4m7a{display:block}
+._4m7a{background:#000;bottom:0;color:#fff;display:none;height:20px;opacity:.7;padding:6px 7px 0 23px;position:absolute;right:1px;width:90px}
+._4m7a:hover{opacity:.95}
+._4m7a ._4m7b{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yA/r/QbfalTL4SQ2.png) no-repeat left 4px;height:18px;left:7px;opacity:.95;position:absolute;top:4px;width:18px}
+._4m79 .img{display:block}
+._4qc ._4qd{margin:0}
+._6y9{margin-top:3px;margin-bottom:14px;overflow:hidden}
+._4qe{font:500 14px "Helvetica Neue", "Helvetica", "Arial", sans-serif;padding:0 5px 5px 0;border-bottom:1px solid #ccc;height:33px}
+._4qa{bottom:-7px;color:#c2c2c2;cursor:pointer;display:inline-block;margin-right:5px;position:relative}
+._4qa ._4qf{color:#b2b2b2;display:inline-block;margin-left:5px}
+._4qa._4lt ._4qf{color:#777}
+._4qa:hover{text-decoration:underline;color:#989898}
+._4qa._4lt{color:#444}
+._4qa._4lt::after{width:10px;height:10px;display:inline-block;text-align:center;content:" ";background:white;border-right:1px solid #ccc;border-bottom:1px solid #ccc;-webkit-transform:rotate(-135deg);margin-left:50%;left:-10px;position:relative;margin-bottom:-7px}
+._4qa::after{width:10px;height:10px;display:inline-block;text-align:center;content:" ";margin-left:50%;left:-10px;position:relative;margin-bottom:-7px}
+#vertex_place_information .uiInfoTable{margin:3px 3px 3px 3px}
+#vertex_place_information .uiInfoTable .label{width:auto;text-align:left}
+.timelineLayout ._413g .uiStreamRedesign .uiStreamStory .mainWrapper{margin-bottom:16px}
+.timelineLayout ._413g .uiStreamRedesign .fbMainStreamAttachment.mvm{margin-bottom:10px}
+._6zy ._6zz{display:none}
+._6zy:hover ._6zz{display:inline}
+._1vd{margin-top:8px}
+._1vd .nearby_pager{margin-left:0;margin-right:0}
+._4tw{margin-bottom:10px}
+._4tw .uiTypeahead .textInput{width:237px !important}
+._40d ._1s8{-webkit-box-shadow:none;border:1px solid #d2d2d2}
+._4lz{width:100%}
+._4lz ._4l- ._4l_{padding-right:10px}
+._4lz ._4l- ._4m0{font-weight:bold;font-size:14px}
+._4tv{margin:-3px;white-space:nowrap}
+._5xe{margin:2px;vertical-align:top;border:1px solid #c4cee2;border-color:rgba(59, 89, 152, .25)}
+._4tv ._53d{bottom:0;left:0;right:0}
+._52ud{font-size:14px}
+._52ue{position:relative}
+._52uf{opacity:0;position:absolute;right:0;top:10px}
+._52ue:hover ._52uf{opacity:1}
+._52ug{font:11px/16px "Lucida Grande", "Helvetica", "Arial", sans-serif;text-align:center;width:100%}
+._52ug a{color:#666}
+._4-hd{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/8zG0BM_UK7h.png) no-repeat left;list-style-type:none;margin-bottom:5px;padding-left:18px}
+._4w6{border-bottom:1px solid #ccc;width:100%;padding-bottom:5px;margin-bottom:14px;font:500 14px "Helvetica Neue", "Helvetica", "Arial", sans-serif;color:#444}
+._4w7{display:inline-block;font-size:11px;letter-spacing:normal;margin-bottom:20px;vertical-align:top}
+._4w7:only-child, ._4w7:last-child{margin-bottom:0}
+._4w8{letter-spacing:15px;font-size:1px}
+#pagelet_vertex_crowdsourcing #suggest_edits_onpage .edit_page_basic_info
+.inputtext, #pagelet_vertex_crowdsourcing #suggest_edits_onpage .edit_page_basic_info
+textarea{width:454px}
+#pagelet_vertex_crowdsourcing #suggest_edits_onpage .edit_page_basic_info
+.uiTypeahead{width:462px}
+#pagelet_vertex_crowdsourcing #suggest_edits_onpage .edit_page_basic_info
+.nullableTypeaheadEnabled .uiTypeahead{width:437px}
+#pagelet_vertex_crowdsourcing #suggest_edits_onpage .edit_page_basic_info
+.nullableFieldDisabled{width:460px}
+#pagelet_vertex_crowdsourcing #suggest_edits_onpage .edit_page_basic_info
+.nullableFieldEnabled{width:462px}
+#pagelet_vertex_crowdsourcing #suggest_edits_onpage .edit_page_basic_info
+.nullableFieldEnabled .nullableTextField, #pagelet_vertex_crowdsourcing #suggest_edits_onpage .edit_page_basic_info
+.nullableTypeaheadEnabled .nullableTypeaheadTextField{width:431px}
+#pagelet_vertex_crowdsourcing #suggest_edits_onpage .uiTokenizer{width:460px}
+._5_y{margin-top:15px}
+.sp_3f0t1g{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yZ/r/wLT6Ip0h51L.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:25px;width:39px}
+.sx_a38611{background-position:-0px -26px}
+.sx_5be905{width:40px;background-position:-0px -0px}
+.sx_0b34c8{width:33px;background-position:-0px -128px}
+.sx_f8f1b4{background-position:-0px -52px}
+.sx_5c7e8e{width:37px;background-position:-0px -78px}
+.sx_ac494f{width:12px;height:15px;background-position:-0px -187px}
+.sx_4f8b0a{width:37px;height:23px;background-position:-0px -104px}
+.sx_cca367{width:32px;height:32px;background-position:-0px -154px}
+.sx_9f87f8{width:9px;height:14px;background-position:-13px -187px}
+.sp_cl6cr8{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yj/r/2AhTAtYQ5UV.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:16px;width:16px}
+.sx_809db9{background-position:0 0}
+.sx_4b2da7{background-position:0 -17px}
+.sp_cxq91e{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yP/r/RwntRufxj8B.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:9px;width:8px}
+.sx_522f58{width:9px;height:16px;background-position:-18px -66px}
+.sx_e6c5de{width:9px;height:16px;background-position:0 -89px}
+.sx_1b6f0c{width:32px;height:32px;background-position:0 0}
+.sx_f831f4{width:32px;height:32px;background-position:0 -33px}
+.sx_d20292{width:17px;height:22px;background-position:0 -66px}
+.sx_957545{height:10px;background-position:-10px -89px}
+.sx_d1dcc7{height:8px;background-position:0 -106px}
+.sx_2d4090{height:8px;background-position:-9px -106px}
+.sx_2c2b7a{width:5px;background-position:-19px -89px}
+.sx_590a64{width:5px;background-position:-25px -89px}
+.sp_djgybi{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yh/r/EUQ02DshbMp.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:13px;width:8px}
+.sx_ea57c1{width:6px;height:11px;background-position:-6px -28px}
+.selected .sx_ea57c1{background-position:0 -28px}
+.sx_450231{width:10px;background-position:0 0}
+.sx_b3d5b4{width:11px;height:10px;background-position:0 -40px}
+.sx_8f7387{width:9px;background-position:0 -14px}
+.sx_e961dd{height:8px;background-position:0 -51px}
+.sp_ewo0o7{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yS/r/89Dvpjs2h9f.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:14px;width:16px}
+.sx_ca2cb6{width:20px;height:20px;background-position:0 0}
+.sx_01152f{width:20px;height:20px;background-position:0 -21px}
+.sx_56a9a2{width:20px;height:20px;background-position:0 -42px}
+.sx_2f4c86{background-position:0 -63px}
+.sx_3be19b{background-position:0 -78px}
+.sx_c852a4{background-position:0 -93px}
+.uiComboInput{border:1px solid #bdc7d8;display:inline-block;zoom:1}
+.uiComboInput .inputtext, .uiComboInput .uiTypeahead, .uiComboInput .uiTypeahead .wrap{border:transparent}
+.uiComboInput .uiTypeahead{display:inline-block;vertical-align:top;zoom:1}
+.uiComboInput .comboButton{margin:-1px;position:relative;z-index:2;zoom:1}
+.uiDynamicMap{overflow:hidden;position:relative}
+.uiDynamicMap .mapOverlay{-webkit-transition:opacity .25s ease-out}
+.uiDynamicMap .uiDynamicMapCopyright{position:absolute;right:0}
+.uiDynamicMap .mapPopUpInfobox{position:absolute;white-space:nowrap}
+.uiDynamicMap .mapPopUpInfoboxInactive{pointer-events:none}
+.uiDynamicMapIframe{width:100%;height:100%;overflow:hidden;border:0}
+.uiDynamicMap .zoomer{z-index:0;height:0}
+.zoomer-ul{left:20px;position:absolute;top:20px}
+.zoomer-ur{position:absolute;right:20px;top:20px}
+.zoomer-br{bottom:75px;position:absolute;right:20px}
+.uiDynamicMap .zoomer div{width:24px;cursor:pointer;background:transparent url(http://static.ak.fbcdn.net/rsrc.php/v2/yz/r/iiecu3W5XWw.png) no-repeat}
+.uiDynamicMap .zoomer .zoomIn{background-position:left top;height:22px}
+.uiDynamicMap .zoomer .zoomOut{background-position:left bottom;height:23px}
+._4288 .uiMorePagerPrimary{border-top:none;display:inline-block;padding:0}
+._4288 .uiMorePagerLoader{border-top:none;padding:0}
+._4288 .uiMorePagerPrimary:hover{background-color:#fff;border-top:none}
+._4288 a{color:#666}
+.async_saving .uiMorePagerPrimary{display:none}
+.uiTypeaheadView .noTrucating .text, .uiTypeaheadView .noTrucating .subtext, .uiTypeaheadView .noTrucating .category{text-overflow:clip;white-space:normal}
+
+#bootloader_T823n { height: 42px; }

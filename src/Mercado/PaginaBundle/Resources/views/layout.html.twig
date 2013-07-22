@@ -4,178 +4,80 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Mercado de Sabores{% endblock %}</title>
-        <!--<link href="{ asset('bundles/mercadopagina/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">-->
-        <script src="{{ asset('bundles/mercadopagina/js/bootstrap.min.js') }}"></script>
-        <link href="{{ asset('bundles/mercadopagina/css/bootstrap-responsive.css') }}" rel="stylesheet">
-        <style type="text/css">
-
-                *{
-
-                    text-shadow: none !important;
-                    color: white !important;
-
-                }
-                body {
-                    padding-top: 20px;
-                    padding-bottom: 60px;
-                    background: url("{{ asset('bundles/mercadopagina/images/bg.jpg') }}") repeat;
-                }
+        <link href="{{ asset('bundles/mercadopagina/css/main.css') }}" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" media="all" href="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+   		</head>
+   		<div class="header">
+       		<div class="main">
+				<div class="media">
+					<!--<div class="face-img">
+						<img src="{{ asset('bundles/mercadopagina/images/face_madeira.png') }}">
+					</div>-->
+					<div id="fb-root"></div>
+					<script>(function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=496543693757445";
+					  fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));</script>
+			   	<div class="fb-like" data-href="https://www.facebook.com/www.mercadodesabores.com.br?ref=ts&amp;fref=ts" data-send="true" data-width="700" data-show-faces="true" data-colorscheme="dark"></div>
+		   		</div>
+			</div>
+		</div>
+       	<div class="main content1">
+			<div class="banner">
+				<div class="previous">
+					<a href="#"></a>
+				</div>
+				<div class="one">
+					<div class="title">
+						<h2>Produto Destaque</h2>
+					</div>
+					<div class="paragraph">
+						<p>Lorem Ipsum is simply dummy text of the printing and
+							typesetting industry. Lorem Ipsum has been the industry's standard
+							dummy text ever since the 1500s, when an unknown printer took a
+							galley of type and scrambled it to make a type specimen book.</p>
+					</div>
+					<div class="img_banner">
+						<img src="{{ asset('bundles/mercadopagina/images/img_banner_01.png') }}">
+					</div>
+				</div>
+				<div class="next">
+					<a href="#"></a>
+				</div>
+		</div>
+		<div class="logo">
+			<a href="{{ path('_welcome') }}"><img alt="Logo da loja Mercado de Sabores" src="{{ asset('bundles/mercadopagina/images/logo.png') }}"></a>			
+		</div>
+		<div class="content2">
+			{% block content_header %}
+            	{% block content_header_more %}
+           		<!--<li><a href="{ path('_demo') }}">Demo Home</a></li>-->
+            	{% endblock %}
+            {% endblock %}
                 
-                textarea, input{
-                    color: #000!important;
-                }
-                
-                
-
-                /* Custom container */
-                .container {
-                    margin: 0 auto;
-                    max-width: 1000px;
-                }
-
-                .container>hr {
-                    margin: 60px 0;
-                }
-
-                /* Main marketing message and sign up button */
-                .jumbotron {
-                    margin: 80px 0;
-                    text-align: center;
-                }
-
-                .jumbotron h1 {
-                    font-size: 100px;
-                    line-height: 1;
-                }
-
-                .jumbotron .lead {
-                    font-size: 24px;
-                    line-height: 1.25;
-                }
-
-                .jumbotron .btn {
-                    font-size: 21px;
-                    padding: 14px 24px;
-                }
-
-                /* Supporting marketing content */
-                .marketing {
-                    margin: 60px 0;
-                }
-
-                .marketing p+h4 {
-                    margin-top: 28px;
-                }
-
-                /* Customize the navbar links to be fill the entire space of the .navbar */
-                .navbar .navbar-inner {
-                    padding: 0;
-                    background: none !important;
-                    color: white !important;
-                    text-shadow: none !important;
-                    border: none !important;
-                }
-                .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus{
-                    text-decoration: underline !important;
-                    background: none !important;
-                    color: white !important;
-                    text-shadow: none !important;
-                }
-                .navbar .nav {
-                    margin: 0;
-                    display: table;
-                    width: 100%;
-                }
-
-                .navbar .nav li {
-                    display: table-cell; 
-                    /*width: 1%;*/
-                    float: none;
-                }
-
-                .navbar .nav li a {
-                    text-align: center;
-                    /*border-left: 1px solid rgba(255, 255, 255, .75);
-                    border-right: 1px solid rgba(0, 0, 0, .1);*/
-                }
-
-                /*
-                .navbar .nav li:first-child a {
-                    border-left: 0;
-                    border-radius: 3px 0 0 3px;
-                }
-
-                .navbar .nav li:last-child a {
-                    border-right: 0;
-                    border-radius: 0 3px 3px 0;
-                }*/
-
-                article.row-fluid > .centralizador{
-                    margin: 0 11% 0 11%;
-                }
-
-
-                footer, .footer{
-                }
-
-                .li_center{
-                    text-align: center;
-                }
-
-                .li_right{
-                    text-align: right;
-                }
-
-                .logo{
-                    background: url("{{ asset('bundles/mercadopagina/images/logo.png') }}") center;
-                    background-size: 100% 100%;
-                    height: 190px;
-                    width: 120px;
-                }
-            </style>
-        </head>
-        <body>
-            <div class="container">
-                <header class="navbar">
-                    <div class="navbar-inner row-fluid">
-                        <div class="span4">
-                            <ul class="nav">
-                                <li><a href="{{ path('_welcome') }}">Home</a></li>
-                                <li><a href="#">Produtos</a></li>
-                            </ul>
-                        </div>    
-                        <a href="{{ path('_welcome') }}">
-                            <div class="span4 visible-desktop logo">                            
-                            </div>
-                        </a>
-                        <div class="span4">                            
-                            <ul class="nav">
-                                <li><a href="#">Curiosidades</a></li>
-                                <li><a href="{{ path('MercadoPaginaBundle_contato') }}">Contato</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /.navbar -->
-                </header>
-
-                {% block content_header %}
-                        {% block content_header_more %}
-                <!--<li><a href="{ path('_demo') }}">Demo Home</a></li>-->
-                        {% endblock %}
-                {% endblock %}
-
-            </div>
-                {% block content %}
-                {% endblock %}
-
-            <div class="container">
-
-                <article class="row-fluid">
-                    <footer class="footer span10">
-                        <p>&copy; DesenhandoWeb 2013</p>
-                    </footer>
-
-                </article>
-            </div>
-        </body>
-    </html>
+          	{% block content %}
+            {% endblock %}
+        </div>
+			
+	</div>
+	<div class="footer">
+       	<div class="main">
+       		<div class="endereco">
+				<p>Avenida Presidente Franklin Roosevelt, 1241 - Loja 04<br>
+				Navengantes - Porto Alegre, RS<br>
+				Telefone : 3028 7219</p>
+			</div>
+			<div class="google-maps">
+				<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Av.+Pres.+Franklin+Roosevelt,+1241+-+S%C3%A3o+Geraldo,+Porto+Alegre+-+RS,+Brasil&amp;aq=0&amp;oq=Avenida+Presidente+Franklin+Roosevelt,+1241+-+&amp;sll=37.0625,-95.677068&amp;sspn=39.916234,80.859375&amp;t=p&amp;ie=UTF8&amp;hq=&amp;hnear=Av.+Pres.+Franklin+Roosevelt,+1241+-+S%C3%A3o+Geraldo,+Porto+Alegre+-+Rio+Grande+do+Sul,+90230-002,+Rep%C3%BAblica+Federativa+do+Brasil&amp;ll=-30.012625,-51.208434&amp;spn=0.013006,0.018239&amp;z=15&amp;output=embed"></iframe><br /><small><a href="https://www.google.com/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=Av.+Pres.+Franklin+Roosevelt,+1241+-+S%C3%A3o+Geraldo,+Porto+Alegre+-+RS,+Brasil&amp;aq=0&amp;oq=Avenida+Presidente+Franklin+Roosevelt,+1241+-+&amp;sll=37.0625,-95.677068&amp;sspn=39.916234,80.859375&amp;t=p&amp;ie=UTF8&amp;hq=&amp;hnear=Av.+Pres.+Franklin+Roosevelt,+1241+-+S%C3%A3o+Geraldo,+Porto+Alegre+-+Rio+Grande+do+Sul,+90230-002,+Rep%C3%BAblica+Federativa+do+Brasil&amp;ll=-30.012625,-51.208434&amp;spn=0.013006,0.018239&amp;z=15" style="color:#0000FF;text-align:left">Exibir mapa ampliado</a></small>
+			</div>
+			<div class="dw">
+			</div>
+		</div>
+	</div>
+</html>

@@ -30,10 +30,12 @@
     <parameter key="database_name">mercado_de_sabores</parameter>
     <parameter key="database_user">root</parameter>
     <parameter key="database_password">olnrtvu2t</parameter>
-    <parameter key="mailer_transport">smtp</parameter>
+    <parameter key="mailer_transport">smtp.gmail.com</parameter>
     <parameter key="mailer_host">127.0.0.1</parameter>
-    <parameter key="mailer_user">null</parameter>
+    <parameter key="mailer_username">diegogiacobb@gmail.com</parameter>
     <parameter key="mailer_password">null</parameter>
+    <parameter key="mailer_port">465</parameter>
+    <parameter key="mailer_encryption">ssl</parameter>
     <parameter key="locale">en</parameter>
     <parameter key="secret">460ddf271d8ed00457e95224284285e37e323c8f</parameter>
     <parameter key="database_path">null</parameter>
@@ -310,17 +312,13 @@
     <parameter key="swiftmailer.transport.smtp.class">Swift_Transport_EsmtpTransport</parameter>
     <parameter key="swiftmailer.transport.smtp.encryption">null</parameter>
     <parameter key="swiftmailer.transport.smtp.port">25</parameter>
-    <parameter key="swiftmailer.transport.smtp.host">127.0.0.1</parameter>
+    <parameter key="swiftmailer.transport.smtp.host">localhost</parameter>
     <parameter key="swiftmailer.transport.smtp.username">null</parameter>
     <parameter key="swiftmailer.transport.smtp.password">null</parameter>
     <parameter key="swiftmailer.transport.smtp.auth_mode">null</parameter>
     <parameter key="swiftmailer.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.transport.smtp.source_ip">null</parameter>
-    <parameter key="swiftmailer.plugin.blackhole.class">Swift_Plugins_BlackholePlugin</parameter>
-    <parameter key="swiftmailer.spool.memory.class">Swift_MemorySpool</parameter>
-    <parameter key="swiftmailer.email_sender.listener.class">Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener</parameter>
-    <parameter key="swiftmailer.spool.memory.path">/var/www/mercadoSabores/app/cache/prod/swiftmailer/spool</parameter>
-    <parameter key="swiftmailer.spool.enabled">true</parameter>
+    <parameter key="swiftmailer.spool.enabled">false</parameter>
     <parameter key="swiftmailer.sender_address">null</parameter>
     <parameter key="swiftmailer.single_address">null</parameter>
     <parameter key="swiftmailer.delivery_whitelist" type="collection"/>
@@ -437,8 +435,8 @@
     <parameter key="jms_di_extra.directories" type="collection"/>
     <parameter key="jms_di_extra.cache_dir">/var/www/mercadoSabores/app/cache/prod/jms_diextra</parameter>
     <parameter key="jms_di_extra.doctrine_integration">true</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/var/www/mercadoSabores/app/cache/prod/jms_diextra/doctrine/EntityManager_5135480dccf59.php</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager5135480dccf59_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/var/www/mercadoSabores/app/cache/prod/jms_diextra/doctrine/EntityManager_51e9eb4f54451.php</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager51e9eb4f54451_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
     <parameter key="security.secured_services" type="collection"/>
     <parameter key="security.access.method_interceptor.class">JMS\SecurityExtraBundle\Security\Authorization\Interception\MethodSecurityInterceptor</parameter>
     <parameter key="security.access.method_access_control" type="collection"/>
@@ -571,10 +569,6 @@
       <call method="addSubscriberService">
         <argument>twig.exception_listener</argument>
         <argument>Symfony\Component\HttpKernel\EventListener\ExceptionListener</argument>
-      </call>
-      <call method="addSubscriberService">
-        <argument>swiftmailer.email_sender.listener</argument>
-        <argument>Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener</argument>
       </call>
     </service>
     <service id="http_kernel" class="Symfony\Bundle\FrameworkBundle\HttpKernel">
@@ -1747,13 +1741,8 @@
       <argument>100</argument>
       <argument>true</argument>
     </service>
-    <service id="swiftmailer.transport.eventdispatcher" class="Swift_Events_SimpleEventDispatcher" public="false"/>
     <service id="swiftmailer.plugin.messagelogger" class="Swift_Plugins_MessageLogger">
       <tag name="swiftmailer.plugin"/>
-    </service>
-    <service id="swiftmailer.email_sender.listener" class="Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener">
-      <tag name="kernel.event_subscriber"/>
-      <argument type="service" id="service_container"/>
     </service>
     <service id="assetic.filter_manager" class="Symfony\Bundle\AsseticBundle\FilterManager">
       <argument type="service" id="service_container"/>
@@ -1884,8 +1873,8 @@
     <service id="doctrine.orm.default_manager_configurator" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator">
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="EntityManager5135480dccf59_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
-      <file>/var/www/mercadoSabores/app/cache/prod/jms_diextra/doctrine/EntityManager_5135480dccf59.php</file>
+    <service id="doctrine.orm.default_entity_manager" class="EntityManager51e9eb4f54451_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+      <file>/var/www/mercadoSabores/app/cache/prod/jms_diextra/doctrine/EntityManager_51e9eb4f54451.php</file>
       <argument type="service">
         <service class="Doctrine\ORM\EntityManager" factory-method="create" public="false">
           <argument type="service" id="doctrine.dbal.default_connection"/>
@@ -1928,11 +1917,13 @@
                   <service class="Doctrine\ORM\Mapping\Driver\DriverChain" public="false">
                     <call method="addDriver">
                       <argument type="service">
-                        <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
-                          <argument type="service" id="annotation_reader"/>
+                        <service class="Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver" public="false">
                           <argument type="collection">
-                            <argument>/var/www/mercadoSabores/src/Mercado/PaginaBundle/Entity</argument>
+                            <argument key="/var/www/mercadoSabores/src/Mercado/PaginaBundle/Resources/config/doctrine">Mercado\PaginaBundle\Entity</argument>
                           </argument>
+                          <call method="setGlobalBasename">
+                            <argument>mapping</argument>
+                          </call>
                         </service>
                       </argument>
                       <argument>Mercado\PaginaBundle\Entity</argument>
@@ -2213,17 +2204,7 @@
         <argument type="service" id="monolog.handler.main"/>
       </call>
     </service>
-    <service id="swiftmailer.transport" class="Swift_Transport_SpoolTransport">
-      <argument type="service" id="swiftmailer.transport.eventdispatcher"/>
-      <argument type="service" id="swiftmailer.spool"/>
-      <call method="registerPlugin">
-        <argument type="service" id="swiftmailer.plugin.messagelogger"/>
-      </call>
-    </service>
-    <service id="mailer" class="Swift_Mailer">
-      <argument type="service" id="swiftmailer.transport"/>
-    </service>
-    <service id="swiftmailer.transport.real" class="Swift_Transport_EsmtpTransport">
+    <service id="swiftmailer.transport" class="Swift_Transport_EsmtpTransport">
       <argument type="service">
         <service class="Swift_Transport_StreamBuffer" public="false">
           <argument type="service">
@@ -2248,9 +2229,11 @@
           </service>
         </argument>
       </argument>
-      <argument type="service" id="swiftmailer.transport.eventdispatcher"/>
+      <argument type="service">
+        <service class="Swift_Events_SimpleEventDispatcher" public="false"/>
+      </argument>
       <call method="setHost">
-        <argument>127.0.0.1</argument>
+        <argument>localhost</argument>
       </call>
       <call method="setPort">
         <argument>25</argument>
@@ -2273,8 +2256,13 @@
       <call method="setSourceIp">
         <argument>null</argument>
       </call>
+      <call method="registerPlugin">
+        <argument type="service" id="swiftmailer.plugin.messagelogger"/>
+      </call>
     </service>
-    <service id="swiftmailer.spool" class="Swift_MemorySpool"/>
+    <service id="mailer" class="Swift_Mailer">
+      <argument type="service" id="swiftmailer.transport"/>
+    </service>
     <service id="jms_di_extra.metadata_driver" class="JMS\DiExtraBundle\Metadata\Driver\AnnotationDriver">
       <argument type="service" id="annotation_reader"/>
     </service>

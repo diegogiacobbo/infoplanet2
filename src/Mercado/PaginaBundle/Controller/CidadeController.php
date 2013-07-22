@@ -36,9 +36,13 @@ class CidadeController extends Controller
     public function showAction($id)
     {
         $em = $this->getDoctrine()->getManager();
-
+        
+        echo "OLAAAA!!!<br><br>";
+        var_dump($id);
         $entity = $em->getRepository('MercadoPaginaBundle:Cidade')->find($id);
-
+        
+        
+        
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Cidade entity.');
         }
