@@ -173,10 +173,12 @@ px      68    160    252    344    436    */
 
 @media only screen and (min-width: 992px) {
 	body{
-		background-image: url("../images/bg.jpg");
+		background: url("../images/bg.jpg") /*transparent*/;
 		padding: 0;
 		margin: 0;
 		margin: auto;
+  		/*opacity:0.6;
+  		filter:alpha(opacity=60); /* For IE8 and earlier */
 	}
 	
 	.main{
@@ -279,6 +281,13 @@ p{
 	height: 100px;
 }
 
+.media > .logo{
+	
+	width: 50px;
+	float: left;
+	clear: right;
+}
+
 .media > .face-img{	
 	width: 50px;
 	float: left;
@@ -314,17 +323,19 @@ p{
 	max-width: 330px;
 }
 
+/*
 .logo{
 	z-index: 9999;
 	text-align: center;
 	margin-bottom: -49px;
-}
+}*/
 
 .content2{
 	float: left;
 	margin: -30px auto 0;
 	background-color: #663300;
-	z-index: -100;
+	/*z-index: -100;*/
+	clear: both;
 }
 
 .yellow{
@@ -384,7 +395,7 @@ p{
 Colocar contents nos outros
 **/
 .content{
-	margin-bottom: 300px;
+	margin-bottom: 800px;
 }
 
 .message {
@@ -418,10 +429,64 @@ Colocar contents nos outros
 }
 
 .footer{
-	height: 600px;
-	background: none repeat scroll 0 0 #363636;	
+	
+	/*position:absolute;*/
+	bottom:0;
+	width:100%;
+	height: 395px;
+	background: none repeat scroll 0 0 #363636;
+	margin-top: 575px;
+}
+
+.footer .google-maps{
+	z-index: 100;
+	float: left;
+	clear: right;
+	width: 50%;
+}
+
+
+.ico_goo{
+	margin: 164px 0px 0px -299px;
+	z-index: 9999;
+	color: #363636;
+	font-family: 'Handlee', cursive;
+	background: url("../images/goo.png") no-repeat;
+	background-position:0 100%; 
+	width: 150px;
+	height: 80px;
+}
+
+.ico_goo:hover{
+	color: white;
+	background: url("../images/google-black.png") no-repeat;
+	background-position:0 100%; 
+	cursor: pointer;
+}
+
+.endereco, .endereco a{
+	float: right;
+	width: 49%;
+	text-decoration:none;
+}
+
+.endereco > p{
+	color: white;
+	font-family: 'Handlee', cursive;
+	margin-top: 30px;
+}
+
+.endereco h2 {
+	margin-top: 20px;
+	font-size: 32px;
+	color: #999a9d;
+	font-weight: 400;
+	line-height: 20px;
+	font-family: 'Satisfy', cursive;
 }
 
 .footer p{
+	margin-top: 20px;
+	font-size: 14px;
 	line-height: 130%;
 }
