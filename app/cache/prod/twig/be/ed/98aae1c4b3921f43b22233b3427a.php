@@ -36,7 +36,7 @@ class __TwigTemplate_beed98aae1c4b3921f43b22233b3427a extends Twig_Template
     {
         // line 6
         echo "<!-- Jumbotron -->
-\t<div class=\"yellow\"></div>
+\t\t<div class=\"yellow\"></div>
 \t\t<div class=\"orange\"></div>
 \t\t<div class=\"content_inner\">
 \t\t\t<h3>Porque consumir produtos orgânicos?</h3>
@@ -44,7 +44,8 @@ class __TwigTemplate_beed98aae1c4b3921f43b22233b3427a extends Twig_Template
 \t\t\t\ttypesetting industry. Lorem Ipsum has been the industry's standard
 \t\t\t\tdummy text ever since the 1500s, when an unknown printer took a
 \t\t\t\tgalley of type and scrambled it to make a type specimen book.</p>
-\t\t</div>
+\t\t</div>\t
+\t\t
 \t\t<div class=\"content_inner\">
 \t\t\t<h3>Contato</h3>
 \t\t\t<input type=\"text\" value=\"Nome\" class=\"input\"> <input
@@ -60,7 +61,6 @@ class __TwigTemplate_beed98aae1c4b3921f43b22233b3427a extends Twig_Template
 \t\t</div>
 \t\t<div class=\"yellow\"></div>
 \t\t<div class=\"orange\"></div>
-\t</div>
 ";
     }
 

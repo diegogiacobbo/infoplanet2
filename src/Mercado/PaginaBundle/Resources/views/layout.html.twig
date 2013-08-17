@@ -1,151 +1,153 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>    
+   		<meta charset="utf-8">
         <title>{% block title %}Mercado de Sabores{% endblock %}</title>
-        <link href="{{ asset('bundles/mercadopagina/css/main.css') }}" rel="stylesheet">
-		<link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
-    	<link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link href='http://fonts.googleapis.com/css?family=Handlee'
+			rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Satisfy'
+			rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" media="all" href="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
-		<script>
-		function initialize() {
+		<script src="{{ asset('bundles/mercadopagina/js/gmap.js') }}"></script>
+		
+		<link href="{{ asset('bundles/mercadopagina/css/bootstrap.css') }}" rel="stylesheet">
+		<link href="{{ asset('bundles/mercadopagina/css/bootstrap-responsive.css') }}" rel="stylesheet">
+        
+        <link href="{{ asset('bundles/mercadopagina/css/main.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/mercadopagina/css/slide-show-home.css') }}" rel="stylesheet">
+        
+        
+		<script src="{{ asset('bundles/mercadopagina/js/jquery.js') }}"></script>
+		<script src="{{ asset('bundles/mercadopagina/js/slide-show-home.js') }}"></script>
 
-  // Create an array of styles.
-  var styles = [
-    {
-      stylers: [
-        { hue: "#00ffe6" },
-        { saturation: -20 }
-      ]
-    },{
-      featureType: "road",
-      elementType: "geometry",
-      stylers: [
-        { lightness: 100 },
-        { visibility: "simplified" }
-      ]
-    },{
-      featureType: "road",
-      elementType: "labels",
-      stylers: [
-        { visibility: "off" }
-      ]
-    }
-  ];
-
-  // Create a new StyledMapType object, passing it the array of styles,
-  // as well as the name to be displayed on the map type control.
-  var styledMap = new google.maps.StyledMapType(styles,
-    {name: "Styled Map"});
-
-  // Create a map object, and include the MapTypeId to add
-  // to the map type control.
-  var mapOptions = {
-    zoom: 11,
-    center: new google.maps.LatLng(55.6468, 37.581),
-    mapTypeControlOptions: {
-      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-    }
-  };
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
-    mapOptions);
-
-  //Associate the styled map with the MapTypeId and set it to display.
-  map.mapTypes.set('map_style', styledMap);
-  map.setMapTypeId('map_style');
-}
-		</script>
+					
    		</head>
    		<body>
 	   		<div class="header">
-	       		<div class="main">
-					<div class="media">
-						<div class="logo">
-							<a href="{{ path('_welcome') }}"><img alt="Logo da loja Mercado de Sabores" src="{{ asset('bundles/mercadopagina/images/logo.png')  }}" height="140" width="150"></a>			
+				<div class="container-narrow">
+					<div class="row-fluid">
+						<div class="logo span8">
+		
+							<a href="{{ path('_welcome') }}"><img
+								alt="Logo da loja Mercado de Sabores"
+								src="{{ asset('bundles/mercadopagina/images/logo.png')  }}"></a>
 						</div>
-						<!--<div class="face-img">
-							<img src="{{ asset('bundles/mercadopagina/images/face_madeira.png') }}">
-						</div>-->
-						<div id="fb-root"></div>
-						<script>(function(d, s, id) {
-						  var js, fjs = d.getElementsByTagName(s)[0];
-						  if (d.getElementById(id)) return;
-						  js = d.createElement(s); js.id = id;
-						  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=496543693757445";
-						  fjs.parentNode.insertBefore(js, fjs);
-						}(document, 'script', 'facebook-jssdk'));</script>
-				   	<div class="fb-like" data-href="https://www.facebook.com/www.mercadodesabores.com.br?ref=ts&amp;fref=ts" data-send="true" data-width="700" data-show-faces="true" data-colorscheme="dark"></div>
-			   		</div>
+						<script>
+							(function(d, s, id) {
+								var js, fjs = d.getElementsByTagName(s)[0];
+								if (d.getElementById(id))
+									return;
+								js = d.createElement(s);
+								js.id = id;
+								js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=496543693757445";
+								fjs.parentNode.insertBefore(js, fjs);
+							}(document, 'script', 'facebook-jssdk'));
+						</script>
+						<div class="fb-like span4 visible-desktop"
+							data-href="https://www.facebook.com/www.mercadodesabores.com.br?ref=ts&amp;fref=ts"
+							data-send="true" data-width="400" data-show-faces="true"
+							data-colorscheme="dark"></div>
+					</div>
 				</div>
 			</div>
-	       	<div class="main content1">
-				<div class="banner">
-					<div class="previous">
-						<a href="#"></a>
-					</div>
-					<div class="one">
-						<div class="title">
-							<h2>Produto Destaque</h2>
+			<div class="banner row-fluid">
+
+			<h1 class="span5">Ta de brincation with me! you have a
+				carecation...</h1>
+			<div class="slides span6 hidden-phone">
+				<div id="slideshow" class="img_banner">
+					<div id="slideshowWindow">
+						<div class="slide">
+							<img src="{{ asset('bundles/mercadopagina/images/img_banner_01.png') }}" />
+							<!-- 				<img src=" asset('bundles/mercadopagina/images/img_banner_01.png')"> -->
+							<div class="slideText">
+								<h2 class="slideTitle">Slide 1</h2>
+								<p class="slideDes">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+									dolore magna aliqua.</p>
+								<!-- 							<p class="slideLink"> -->
+								<!-- 								<a href="#">click here</a> -->
+								<!-- 							</p> -->
+							</div>
 						</div>
-						<div class="paragraph">
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting industry. Lorem Ipsum has been the industry's standard
-								dummy text ever since the 1500s, when an unknown printer took a
-								galley of type and scrambled it to make a type specimen book.</p>
+						<!--/slide-->
+						<div class="slide">
+							<img src="{{ asset('bundles/mercadopagina/images/img_banner_01.png') }}" />
+							<div class="slideText">
+								<h2 class="slideTitle">Slide 2</h2>
+								<p class="slideDes">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+									dolore magna aliqua.</p>
+								<!-- 							<p class="slideLink"> -->
+								<!-- 								<a href="#">click here</a> -->
+								<!-- 							</p> -->
+							</div>
 						</div>
-						<div class="img_banner">
-							<img src="{{ asset('bundles/mercadopagina/images/img_banner_01.png') }}">
+						<!--/slide-->
+						<div class="slide">
+							<img src="{{ asset('bundles/mercadopagina/images/img_banner_01.png') }}" />
+							<div class="slideText">
+								<h2 class="slideTitle">Slide 3</h2>
+								<p class="slideDes">Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+									dolore magna aliqua.</p>
+								<!-- 							<p class="slideLink"> -->
+								<!-- 								<a href="#">click here</a> -->
+								<!-- 							</p> -->
+							</div>
 						</div>
+						<!--/slide-->
 					</div>
-					<div class="next">
-						<a href="#"></a>
-					</div>
+					<!--/slideshowWindow-->
+				</div>
+				<!--/slideshow-->
 			</div>
-			<div class="content2">
+		</div>
+		<div class="container-narrow">
+		<!-- 		<hr> -->
 				{% block content_header %}
 	            	{% block content_header_more %}
-	           		<!--<li><a href="{ path('_demo') }}">Demo Home</a></li>-->
 	            	{% endblock %}
 	            {% endblock %}
-	                
+
 	          	{% block content %}
 	            {% endblock %}
-	        </div>
-				
 		</div>
 		<div class="footer">
-	       	<div class="main">
-				<div class="google-maps">
-					<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
-					src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Av.+Pres.+Franklin+Roosevelt,+1241+
-					-+S%C3%A3o+Geraldo,+Porto+Alegre+-+RS,+Brasil&amp;aq=0&amp;oq=Avenida+Presidente+Franklin+Roosevelt,+1241+-
-					+&amp;sll=37.0625,-95.677068&amp;sspn=39.916234,80.859375&amp;t=p&amp;ie=UTF8&amp;hq=&amp;hnear=Av.+Pres.+Franklin+Roosevelt,
-					+1241+-+S%C3%A3o+Geraldo,+Porto+Alegre+-+Rio+Grande+do+Sul,+90230-002,+Rep%C3%BAblica+Federativa+do+Brasil&amp;ll=-30.012625,
-					-51.208434&amp;spn=0.013006,0.018239&amp;z=15&amp;output=embed"></iframe><br />
+			<div class="container-narrow row-fluid">
+				<div class="google-maps span6">
+					<iframe width="100%" height="100%" frameborder="0" scrolling="no"
+						marginheight="0" marginwidth="0"
+						src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Av.+Pres.+Franklin+Roosevelt,+1241+
+						-+S%C3%A3o+Geraldo,+Porto+Alegre+-+RS,+Brasil&amp;aq=0&amp;oq=Avenida+Presidente+Franklin+Roosevelt,+1241+-
+						+&amp;sll=37.0625,-95.677068&amp;sspn=39.916234,80.859375&amp;t=p&amp;ie=UTF8&amp;hq=&amp;hnear=Av.+Pres.+Franklin+Roosevelt,
+						+1241+-+S%C3%A3o+Geraldo,+Porto+Alegre+-+Rio+Grande+do+Sul,+90230-002,+Rep%C3%BAblica+Federativa+do+Brasil&amp;ll=-30.012625,
+						-51.208434&amp;spn=0.013006,0.018239&amp;z=15&amp;output=embed"></iframe>
+					<br />
 				</div>
-	       		<div class="endereco">
-					<p>Avenida Presidente Franklin Roosevelt, 1241 - Loja 04<br>
-					Navengantes - Porto Alegre, RS<br>
-					<h2>51 3028 7219</h2></p>
-					
-					<a href="https://www.google.com/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=
-							Av.+Pres.+Franklin+Roosevelt,+1241+-+S%C3%A3o+Geraldo,+Porto+Alegre+-+RS,+Brasil&amp;aq=0&amp;oq=Avenida+
-							Presidente+Franklin+Roosevelt,+1241+-+&amp;sll=37.0625,-95.677068&amp;sspn=39.916234,80.859375&amp;t=p&amp;ie=UTF8&amp;
-							hq=&amp;hnear=Av.+Pres.+Franklin+Roosevelt,+1241+-+S%C3%A3o+Geraldo,+Porto+Alegre+-+Rio+Grande+do+Sul,+90230-002,+
-							Rep%C3%BAblica+Federativa+do+Brasil&amp;ll=-30.012625,-51.208434&amp;spn=0.013006,0.018239&amp;z=15" 
-							style="color:#0000FF;text-align:left" target="_blank">
-						<div class="ico_goo">
-							Abra no google!	
-						</div>
+				<div class="endereco span6">
+					<p>
+						Avenida Presidente Franklin Roosevelt, 1241 - Loja 04<br>
+						Navegantes - Porto Alegre, RS<br>
+					<h2>51 3028 7219</h2>
+					</p>
+	
+					<a class="visible-desktop"
+						href="https://www.google.com/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=
+								Av.+Pres.+Franklin+Roosevelt,+1241+-+S%C3%A3o+Geraldo,+Porto+Alegre+-+RS,+Brasil&amp;aq=0&amp;oq=Avenida+
+								Presidente+Franklin+Roosevelt,+1241+-+&amp;sll=37.0625,-95.677068&amp;sspn=39.916234,80.859375&amp;t=p&amp;ie=UTF8&amp;
+								hq=&amp;hnear=Av.+Pres.+Franklin+Roosevelt,+1241+-+S%C3%A3o+Geraldo,+Porto+Alegre+-+Rio+Grande+do+Sul,+90230-002,+
+								Rep%C3%BAblica+Federativa+do+Brasil&amp;ll=-30.012625,-51.208434&amp;spn=0.013006,0.018239&amp;z=15"
+						style="color: #0000FF; text-align: left" target="_blank">
+						<div class="ico_goo">Abra no google!</div>
 					</a>
-					</div>
 				</div>
-				<div class="dw">
-				</div>
+				<!-- 			<div class="dw"><p>&copy; Company 2013</p></div>					 -->
 			</div>
-		</div>  
+		</div>
 	</body>
 </html>
