@@ -21,14 +21,14 @@
 
 				<div class="span6">
 					<h4>Contato</h4>
-					<p>Donec id elit non mi porta gravida at eget metus. Maecenas
-						faucibus mollis interdum.</p>
-
-					<p>Morbi leo risus, porta ac consectetur ac, vestibulum at
-						eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-					<p>Maecenas sed diam eget risus varius blandit sit amet non
-						magna.</p>
+					<p>
+					Avenida Presidente Franklin Roosevelt, 1241 - Loja 04<br>
+					Navegantes - Porto Alegre, RS<br>
+					</p>            
+	               <form action="{{ path('MercadoPaginaBundle_contato_send') }}" method="post" {{ form_enctype(form) }} class="contato">
+			        {{ form_widget(form) }}
+			        <input type="submit" />
+			    </form>
 				</div>
 			</div>
 		</div>

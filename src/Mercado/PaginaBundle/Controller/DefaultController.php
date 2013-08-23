@@ -9,7 +9,15 @@ use Mercado\PaginaBundle\Entity\Contato;
 class DefaultController extends Controller {
 
     public function indexAction() {
-        return $this->render('MercadoPaginaBundle:Default:index.html.twig');
+    	$contato = new Contato();
+    	
+    	$form = $this->createForm(new \Mercado\PaginaBundle\Form\ContatoType(), $contato);
+    	$request = $this->getRequest();
+    	 
+    	
+        return $this->render('MercadoPaginaBundle:Default:index.html.twig', array(
+                    'form' => $form->createView(), 'result' => null
+                ));
     }
 
     public function contatoAction() {

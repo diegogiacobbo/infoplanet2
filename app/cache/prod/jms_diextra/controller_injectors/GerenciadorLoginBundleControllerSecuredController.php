@@ -10,7 +10,7 @@ namespace Gerenciador\LoginBundle\Controller;
 class SecuredController__JMSInjector
 {
     public static function inject($container) {
-        require_once '/var/www/mercadoSabores/app/cache/prod/jms_diextra/proxies/Gerenciador-LoginBundle-Controller-SecuredController.php';
+        require_once 'C:/Users/diegog/Documents/GitHub/infoplanet2/app/cache/prod/jms_diextra/proxies/Gerenciador-LoginBundle-Controller-SecuredController.php';
         $a = new \JMS\AopBundle\Aop\InterceptorLoader($container, array('Gerenciador\\LoginBundle\\Controller\\SecuredController' => array('helloadminAction' => array(0 => 'security.access.method_interceptor'))));
         $instance = new \EnhancedProxy_53c2e1ec35c3c34850b1b7efe4059cd152085917\__CG__\Gerenciador\LoginBundle\Controller\SecuredController();
         $instance->__CGInterception__setLoader($a);
