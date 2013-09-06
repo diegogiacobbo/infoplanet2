@@ -61,15 +61,18 @@ class FileResource implements ResourceInterface, \Serializable
      */
     public function isFresh($timestamp)
     {
-//        if($_SERVER['SERVER_ADDR'] == "127.0.0.1"){
-//            //nada
-//        }else if($_SERVER['SERVER_ADDR'] == "174.132.156.93"){           
-//                $pos = strpos($this->resource, "mercadoSabores");
-//                $this->resource = "/home/diego/public_html/ms2013".substr($this->resource, $pos+14);
-//        }else{
-//                $pos = strpos($this->resource, "mercadoSabores");
-//                $this->resource = "/home/mercadodesabores/www/2013".substr($this->resource, $pos+14);
-//        }
+    	
+
+    // @todo última alteração para não buscar templae do cache - 25082013
+       if($_SERVER['SERVER_ADDR'] == "127.0.0.1"){
+           //nada
+       }else if($_SERVER['SERVER_ADDR'] == "174.132.156.93"){           
+               $pos = strpos($this->resource, "mercadoSabores");
+               $this->resource = "/home/diego/public_html/ms2013".substr($this->resource, $pos+14);
+       }else{
+               $pos = strpos($this->resource, "mercadoSabores");
+               $this->resource = "/home/mercadodesabores/www/2013".substr($this->resource, $pos+14);
+       }
         if (!file_exists($this->resource)) {
             return false;
         }

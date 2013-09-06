@@ -24,7 +24,45 @@
 		<script src="{{ asset('bundles/mercadopagina/js/jquery.js') }}"></script>
 		<script src="{{ asset('bundles/mercadopagina/js/slide-show-home.js') }}"></script>
 
-					
+		<script>
+		
+		$(document).ready(function(){
+			
+ 			$("textarea").text("Mensagem.");
+			
+			$('#mercado_paginabundle_contatotype_nome').focusout(function(){				
+				if( this.value === ''){
+					this.value = 'nome'
+				}			
+			});
+			
+			$('#mercado_paginabundle_contatotype_email').focusout(function(){				
+				if( this.value === ''){
+					this.value = 'e-mail'
+				}
+			});
+			
+			$('#mercado_paginabundle_contatotype').delegate('input', 'focus', function() {
+			    if (this.value === 'nome' || this.value === 'e-mail') {
+			        this.value = '';
+			    }
+			});
+			
+			$('#mercado_paginabundle_contatotype_contato').focusout(function(){				
+				if( this.value === ''){
+					this.value = 'Mensagem.'
+				}
+			});
+			
+			$('#mercado_paginabundle_contatotype').delegate('textarea', 'focus', function() {
+			    if (this.value === 'Mensagem.') {
+			        this.value = '';
+			    }
+			});
+			
+		});
+		
+		</script>			
    		</head>
    		<body>
 	   		<div class="header">
@@ -55,50 +93,42 @@
 				</div>
 			</div>
 			<div class="banner row-fluid">
-
-			<h1 class="span5">Ta de brincation with me! you have a
-				carecation...</h1>
-			<div class="slides span6 hidden-phone">
+			<h2 class="span5">Mercado de Sabores trás para você, alimentos sadios, limpos, cultivados sem agrotóxicos e sem fertilizantes químicos.</h1>
+			<div class="slides span5 hidden-phone">
 				<div id="slideshow" class="img_banner">
 					<div id="slideshowWindow">
 						<div class="slide">
-							<img src="{{ asset('bundles/mercadopagina/images/img_banner_01.png') }}" />
-							<!-- 				<img src=" asset('bundles/mercadopagina/images/img_banner_01.png')"> -->
 							<div class="slideText">
-								<h2 class="slideTitle">Slide 1</h2>
-								<p class="slideDes">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-									dolore magna aliqua.</p>
+								<h2 class="slideTitle">Mel</h2>
+								<p class="slideDes">Para gripes e resfriados, um ótimo aliado é o mel. Experimente!</p>
 								<!-- 							<p class="slideLink"> -->
 								<!-- 								<a href="#">click here</a> -->
 								<!-- 							</p> -->
+							<img src="{{ asset('bundles/mercadopagina/images/img_banner_01.png') }}" />
 							</div>
 						</div>
 						<!--/slide-->
 						<div class="slide">
-							<img src="{{ asset('bundles/mercadopagina/images/img_banner_01.png') }}" />
 							<div class="slideText">
-								<h2 class="slideTitle">Slide 2</h2>
-								<p class="slideDes">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-									dolore magna aliqua.</p>
+								<h2 class="slideTitle">Óleo de Côco</h2>
+								<p class="slideDes">Este óleo, seja em cápsula ou líquido, auxilia fortemente na redução de peso.</p>
 								<!-- 							<p class="slideLink"> -->
 								<!-- 								<a href="#">click here</a> -->
 								<!-- 							</p> -->
 							</div>
+							<img src="{{ asset('bundles/mercadopagina/images/img_banner_02.png') }}" />
+							
 						</div>
 						<!--/slide-->
 						<div class="slide">
-							<img src="{{ asset('bundles/mercadopagina/images/img_banner_01.png') }}" />
 							<div class="slideText">
-								<h2 class="slideTitle">Slide 3</h2>
-								<p class="slideDes">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-									dolore magna aliqua.</p>
+								<h2 class="slideTitle">Chá Verde</h2>
+								<p class="slideDes">A fama deste chá é milenar. É estimulante, auxilia em questões estéticas e muito mais. Passe na nossa loja para saber mais!</p>
 								<!-- 							<p class="slideLink"> -->
 								<!-- 								<a href="#">click here</a> -->
 								<!-- 							</p> -->
 							</div>
+							<img src="{{ asset('bundles/mercadopagina/images/img_banner_03.png') }}" />
 						</div>
 						<!--/slide-->
 					</div>

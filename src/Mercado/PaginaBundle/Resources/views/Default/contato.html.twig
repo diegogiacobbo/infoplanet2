@@ -5,7 +5,7 @@
 {% block content %}
     <form action="{{ path('MercadoPaginaBundle_contato_send') }}" method="post" {{ form_enctype(form) }} class="contato">
         {{ form_widget(form) }}
-        <input type="submit" />
+        <input type="submit" value="Enviar" class="submit">
     </form>
 
 {% if result is not null %}

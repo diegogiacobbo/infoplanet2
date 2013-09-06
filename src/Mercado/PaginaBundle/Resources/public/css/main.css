@@ -7,7 +7,7 @@ body {
 }
 
 .grand-content {
-	margin: 60px 0;
+	margin: -25px 0 50px 0;
 	border-top: 2px solid #ffcc00;
 	border-bottom: 3px solid #ffcc00;
 	padding-right: 40px;
@@ -15,17 +15,58 @@ body {
 
 .grand-content>.content {
 	background-color: #663300;
-	border-top: 4px solid #cc6600;
-	border-bottom: 6px solid #cc6600;
+	border-top: 3px solid #cc6600;
+	border-bottom: 3px solid #cc6600;
 	padding-top: 40px;
 	padding-bottom: 40px;
 	padding-left: 20px;
 	padding-right: 20px;
 }
 
+#mercado_paginabundle_contatotype>div>input {
+	width: 100%;
+}
+
+#mercado_paginabundle_contatotype>div>select {
+	width: 102%;
+}
+
+#mercado_paginabundle_contatotype>div>textarea {
+	width: 100%;
+}
+
 .footer>.container-narrow>.google-maps {
 	height: 250px;
 	width: 300px;
+}
+
+@media only screen and (max-width: 992px) {
+	.banner{
+		margin-bottom: 80px;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.footer>.container-narrow>.google-maps {
+		height: 200px;
+		width: 250px;
+	}
+}
+
+@media only screen and (max-width: 250px) {
+	.footer>.container-narrow>.google-maps {
+		height: 150px;
+		width: 200px;
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	#leftNav {
+		left: 9%;
+	}
+	#rightNav {
+		left: 9%;
+	}
 }
 
 @media only screen and (min-width: 992px) {
@@ -44,8 +85,38 @@ body {
 		margin-top: 20px !important;
 		float: right;
 	}
+	#mercado_paginabundle_contatotype>div>input {
+		width: 44%;
+		clear: right;
+		float: left;
+	}
+	#mercado_paginabundle_contatotype>div>input#mercado_paginabundle_contatotype_email
+		{
+		margin-left: 5%;
+	}
+	#mercado_paginabundle_contatotype>div>select {
+		width: 99%;
+	}
+	#mercado_paginabundle_contatotype>div>textarea {
+		width: 96%;
+	}
+	.contato>input.submit {
+		background-color: #ffcc00;
+		border: none;
+		border-radius: 4px;
+		color: #6633300;
+		font-size: 11px;
+		padding: 3px 5px;
+		float: right;
+		margin: 10px 1% 0 0;
+	}
+	
+	.contato>input.submit:hover {
+		background-color: #cc6600;
+	}
+	
 	.banner {
-		margin: 30px auto;
+		margin: auto;
 		width: 960px !important;
 	}
 	.footer {
@@ -90,11 +161,10 @@ body {
 	text-indent: 0px !important;
 }
 
-.banner h1 {
+.banner > h2 {
+	font-family: 'Handlee', cursive;
 	margin-top: 60px;
-	font-size: 72px;
-	line-height: 1;
-	font-size: 72px;
+	line-height: 1.5;
 }
 
 .banner .btn {
@@ -102,17 +172,25 @@ body {
 	padding: 14px 24px;
 }
 
-.content p+h4 {
+.content  p+h4 {
 	margin-top: 28px;
 }
 
-.contato{
-	
+.content div > .texto {
+	line-height: 1.9;
+}
+
+#mercado_paginabundle_contatotype>div>label {
+	display: none;
+}
+
+.contato>input.submit {
+	float: right;
 }
 
 .ico_goo {
 	z-index: 9999;
-	color: #363636;
+	color: #fff;
 	font-family: 'Handlee', cursive;
 	background: url("../images/goo.png") no-repeat;
 	background-position: 0 100%;
@@ -143,17 +221,16 @@ body {
 
 .endereco>p {
 	color: white;
-	font-family: 'Handlee', cursive;
-	margin-top: 30px;
+	font-family: tahoma;
+	margin-top: 0px;
 }
 
 .endereco h2 {
-	margin-top: 20px;
-	font-size: 32px;
+	margin-top: 10px;
+	font-size: 40px;
 	color: #FFF;
-	font-weight: 400;
-	line-height: 20px;
-	font-family: 'Satisfy', cursive;
+	font-weight: 600;
+	font-family: 'Handlee', cursive;
 }
 
 .footer {
@@ -169,8 +246,143 @@ body {
 .footer>.container-narrow>.dw {
 	
 }
+<!--
+HTML5
 
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-  <script src="js/html5shiv.js"></script>
-<![endif]-->
+
+
+
+ 
+
+
+
+
+shim
+,
+for
+
+
+
+
+ 
+
+
+
+
+IE6-8
+
+
+
+
+ 
+
+
+
+
+support
+
+
+
+
+ 
+
+
+
+
+of
+
+
+
+
+ 
+
+
+
+
+HTML5
+
+
+
+
+ 
+
+
+
+
+elements
+
+
+
+
+ 
+
+
+
+
+-->
+<!--
+[
+if
+lt
+IE
+9
+]
+>
+<
+script
+
+
+
+
+ 
+
+
+
+
+src
+
+
+
+
+
+
+
+
+="
+js
+/html5shiv
+
+
+
+
+
+
+
+
+.js
+
+
+
+
+
+
+
+
+"
+>
+</
+script
+>
+<!
+[
+endif
+]
+
+
+
+
+
+
+
+
+-->

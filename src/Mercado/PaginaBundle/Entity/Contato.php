@@ -29,11 +29,26 @@ class Contato
     private $contato;
     
     public function getContato() {
-        return $this->contato;
+    	return $this->contato;
     }
-
+    
     public function setContato($contato) {
-        $this->contato = $contato;
+    	$this->contato = $contato;
+    }
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nome", type="string", length=45, nullable=false)
+     */
+    private $nome;
+    
+    public function getNome() {
+    	return $this->nome;
+    }
+    
+    public function setNome($nome) {
+    	$this->nome = $nome;
     }
 
         /**

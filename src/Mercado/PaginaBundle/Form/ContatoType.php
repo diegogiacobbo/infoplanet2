@@ -10,17 +10,18 @@ class ContatoType extends AbstractType {
 
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
-                ->add('contato', 'textarea')
-                ->add('data', 'hidden', array('attr' => array('style' => 'display:none;')))
-                ->add('emailSecundario', 'choice', array(
-    'choices' => array('foo' => 'Foo', 'bar' => 'Bar', 'baz' => 'Baz'),
-    'preferred_choices' => array('Sugestao') ,'empty_value' => 'Sugestao'))
+        		->add('data', 'hidden', array('attr' => array('style' => 'display:none;')))
+        		->add('nome', 'text', array('attr' => array('value' => 'nome')))
                 ->add('email', 'email', array('attr' => array('value' => 'e-mail')))
-                ->add('telefoneResidencial', 'number', array(
-                    'invalid_message' => 'O telefone deve conter apenas números, são %num%',
-                    'invalid_message_parameters' => array('%num%' => 8),
-                		 'attr' => array('value' => 'tel')
-                ));
+                ->add('emailSecundario', 'choice', array(
+    'choices' => array('sugestao' => 'Sugestão', 'duvida' => 'Dúvida', 'reclamacao' => 'reclamação'),
+    'preferred_choices' => array('Assunto') ,'empty_value' => 'Assunto'))
+//                 ->add('telefoneResidencial', 'number', array(
+//                     'invalid_message' => 'O telefone deve conter apenas números, são %num%',
+//                     'invalid_message_parameters' => array('%num%' => 8),
+//                 		 'attr' => array('value' => 'tel')
+//                 ))
+                ->add('contato', 'textarea');
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver) {

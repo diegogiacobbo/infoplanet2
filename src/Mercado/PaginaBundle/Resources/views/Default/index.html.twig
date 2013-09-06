@@ -6,17 +6,9 @@
 <div class="grand-content">
 			<div class="row-fluid content">
 				<div class="span6">
-					<h4>Subheading</h4>
-					<p>Donec id elit non mi porta gravida at eget metus. Maecenas
-						faucibus mollis interdum.</p>
-
-					<h4>Subheading</h4>
-					<p>Morbi leo risus, porta ac consectetur ac, vestibulum at
-						eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-					<h4>Subheading</h4>
-					<p>Maecenas sed diam eget risus varius blandit sit amet non
-						magna.</p>
+					<h4>Porque consumir produtos orgânicos?</h4>
+					<p class='texto'>Alimentos orgânicos são, entre outras coisas, livre de pesticidas
+Vários pesticidas utilizados hoje em dia no Brasil estão proibidos em muitos países em razão das consequências provocadas à saúde, tais como o câncer, as alergias e a asma.</p>
 				</div>
 
 				<div class="span6">
@@ -26,9 +18,12 @@
 					Navegantes - Porto Alegre, RS<br>
 					</p>            
 	               <form action="{{ path('MercadoPaginaBundle_contato_send') }}" method="post" {{ form_enctype(form) }} class="contato">
-			        {{ form_widget(form) }}
-			        <input type="submit" />
-			    </form>
+				        {{ form_widget(form) }}
+        				<input type="submit" value="Enviar" class="submit">
+			    	</form>
+			    	{% if result is not null %}
+					    <p>{{ result }}</p>
+					{% endif %}
 				</div>
 			</div>
 		</div>
