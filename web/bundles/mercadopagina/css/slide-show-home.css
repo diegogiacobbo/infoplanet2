@@ -1,5 +1,9 @@
 @CHARSET "UTF-8";
 
+.slides{
+	margin-left: 0px !important;
+}
+
 #slideshow #slideshowWindow {
 	width: 500px;
 	height: 400px;
@@ -17,9 +21,18 @@
 	position: relative;
 }
 
+#slideshow #slideshowWindow .slide img{
+	width: 483px;
+	height: 260px;
+}
+
+#slideshow #slideshowWindow .slide img{
+	display: block;
+	vertical-align: bottom;
+	max-width: 100%;
 }
 #slideshow #slideshowWindow .slide .slideText {
-	position: absolute;
+	position: relative;
 	top: 0px;
 	left: 0px;
 	width: 100%;
@@ -43,11 +56,11 @@
 }
 
 #slideshow #slideshowWindow .slide .slideText p {
-	font-family: tahoma;
+/* 	font-family: tahoma; */
 }
 
 #slideshow #slideshowWindow .slide .slideText h2 {
-	font-family: handlee;
+	font-family: 'Shadows Into Light Two', cursive;
 }
 
 /*Navigation*/

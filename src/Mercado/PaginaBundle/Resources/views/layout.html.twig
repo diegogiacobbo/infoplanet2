@@ -1,15 +1,13 @@
 <!DOCTYPE HTML>
 <html>
     <head>    
+        <link rel="shortcut icon" href="{{ asset('bundles/mercadopagina/images/favicon.ico') }}" />
    		<meta charset="utf-8">
         <title>{% block title %}Mercado de Sabores{% endblock %}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<link href='http://fonts.googleapis.com/css?family=Handlee'
-			rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Satisfy'
-			rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" media="all" href="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script src="{{ asset('bundles/mercadopagina/js/gmap.js') }}"></script>
@@ -74,26 +72,24 @@
 								alt="Logo da loja Mercado de Sabores"
 								src="{{ asset('bundles/mercadopagina/images/logo.png')  }}"></a>
 						</div>
-						<script>
-							(function(d, s, id) {
-								var js, fjs = d.getElementsByTagName(s)[0];
-								if (d.getElementById(id))
-									return;
-								js = d.createElement(s);
-								js.id = id;
-								js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=496543693757445";
-								fjs.parentNode.insertBefore(js, fjs);
-							}(document, 'script', 'facebook-jssdk'));
-						</script>
+						<script>(function(d, s, id) {
+						  var js, fjs = d.getElementsByTagName(s)[0];
+						  if (d.getElementById(id)) return;
+						  js = d.createElement(s); js.id = id;
+						  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=496543693757445";
+						  fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));</script>
 						<div class="fb-like span4 visible-desktop"
-							data-href="https://www.facebook.com/www.mercadodesabores.com.br?ref=ts&amp;fref=ts"
-							data-send="true" data-width="400" data-show-faces="true"
-							data-colorscheme="dark"></div>
+							data-href="http://www.facebook.com/lojamercadodesabores" 
+							data-width="400" 
+							data-colorscheme="dark" data-action="recommend" data-show-faces="true" data-send="true">						
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="banner row-fluid">
 			<h2 class="span5">Mercado de Sabores trás para você, alimentos sadios, limpos, cultivados sem agrotóxicos e sem fertilizantes químicos.</h1>
+			<div class="line-border span1 hidden-phone"><div class="line-border-intern"></div></div>
 			<div class="slides span5 hidden-phone">
 				<div id="slideshow" class="img_banner">
 					<div id="slideshowWindow">
@@ -104,8 +100,8 @@
 								<!-- 							<p class="slideLink"> -->
 								<!-- 								<a href="#">click here</a> -->
 								<!-- 							</p> -->
-							<img src="{{ asset('bundles/mercadopagina/images/img_banner_01.png') }}" />
 							</div>
+							<div class="imagem-banner"><img src="{{ asset('bundles/mercadopagina/images/img_banner_01.png') }}" /></div>
 						</div>
 						<!--/slide-->
 						<div class="slide">
@@ -116,8 +112,7 @@
 								<!-- 								<a href="#">click here</a> -->
 								<!-- 							</p> -->
 							</div>
-							<img src="{{ asset('bundles/mercadopagina/images/img_banner_02.png') }}" />
-							
+							<div class="imagem-banner"><img src="{{ asset('bundles/mercadopagina/images/img_banner_02.png') }}"/></div>						
 						</div>
 						<!--/slide-->
 						<div class="slide">
@@ -128,7 +123,7 @@
 								<!-- 								<a href="#">click here</a> -->
 								<!-- 							</p> -->
 							</div>
-							<img src="{{ asset('bundles/mercadopagina/images/img_banner_03.png') }}" />
+							<div class="imagem-banner"><img src="{{ asset('bundles/mercadopagina/images/img_banner_03.png') }}" /></div>
 						</div>
 						<!--/slide-->
 					</div>

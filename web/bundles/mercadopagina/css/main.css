@@ -4,6 +4,7 @@ body {
 	margin: auto;
 	background: none repeat scroll 0 0 #663300;
 	color: white;
+	font-family: arial;
 }
 
 .grand-content {
@@ -65,7 +66,7 @@ body {
 		left: 9%;
 	}
 	#rightNav {
-		left: 9%;
+		right: 9%;
 	}
 }
 
@@ -104,7 +105,7 @@ body {
 		background-color: #ffcc00;
 		border: none;
 		border-radius: 4px;
-		color: #6633300;
+		color: #663300;
 		font-size: 11px;
 		padding: 3px 5px;
 		float: right;
@@ -138,18 +139,16 @@ body {
 }
 
 .header {
-	height: 109px;
-	padding-top: 20px;
+	height: 167px;
+	padding-top: 10px;
 }
 
 .header .container-narrow .row-fluid>.logo {
-	width: 100px;
 	clear: right;
 	margin: auto;
 }
 
 .header .container-narrow .row-fluid>.logo img {
-	width: 100px;
 }
 
 .header .container-narrow .row-fluid>.fb-like {
@@ -162,7 +161,7 @@ body {
 }
 
 .banner > h2 {
-	font-family: 'Handlee', cursive;
+	font-family: 'Shadows Into Light Two', cursive;
 	margin-top: 60px;
 	line-height: 1.5;
 }
@@ -191,7 +190,7 @@ body {
 .ico_goo {
 	z-index: 9999;
 	color: #fff;
-	font-family: 'Handlee', cursive;
+	font-family: 'Shadows Into Light Two', cursive;
 	background: url("../images/goo.png") no-repeat;
 	background-position: 0 100%;
 	width: 150px;
@@ -221,7 +220,6 @@ body {
 
 .endereco>p {
 	color: white;
-	font-family: tahoma;
 	margin-top: 0px;
 }
 
@@ -230,7 +228,7 @@ body {
 	font-size: 40px;
 	color: #FFF;
 	font-weight: 600;
-	font-family: 'Handlee', cursive;
+	font-family: 'Shadows Into Light Two', cursive;
 }
 
 .footer {
