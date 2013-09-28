@@ -128,20 +128,10 @@ class Twig_Loader_Filesystem implements Twig_LoaderInterface, Twig_ExistsLoaderI
 		// echo "<br>";
 		// var_dump ( $_SERVER ['SERVER_ADDR'] );
 		
-// 		if ($_SERVER ['SERVER_ADDR'] == "127.0.0.1") {			
-// 			// @todo última alteração para não buscar templae do cache - 25082013
-// 			return file_get_contents ( $this->findTemplate ( $name ) );
-// 		} else if ($_SERVER ['SERVER_ADDR'] == "174.132.156.93") {
-// 			$pos = strpos ( $this->findTemplate ( $name ), "mercadoSabores" );
-// 			$name = "/home/diego/public_html/ms2013" . substr ( $this->findTemplate ( $name ), $pos + 31 );
-// 			return file_get_contents ( $name );
-// 		} else {
-// 			$pos = strpos ( $this->findTemplate ( $name ), "mercadoSabores" );
-// 			$name = "/home/mercadodesabores/www/2013" . substr ( $this->findTemplate ( $name ), $pos + 31 );
-// 			return file_get_contents ( $name );
-// 		}
+		$pos = strpos ( $this->findTemplate ( $name ), "mercadoSabores" );
+		return file_get_contents ( $this->findTemplate ( $name )  );
 		
-		return file_get_contents ( $this->findTemplate ( $name ) );
+// 		return file_get_contents ( $this->findTemplate ( $name ) );
 	}
 	
 	/**
@@ -173,19 +163,19 @@ class Twig_Loader_Filesystem implements Twig_LoaderInterface, Twig_ExistsLoaderI
 	 * @ERROR!!!
 	 */
 	public function isFresh($name, $time) {
-// 		if ($_SERVER ['SERVER_ADDR'] == "127.0.0.1") {
-// 			// nada
-// 		} else if ($_SERVER ['SERVER_NAME'] == "174.132.156.93") {
-// 			foreach ( $this->cache as $cache ) {
-// 				$pos = strpos ( $cache, "mercadoSabores" );
-// 				$this->cache [key ( $this->cache )] = "/home/diego/public_html/ms2013" . substr ( $cache, $pos + 31 );
-// 			}
-// 		} else {
-// 			foreach ( $this->cache as $cache ) {
-// 				$pos = strpos ( $cache, "mercadoSabores" );
-// 				$this->cache [key ( $this->cache )] = "/home/mercadodesabores/www/2013" . substr ( $cache, $pos + 31 );
-// 			}
-// 		}
+		if ($_SERVER ['SERVER_ADDR'] == "127.0.0.1") {
+			// nada
+		} else if ($_SERVER ['SERVER_NAME'] == "174.132.156.93") {
+			foreach ( $this->cache as $cache ) {
+				$pos = strpos ( $cache, "mercadoSabores" );
+				$this->cache [key ( $this->cache )] = "/home/diego/public_html/ms2013" . substr ( $cache, $pos + 31 );
+			}
+		} else {
+			foreach ( $this->cache as $cache ) {
+				$pos = strpos ( $cache, "mercadoSabores" );
+				$this->cache [key ( $this->cache )] = $cache; //"/www/" . substr (  );
+			}
+		}
 		return filemtime ( $this->findTemplate ( $name ) ) <= $time;
 	}
 	protected function findTemplate($name) {

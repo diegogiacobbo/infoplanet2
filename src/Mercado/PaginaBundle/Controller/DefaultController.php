@@ -45,36 +45,31 @@ class DefaultController extends Controller {
                     $contato->setNome($_POST["mercado_paginabundle_contatotype"]["nome"]);
 
                     $stmt = $this->get('database_connection');
-//                     $insert = $stmt->prepare(
-//                             "INSERT INTO contato set
-//                         contato = :contato,
-//                         email = :email,
-//                         data = now()
-//                     	,nome = :nome"
-//                     );
-//                     $bol = $insert->execute(array(
-//                         ':contato' => $contato->getContato(),
-//                         ':email' => $contato->getEmail(),
-//                         ':nome' => $contato->getNome()
-//                             ));
+                    $insert = $stmt->prepare(
+                            "INSERT INTO contato set
+                        contato = :contato,
+                        email = :email,
+                        data = now()
+                    	,nome = :nome"
+                    );
+                    $bol = $insert->execute(array(
+                        ':contato' => $contato->getContato(),
+                        ':email' => $contato->getEmail(),
+                        ':nome' => $contato->getNome()
+                            ));
 
                     $bol = true;
                     if ($bol) {
 
 
 //                        subject
-                       $subject = 'Resposta automática de www.mercadodesabores.com.br';
-
-//                        message
-//                        $message = '';
-
-                    	
+                       $subject = 'Mensagem automática de www.mercadodesabores.com.br';                    	
                     	
                     	$message = \Swift_Message::newInstance()
                     	->setSubject($subject)
                     	->setFrom($contato->getEmail())
                     	->setTo('diego@desenhandoweb.com.br')
-                    	->setBody(
+                    	->setBody("Você recebeu um contato de um possível cliente em www.mercadodesabores.com.br: \"".$contato->getContato()."\""
 //                     			$this->renderView(
 //                     					'HelloBundle:Hello:email.txt.twig',
 //                     					array('name' => $contato->getNome(), 'contato' => $contato->getContato())
@@ -82,6 +77,15 @@ class DefaultController extends Controller {
                     	);
                     	$this->get('mailer')->send($message);
 
+                    	$subject = 'Resposta automática de www.mercadodesabores.com.br';
+                    	 
+                    	$message2 = \Swift_Message::newInstance()
+                    	->setSubject($subject)
+                    	->setFrom('contato@mercadodesabores.com.br')
+                    	->setTo($contato->getEmail())
+                    	->setBody("Obrigado por nos contatar. \n\r Está é uma mensagem automática, não responda este e-mail, em breve estaremos lhe retornando!");
+                    	$this->get('mailer')->send($message2);
+                    	
                     }
                 }
     				return $this->render('MercadoPaginaBundle:Default:index.html.twig', array(

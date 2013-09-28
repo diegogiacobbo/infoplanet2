@@ -200,11 +200,11 @@ class appProdDebugProjectContainer extends Container
      * This service is shared.
      * This method always returns the same instance of the service.
      *
-     * @return EntityManager523a458801b79_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager523a458801b79_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
+     * @return EntityManager5240d79e049e2_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager5240d79e049e2_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
      */
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
-        require_once '/var/www/mercadoSabores/app/cache/prod/jms_diextra/doctrine/EntityManager_523a458801b79.php';
+        require_once '/var/www/mercadoSabores/app/cache/prod/jms_diextra/doctrine/EntityManager_5240d79e049e2.php';
 
         $a = new \Doctrine\Common\Cache\ArrayCache();
         $a->setNamespace('sf2orm_default_f6e7f13c71e112e30aea502453e94252');
@@ -237,7 +237,7 @@ class appProdDebugProjectContainer extends Container
         $g = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $f);
         $this->get('doctrine.orm.default_manager_configurator')->configure($g);
 
-        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager523a458801b79_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($g, $this);
+        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager5240d79e049e2_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($g, $this);
     }
 
     /**
@@ -1658,11 +1658,11 @@ class appProdDebugProjectContainer extends Container
         $this->services['swiftmailer.transport.real'] = $instance = new \Swift_Transport_EsmtpTransport(new \Swift_Transport_StreamBuffer(new \Swift_StreamFilters_StringReplacementFilterFactory()), array(0 => new \Swift_Transport_Esmtp_AuthHandler(array(0 => new \Swift_Transport_Esmtp_Auth_CramMd5Authenticator(), 1 => new \Swift_Transport_Esmtp_Auth_LoginAuthenticator(), 2 => new \Swift_Transport_Esmtp_Auth_PlainAuthenticator()))), $this->get('swiftmailer.transport.eventdispatcher'));
 
         $instance->setHost('smtp.gmail.com');
-        $instance->setPort(25);
-        $instance->setEncryption(NULL);
+        $instance->setPort(465);
+        $instance->setEncryption('ssl');
         $instance->setUsername('diegogiacobbo@gmail.com');
         $instance->setPassword('oKXx9b7m');
-        $instance->setAuthMode(NULL);
+        $instance->setAuthMode('login');
         $instance->setTimeout(30);
         $instance->setSourceIp(NULL);
 
@@ -2385,7 +2385,7 @@ class appProdDebugProjectContainer extends Container
     /**
      * Gets the doctrine.orm.entity_manager service alias.
      *
-     * @return EntityManager523a458801b79_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
+     * @return EntityManager5240d79e049e2_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
      */
     protected function getDoctrine_Orm_EntityManagerService()
     {
@@ -2685,11 +2685,11 @@ class appProdDebugProjectContainer extends Container
             'database_user' => 'mercadodesabor',
             'database_password' => 'z9z7h7',
             'database_path' => NULL,
-            'mailer_transport' => 'smtp',
+            'mailer_transport' => 'gmail',
             'mailer_host' => 'smtp.gmail.com',
             'mailer_user' => 'diegogiacobbo@gmail.com',
             'mailer_password' => 'oKXx9b7m',
-            'mailer_port' => 25,
+            'mailer_port' => 587,
             'mailer_encryption' => 'ssl',
             'locale' => 'en',
             'secret' => '460ddf271d8ed00457e95224284285e37e323c8f',
@@ -2972,12 +2972,12 @@ class appProdDebugProjectContainer extends Container
             'swiftmailer.plugin.antiflood.sleep' => 0,
             'swiftmailer.data_collector.class' => 'Symfony\\Bridge\\Swiftmailer\\DataCollector\\MessageDataCollector',
             'swiftmailer.transport.smtp.class' => 'Swift_Transport_EsmtpTransport',
-            'swiftmailer.transport.smtp.encryption' => NULL,
-            'swiftmailer.transport.smtp.port' => 25,
+            'swiftmailer.transport.smtp.encryption' => 'ssl',
+            'swiftmailer.transport.smtp.port' => 465,
             'swiftmailer.transport.smtp.host' => 'smtp.gmail.com',
             'swiftmailer.transport.smtp.username' => 'diegogiacobbo@gmail.com',
             'swiftmailer.transport.smtp.password' => 'oKXx9b7m',
-            'swiftmailer.transport.smtp.auth_mode' => NULL,
+            'swiftmailer.transport.smtp.auth_mode' => 'login',
             'swiftmailer.transport.smtp.timeout' => 30,
             'swiftmailer.transport.smtp.source_ip' => NULL,
             'swiftmailer.plugin.blackhole.class' => 'Swift_Plugins_BlackholePlugin',
@@ -3117,8 +3117,8 @@ class appProdDebugProjectContainer extends Container
             ),
             'jms_di_extra.cache_dir' => '/var/www/mercadoSabores/app/cache/prod/jms_diextra',
             'jms_di_extra.doctrine_integration' => true,
-            'jms_di_extra.doctrine_integration.entity_manager.file' => '/var/www/mercadoSabores/app/cache/prod/jms_diextra/doctrine/EntityManager_523a458801b79.php',
-            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager523a458801b79_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
+            'jms_di_extra.doctrine_integration.entity_manager.file' => '/var/www/mercadoSabores/app/cache/prod/jms_diextra/doctrine/EntityManager_5240d79e049e2.php',
+            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager5240d79e049e2_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
             'security.secured_services' => array(
 
             ),

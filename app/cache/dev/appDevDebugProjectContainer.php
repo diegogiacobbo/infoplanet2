@@ -266,11 +266,11 @@ class appDevDebugProjectContainer extends Container
      * This service is shared.
      * This method always returns the same instance of the service.
      *
-     * @return EntityManager523ca487af584_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager523ca487af584_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
+     * @return EntityManager5240f7295cc8c_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager5240f7295cc8c_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
      */
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
-        require_once '/var/www/mercadoSabores/app/cache/dev/jms_diextra/doctrine/EntityManager_523ca487af584.php';
+        require_once '/var/www/mercadoSabores/app/cache/dev/jms_diextra/doctrine/EntityManager_5240f7295cc8c.php';
 
         $a = new \Doctrine\Common\Cache\ArrayCache();
         $a->setNamespace('sf2orm_default_5969e0242982b58d4b0a09c70d94c1ea');
@@ -303,7 +303,7 @@ class appDevDebugProjectContainer extends Container
         $g = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $f);
         $this->get('doctrine.orm.default_manager_configurator')->configure($g);
 
-        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager523ca487af584_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($g, $this);
+        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager5240f7295cc8c_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($g, $this);
     }
 
     /**
@@ -1846,8 +1846,8 @@ class appDevDebugProjectContainer extends Container
         $instance->setHost('smtp.gmail.com');
         $instance->setPort(465);
         $instance->setEncryption('ssl');
-        $instance->setUsername('diegogiacobbo@gmail.com');
-        $instance->setPassword('oKXx9b7m');
+        $instance->setUsername('diegogiacobo@gmail.com');
+        $instance->setPassword('olnrtvu2t');
         $instance->setAuthMode('login');
         $instance->setTimeout(30);
         $instance->setSourceIp(NULL);
@@ -2585,7 +2585,7 @@ class appDevDebugProjectContainer extends Container
     /**
      * Gets the doctrine.orm.entity_manager service alias.
      *
-     * @return EntityManager523ca487af584_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
+     * @return EntityManager5240f7295cc8c_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
      */
     protected function getDoctrine_Orm_EntityManagerService()
     {
@@ -2963,8 +2963,8 @@ class appDevDebugProjectContainer extends Container
             'database_path' => NULL,
             'mailer_transport' => 'gmail',
             'mailer_host' => 'smtp.gmail.com',
-            'mailer_user' => 'diegogiacobbo@gmail.com',
-            'mailer_password' => 'oKXx9b7m',
+            'mailer_user' => 'diegogiacobo@gmail.com',
+            'mailer_password' => 'olnrtvu2t',
             'mailer_port' => 587,
             'mailer_encryption' => 'ssl',
             'locale' => 'en',
@@ -3268,8 +3268,8 @@ class appDevDebugProjectContainer extends Container
             'swiftmailer.transport.smtp.encryption' => 'ssl',
             'swiftmailer.transport.smtp.port' => 465,
             'swiftmailer.transport.smtp.host' => 'smtp.gmail.com',
-            'swiftmailer.transport.smtp.username' => 'diegogiacobbo@gmail.com',
-            'swiftmailer.transport.smtp.password' => 'oKXx9b7m',
+            'swiftmailer.transport.smtp.username' => 'diegogiacobo@gmail.com',
+            'swiftmailer.transport.smtp.password' => 'olnrtvu2t',
             'swiftmailer.transport.smtp.auth_mode' => 'login',
             'swiftmailer.transport.smtp.timeout' => 30,
             'swiftmailer.transport.smtp.source_ip' => NULL,
@@ -3415,8 +3415,8 @@ class appDevDebugProjectContainer extends Container
             ),
             'jms_di_extra.cache_dir' => '/var/www/mercadoSabores/app/cache/dev/jms_diextra',
             'jms_di_extra.doctrine_integration' => true,
-            'jms_di_extra.doctrine_integration.entity_manager.file' => '/var/www/mercadoSabores/app/cache/dev/jms_diextra/doctrine/EntityManager_523ca487af584.php',
-            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager523ca487af584_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
+            'jms_di_extra.doctrine_integration.entity_manager.file' => '/var/www/mercadoSabores/app/cache/dev/jms_diextra/doctrine/EntityManager_5240f7295cc8c.php',
+            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager5240f7295cc8c_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
             'security.secured_services' => array(
 
             ),

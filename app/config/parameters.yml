@@ -4,12 +4,12 @@ parameters:
     database_port: null
     database_name: mercadodesabor
     database_user: mercadodesabor
-    database_password: z9z7h7
+    database_password: *****
     database_path: null
     mailer_transport: gmail
     mailer_host: smtp.gmail.com
-    mailer_user: diegogiacobbo@gmail.com
-    mailer_password: oKXx9b7m
+    mailer_user: diegogiacobo@gmail.com
+    mailer_password: *****
     mailer_port: 587
     mailer_encryption: ssl
     locale: en

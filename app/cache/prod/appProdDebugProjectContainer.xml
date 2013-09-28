@@ -31,11 +31,11 @@
     <parameter key="database_user">mercadodesabor</parameter>
     <parameter key="database_password">z9z7h7</parameter>
     <parameter key="database_path">null</parameter>
-    <parameter key="mailer_transport">smtp</parameter>
+    <parameter key="mailer_transport">gmail</parameter>
     <parameter key="mailer_host">smtp.gmail.com</parameter>
     <parameter key="mailer_user">diegogiacobbo@gmail.com</parameter>
     <parameter key="mailer_password">oKXx9b7m</parameter>
-    <parameter key="mailer_port">25</parameter>
+    <parameter key="mailer_port">587</parameter>
     <parameter key="mailer_encryption">ssl</parameter>
     <parameter key="locale">en</parameter>
     <parameter key="secret">460ddf271d8ed00457e95224284285e37e323c8f</parameter>
@@ -310,12 +310,12 @@
     <parameter key="swiftmailer.plugin.antiflood.sleep">0</parameter>
     <parameter key="swiftmailer.data_collector.class">Symfony\Bridge\Swiftmailer\DataCollector\MessageDataCollector</parameter>
     <parameter key="swiftmailer.transport.smtp.class">Swift_Transport_EsmtpTransport</parameter>
-    <parameter key="swiftmailer.transport.smtp.encryption">null</parameter>
-    <parameter key="swiftmailer.transport.smtp.port">25</parameter>
+    <parameter key="swiftmailer.transport.smtp.encryption">ssl</parameter>
+    <parameter key="swiftmailer.transport.smtp.port">465</parameter>
     <parameter key="swiftmailer.transport.smtp.host">smtp.gmail.com</parameter>
     <parameter key="swiftmailer.transport.smtp.username">diegogiacobbo@gmail.com</parameter>
     <parameter key="swiftmailer.transport.smtp.password">oKXx9b7m</parameter>
-    <parameter key="swiftmailer.transport.smtp.auth_mode">null</parameter>
+    <parameter key="swiftmailer.transport.smtp.auth_mode">login</parameter>
     <parameter key="swiftmailer.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.transport.smtp.source_ip">null</parameter>
     <parameter key="swiftmailer.plugin.blackhole.class">Swift_Plugins_BlackholePlugin</parameter>
@@ -439,8 +439,8 @@
     <parameter key="jms_di_extra.directories" type="collection"/>
     <parameter key="jms_di_extra.cache_dir">/var/www/mercadoSabores/app/cache/prod/jms_diextra</parameter>
     <parameter key="jms_di_extra.doctrine_integration">true</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/var/www/mercadoSabores/app/cache/prod/jms_diextra/doctrine/EntityManager_523a458801b79.php</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager523a458801b79_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/var/www/mercadoSabores/app/cache/prod/jms_diextra/doctrine/EntityManager_5240d79e049e2.php</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager5240d79e049e2_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
     <parameter key="security.secured_services" type="collection"/>
     <parameter key="security.access.method_interceptor.class">JMS\SecurityExtraBundle\Security\Authorization\Interception\MethodSecurityInterceptor</parameter>
     <parameter key="security.access.method_access_control" type="collection"/>
@@ -1886,8 +1886,8 @@
     <service id="doctrine.orm.default_manager_configurator" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator">
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="EntityManager523a458801b79_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
-      <file>/var/www/mercadoSabores/app/cache/prod/jms_diextra/doctrine/EntityManager_523a458801b79.php</file>
+    <service id="doctrine.orm.default_entity_manager" class="EntityManager5240d79e049e2_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+      <file>/var/www/mercadoSabores/app/cache/prod/jms_diextra/doctrine/EntityManager_5240d79e049e2.php</file>
       <argument type="service">
         <service class="Doctrine\ORM\EntityManager" factory-method="create" public="false">
           <argument type="service" id="doctrine.dbal.default_connection"/>
@@ -2257,10 +2257,10 @@
         <argument>smtp.gmail.com</argument>
       </call>
       <call method="setPort">
-        <argument>25</argument>
+        <argument>465</argument>
       </call>
       <call method="setEncryption">
-        <argument>null</argument>
+        <argument>ssl</argument>
       </call>
       <call method="setUsername">
         <argument>diegogiacobbo@gmail.com</argument>
@@ -2269,7 +2269,7 @@
         <argument>oKXx9b7m</argument>
       </call>
       <call method="setAuthMode">
-        <argument>null</argument>
+        <argument>login</argument>
       </call>
       <call method="setTimeout">
         <argument>30</argument>

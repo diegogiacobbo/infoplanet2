@@ -211,7 +211,7 @@ class __TwigTemplate_7a2ccac21e3f77640c48cb90f56f052b extends Twig_Template
 \t\t</div>
 \t\t<div class=\"footer\">
 \t\t\t<div class=\"container-narrow row-fluid\">
-\t\t\t\t<div class=\"google-maps span6\">
+\t\t\t\t<!--<div class=\"google-maps span6\">
 \t\t\t\t\t<iframe width=\"100%\" height=\"100%\" frameborder=\"0\" scrolling=\"no\"
 \t\t\t\t\t\tmarginheight=\"0\" marginwidth=\"0\"
 \t\t\t\t\t\tsrc=\"https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Av.+Pres.+Franklin+Roosevelt,+1241+
@@ -220,7 +220,7 @@ class __TwigTemplate_7a2ccac21e3f77640c48cb90f56f052b extends Twig_Template
 \t\t\t\t\t\t+1241+-+S%C3%A3o+Geraldo,+Porto+Alegre+-+Rio+Grande+do+Sul,+90230-002,+Rep%C3%BAblica+Federativa+do+Brasil&amp;ll=-30.012625,
 \t\t\t\t\t\t-51.208434&amp;spn=0.013006,0.018239&amp;z=15&amp;output=embed\"></iframe>
 \t\t\t\t\t<br />
-\t\t\t\t</div>
+\t\t\t\t</div>-->
 \t\t\t\t<div class=\"endereco span6\">
 \t\t\t\t\t<p>
 \t\t\t\t\t\tAvenida Presidente Franklin Roosevelt, 1241 - Loja 04<br>
@@ -235,10 +235,10 @@ class __TwigTemplate_7a2ccac21e3f77640c48cb90f56f052b extends Twig_Template
 \t\t\t\t\t\t\t\thq=&amp;hnear=Av.+Pres.+Franklin+Roosevelt,+1241+-+S%C3%A3o+Geraldo,+Porto+Alegre+-+Rio+Grande+do+Sul,+90230-002,+
 \t\t\t\t\t\t\t\tRep%C3%BAblica+Federativa+do+Brasil&amp;ll=-30.012625,-51.208434&amp;spn=0.013006,0.018239&amp;z=15\"
 \t\t\t\t\t\tstyle=\"color: #0000FF; text-align: left\" target=\"_blank\">
-\t\t\t\t\t\t<div class=\"ico_goo\">Abra no google!</div>
+\t\t\t\t\t\t<div class=\"ico_goo\">Endereço no googlemaps!</div>
 \t\t\t\t\t</a>
 \t\t\t\t</div>
-\t\t\t\t<!-- \t\t\t<div class=\"dw\"><p>&copy; Company 2013</p></div>\t\t\t\t\t -->
+\t\t\t\t<!--<div class=\"dw\"><p>&copy; Company 2013</p></div>-->
 \t\t\t</div>
 \t\t</div>
 \t</body>
@@ -287,6 +287,6 @@ class __TwigTemplate_7a2ccac21e3f77640c48cb90f56f052b extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  275 => 143,  272 => 142,  268 => 139,  265 => 138,  261 => 140,  258 => 138,  255 => 137,  249 => 6,  210 => 144,  208 => 142,  205 => 141,  203 => 137,  189 => 126,  175 => 115,  161 => 104,  127 => 73,  122 => 71,  71 => 23,  67 => 22,  61 => 19,  57 => 18,  52 => 16,  48 => 15,  43 => 13,  33 => 6,  28 => 4,  23 => 1,);
+        return array (  275 => 143,  272 => 142,  268 => 139,  265 => 138,  261 => 140,  258 => 138,  255 => 137,  249 => 6,  210 => 144,  208 => 142,  205 => 141,  203 => 137,  189 => 126,  175 => 115,  161 => 104,  127 => 73,  122 => 71,  71 => 23,  67 => 22,  61 => 19,  57 => 18,  52 => 16,  48 => 15,  43 => 13,  33 => 6,  28 => 4,  23 => 1,  74 => 27,  68 => 25,  66 => 24,  60 => 21,  54 => 20,  38 => 6,  35 => 5,  29 => 3,);
     }
 }

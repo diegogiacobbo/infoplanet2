@@ -37,8 +37,8 @@
     <parameter key="database_path">null</parameter>
     <parameter key="mailer_transport">gmail</parameter>
     <parameter key="mailer_host">smtp.gmail.com</parameter>
-    <parameter key="mailer_user">diegogiacobbo@gmail.com</parameter>
-    <parameter key="mailer_password">oKXx9b7m</parameter>
+    <parameter key="mailer_user">diegogiacobo@gmail.com</parameter>
+    <parameter key="mailer_password">olnrtvu2t</parameter>
     <parameter key="mailer_port">587</parameter>
     <parameter key="mailer_encryption">ssl</parameter>
     <parameter key="locale">en</parameter>
@@ -334,8 +334,8 @@
     <parameter key="swiftmailer.transport.smtp.encryption">ssl</parameter>
     <parameter key="swiftmailer.transport.smtp.port">465</parameter>
     <parameter key="swiftmailer.transport.smtp.host">smtp.gmail.com</parameter>
-    <parameter key="swiftmailer.transport.smtp.username">diegogiacobbo@gmail.com</parameter>
-    <parameter key="swiftmailer.transport.smtp.password">oKXx9b7m</parameter>
+    <parameter key="swiftmailer.transport.smtp.username">diegogiacobo@gmail.com</parameter>
+    <parameter key="swiftmailer.transport.smtp.password">olnrtvu2t</parameter>
     <parameter key="swiftmailer.transport.smtp.auth_mode">login</parameter>
     <parameter key="swiftmailer.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.transport.smtp.source_ip">null</parameter>
@@ -465,8 +465,8 @@
     <parameter key="jms_di_extra.directories" type="collection"/>
     <parameter key="jms_di_extra.cache_dir">/var/www/mercadoSabores/app/cache/dev/jms_diextra</parameter>
     <parameter key="jms_di_extra.doctrine_integration">true</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/var/www/mercadoSabores/app/cache/dev/jms_diextra/doctrine/EntityManager_523ca487af584.php</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager523ca487af584_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/var/www/mercadoSabores/app/cache/dev/jms_diextra/doctrine/EntityManager_5240f7295cc8c.php</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager5240f7295cc8c_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
     <parameter key="security.secured_services" type="collection"/>
     <parameter key="security.access.method_interceptor.class">JMS\SecurityExtraBundle\Security\Authorization\Interception\MethodSecurityInterceptor</parameter>
     <parameter key="security.access.method_access_control" type="collection"/>
@@ -2150,8 +2150,8 @@
     <service id="doctrine.orm.default_manager_configurator" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator">
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="EntityManager523ca487af584_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
-      <file>/var/www/mercadoSabores/app/cache/dev/jms_diextra/doctrine/EntityManager_523ca487af584.php</file>
+    <service id="doctrine.orm.default_entity_manager" class="EntityManager5240f7295cc8c_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+      <file>/var/www/mercadoSabores/app/cache/dev/jms_diextra/doctrine/EntityManager_5240f7295cc8c.php</file>
       <argument type="service">
         <service class="Doctrine\ORM\EntityManager" factory-method="create" public="false">
           <argument type="service" id="doctrine.dbal.default_connection"/>
@@ -2612,10 +2612,10 @@
         <argument>ssl</argument>
       </call>
       <call method="setUsername">
-        <argument>diegogiacobbo@gmail.com</argument>
+        <argument>diegogiacobo@gmail.com</argument>
       </call>
       <call method="setPassword">
-        <argument>oKXx9b7m</argument>
+        <argument>olnrtvu2t</argument>
       </call>
       <call method="setAuthMode">
         <argument>login</argument>
